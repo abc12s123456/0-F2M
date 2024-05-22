@@ -28,8 +28,6 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include "mm.h"
-
 
 #if (ITM_LOG_EN == ON && HW_LOG_EN == OFF)                                       /* ITM需要连接SWO */
 

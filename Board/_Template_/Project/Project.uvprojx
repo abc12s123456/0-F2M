@@ -380,6 +380,18 @@
       <Groups>
         <Group>
           <GroupName>Document</GroupName>
+          <Files>
+            <File>
+              <FileName>1、错误、警告修复记录.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Document\1、错误、警告修复记录.txt</FilePath>
+            </File>
+            <File>
+              <FileName>2、调试、修改记录.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Document\2、调试、修改记录.txt</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>==========Board==========</GroupName>
