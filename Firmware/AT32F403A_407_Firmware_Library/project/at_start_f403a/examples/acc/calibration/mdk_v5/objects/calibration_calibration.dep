@@ -1,0 +1,1310 @@
+Dependencies for Project 'calibration', Target 'calibration': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\src\at32f403a_407_clock.c)(0x65B244FC)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_clock.o --omf_browse .\objects\at32f403a_407_clock.crf --depend .\objects\at32f403a_407_clock.d)
+I (..\inc\at32f403a_407_clock.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\src\at32f403a_407_int.c)(0x65B244FC)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_int.o --omf_browse .\objects\at32f403a_407_int.crf --depend .\objects\at32f403a_407_int.d)
+I (..\inc\at32f403a_407_int.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\src\main.c)(0x65B244FC)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\inc\at32f403a_407_clock.h)(0x65B244FB)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_class.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_desc.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_int.h)(0x65B244E7)
+F (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.c)(0x65B244F7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_board.o --omf_browse .\objects\at32f403a_407_board.crf --depend .\objects\at32f403a_407_board.d)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_acc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_acc.o --omf_browse .\objects\at32f403a_407_acc.crf --depend .\objects\at32f403a_407_acc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_adc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_adc.o --omf_browse .\objects\at32f403a_407_adc.crf --depend .\objects\at32f403a_407_adc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_bpr.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_bpr.o --omf_browse .\objects\at32f403a_407_bpr.crf --depend .\objects\at32f403a_407_bpr.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_can.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_can.o --omf_browse .\objects\at32f403a_407_can.crf --depend .\objects\at32f403a_407_can.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_crc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_crc.o --omf_browse .\objects\at32f403a_407_crc.crf --depend .\objects\at32f403a_407_crc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_crm.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_crm.o --omf_browse .\objects\at32f403a_407_crm.crf --depend .\objects\at32f403a_407_crm.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_dac.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_dac.o --omf_browse .\objects\at32f403a_407_dac.crf --depend .\objects\at32f403a_407_dac.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_debug.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_debug.o --omf_browse .\objects\at32f403a_407_debug.crf --depend .\objects\at32f403a_407_debug.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_dma.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_dma.o --omf_browse .\objects\at32f403a_407_dma.crf --depend .\objects\at32f403a_407_dma.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_emac.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_emac.o --omf_browse .\objects\at32f403a_407_emac.crf --depend .\objects\at32f403a_407_emac.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_exint.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_exint.o --omf_browse .\objects\at32f403a_407_exint.crf --depend .\objects\at32f403a_407_exint.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_flash.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_flash.o --omf_browse .\objects\at32f403a_407_flash.crf --depend .\objects\at32f403a_407_flash.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_gpio.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_gpio.o --omf_browse .\objects\at32f403a_407_gpio.crf --depend .\objects\at32f403a_407_gpio.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_i2c.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_i2c.o --omf_browse .\objects\at32f403a_407_i2c.crf --depend .\objects\at32f403a_407_i2c.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_misc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_misc.o --omf_browse .\objects\at32f403a_407_misc.crf --depend .\objects\at32f403a_407_misc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_pwc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_pwc.o --omf_browse .\objects\at32f403a_407_pwc.crf --depend .\objects\at32f403a_407_pwc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_rtc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_rtc.o --omf_browse .\objects\at32f403a_407_rtc.crf --depend .\objects\at32f403a_407_rtc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_sdio.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_sdio.o --omf_browse .\objects\at32f403a_407_sdio.crf --depend .\objects\at32f403a_407_sdio.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_spi.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_spi.o --omf_browse .\objects\at32f403a_407_spi.crf --depend .\objects\at32f403a_407_spi.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_tmr.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_tmr.o --omf_browse .\objects\at32f403a_407_tmr.crf --depend .\objects\at32f403a_407_tmr.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_usart.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_usart.o --omf_browse .\objects\at32f403a_407_usart.crf --depend .\objects\at32f403a_407_usart.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_usb.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_usb.o --omf_browse .\objects\at32f403a_407_usb.crf --depend .\objects\at32f403a_407_usb.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_wdt.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_wdt.o --omf_browse .\objects\at32f403a_407_wdt.crf --depend .\objects\at32f403a_407_wdt.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_wwdt.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_wwdt.o --omf_browse .\objects\at32f403a_407_wwdt.crf --depend .\objects\at32f403a_407_wwdt.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\drivers\src\at32f403a_407_xmc.c)(0x65B244CD)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\at32f403a_407_xmc.o --omf_browse .\objects\at32f403a_407_xmc.crf --depend .\objects\at32f403a_407_xmc.d)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.c)(0x65B244D2)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\system_at32f403a_407.o --omf_browse .\objects\system_at32f403a_407.crf --depend .\objects\system_at32f403a_407.d)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+F (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\startup\mdk\startup_at32f403a_407.s)(0x65B244D2)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 529" --pd "AT32F403AVGT7 SETA 1"--list .\listings\startup_at32f403a_407.lst --xref -o .\objects\startup_at32f403a_407.o --depend .\objects\startup_at32f403a_407.d)
+F (..\..\..\..\..\..\middlewares\usbd_drivers\src\usbd_core.c)(0x65B244E7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\usbd_core.o --omf_browse .\objects\usbd_core.crf --depend .\objects\usbd_core.d)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_sdr.h)(0x65B244E6)
+F (..\..\..\..\..\..\middlewares\usbd_drivers\src\usbd_int.c)(0x65B244E7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\usbd_int.o --omf_browse .\objects\usbd_int.crf --depend .\objects\usbd_int.d)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_int.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+F (..\..\..\..\..\..\middlewares\usbd_drivers\src\usbd_sdr.c)(0x65B244E7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\usbd_sdr.o --omf_browse .\objects\usbd_sdr.crf --depend .\objects\usbd_sdr.d)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_sdr.h)(0x65B244E6)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+F (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_class.c)(0x65B244E7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\cdc_class.o --omf_browse .\objects\cdc_class.crf --depend .\objects\cdc_class.d)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_class.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_desc.h)(0x65B244E7)
+F (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_desc.c)(0x65B244E7)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\..\..\..\at32f403a_407_board -I ..\..\..\..\..\..\libraries\drivers\inc -I ..\..\..\..\..\..\libraries\cmsis\cm4\core_support -I ..\..\..\..\..\..\libraries\cmsis\cm4\device_support -I ..\..\..\..\..\..\middlewares\usbd_drivers\inc -I ..\..\..\..\..\..\middlewares\usbd_class\cdc-I.\RTE\_calibration-I"D:\Program Files (x86)\MDK\Arm\Packs\ArteryTek\AT32F403A_407_DFP\2.1.9\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DAT32F403AVGT7 -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1-o .\objects\cdc_desc.o --omf_browse .\objects\cdc_desc.crf --depend .\objects\cdc_desc.d)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usb_std.h)(0x65B244E7)
+I (..\inc\usb_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x65B248C4)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x65B244D2)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_version.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x65B244D2)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x65B244CC)
+I (..\inc\at32f403a_407_conf.h)(0x65B244FB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_rtc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_bpr.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_i2c.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_can.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_adc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dac.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wwdt.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_sdio.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x65B244CC)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_acc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x65B244CB)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_usb.h)(0x65B244CD)
+I (..\..\..\..\..\..\libraries\drivers\inc\at32f403a_407_emac.h)(0x65B244CD)
+I (..\..\..\..\..\at32f403a_407_board\at32f403a_407_board.h)(0x65B244F7)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_sdr.h)(0x65B244E6)
+I (..\..\..\..\..\..\middlewares\usbd_drivers\inc\usbd_core.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_desc.h)(0x65B244E7)
+I (..\..\..\..\..\..\middlewares\usbd_class\cdc\cdc_class.h)(0x65B244E7)
+F (..\readme.txt)(0x65B244FC)()

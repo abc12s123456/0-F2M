@@ -1,0 +1,15 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\at32f403a_407_clock.o"
+".\objects\at32f403a_407_int.o"
+".\objects\main.o"
+".\objects\at32f403a_407_board.o"
+".\objects\at32f403a_407_crm.o"
+".\objects\at32f403a_407_usart.o"
+".\objects\at32f403a_407_gpio.o"
+".\objects\at32f403a_407_misc.o"
+".\objects\system_at32f403a_407.o"
+".\objects\startup_at32f403a_407.o"
+--strict --scatter ".\objects\io_toggle.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listings\io_toggle.map" -o .\objects\io_toggle.axf

@@ -1,0 +1,8 @@
+2023.10.26
+.\Objects\Project.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+原因：未添加MCU的启动文件(startup_xxxx.s).
+
+
+
+
+
