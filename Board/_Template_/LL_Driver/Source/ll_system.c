@@ -11,41 +11,74 @@ LL_Clocks_Type LL_Clocks;
 __LI_ void NMI_Handler(void)
 {
 #if HSE_EN
+    if(rcu_interrupt_flag_get(RCU_INT_FLAG_HXTALSTB) == SET)
+    {
+        //使能内部时钟
+        rcu_osci_on(RCU_IRC8M);
+        while(rcu_flag_get(RCU_FLAG_IRC8MSTB) != SET);
+        
+        //使用内部时钟作为PLL输入
+        rcu_pll_config(RCU_PLLSRC_IRC8M_DIV2, RCU_PLL_MUL30);  //PLL_CLK = 8MHz / 2 * 30 = 120MHz
+        rcu_osci_on(RCU_PLL_CK);
+        while(rcu_flag_get(RCU_FLAG_PLLSTB) != SET);
     
+        rcu_interrupt_flag_clear(RCU_INT_FLAG_HXTALSTB_CLR);
+    }
 #endif
 }
 
 
 static void System_Init(void)
 {
-    nvic_priority_group_config(NVIC_PRIORITY_GROUP_4);
+    NVIC_SetPriorityGrouping(NVIC_PRIGROUP_PRE2_SUB2); //设置中断优先级组
+    fmc_wscnt_set(WS_WSCNT_0);                         //片上Flash 0等待读写
+
+    rcu_deinit();
     
-    crm_reset();
+    //调试端口只使用SWD
+    rcu_periph_clock_enable(RCU_AF);
+    gpio_pin_remap_config(GPIO_SWJ_SWDPENABLE_REMAP, ENABLE);
     
-    crm_clock_source_enable(CRM_CLOCK_SOURCE_HICK, TRUE);
-    while(crm_flag_get(CRM_HICK_STABLE_FLAG) != SET);
+    rcu_periph_clock_enable(RCU_CRC);                  //使能CRC
+
+#if HSE_EN
+    //开启外部时钟监控
+    rcu_interrupt_enable(RCU_INT_HXTALSTB);                       
+    rcu_hxtal_clock_monitor_enable();   
     
-    crm_pll_config(CRM_PLL_SOURCE_HICK, CRM_PLL_MULT_60, CRM_PLL_OUTPUT_RANGE_GT72MHZ);
-    crm_clock_source_enable(CRM_CLOCK_SOURCE_PLL, TRUE);
-    while(crm_flag_get(CRM_PLL_STABLE_FLAG) != SET);
+    //使能外部时钟
+    rcu_osci_on(RCU_HXTAL);
+    while(rcu_flag_get(RCU_FLAG_HXTALSTB) != SET);
     
-    crm_ahb_div_set(CRM_AHB_DIV_1);
-    crm_apb2_div_set(CRM_APB2_DIV_2);
-    crm_apb1_div_set(CRM_APB1_DIV_2);
+    //使用外部时钟作为PLL输入
+    rcu_pllpresel_config(RCU_PLLPRESRC_HXTAL);
+    rcu_pll_config(RCU_PLLSRC_HXTAL_IRC48M, RCU_PLL_MUL15);//PLL_CLK = 8MHz * 15 = 120MHz
+    rcu_osci_on(RCU_PLL_CK);
+    while(rcu_flag_get(RCU_FLAG_PLLSTB) != SET);          
+#else
+    //使能内部时钟
+    rcu_osci_on(RCU_IRC8M);
+    while(rcu_flag_get(RCU_FLAG_IRC8MSTB) != SET);
     
-    crm_auto_step_mode_enable(TRUE);
+    //使用内部时钟作为PLL输入
+    rcu_pll_config(RCU_PLLSRC_IRC8M_DIV2, RCU_PLL_MUL30);  //PLL_CLK = 8MHz / 2 * 30 = 120MHz
+    rcu_osci_on(RCU_PLL_CK);
+    while(rcu_flag_get(RCU_FLAG_PLLSTB) != SET);
+#endif
+
+    //使用PLL作为系统时钟输入
+    rcu_system_clock_source_config(RCU_CKSYSSRC_PLL);
     
-    crm_sysclk_switch(CRM_SCLK_PLL);
-    while(crm_sysclk_switch_status_get() != CRM_SCLK_PLL);
+    //时钟总线配置
+    rcu_ahb_clock_config(RCU_AHB_CKSYS_DIV1);     //AHB
+    rcu_apb1_clock_config(RCU_APB1_CKAHB_DIV2);   //APB1
+    rcu_apb2_clock_config(RCU_APB2_CKAHB_DIV1);   //APB2
     
-    crm_auto_step_mode_enable(FALSE);
-    
-    system_core_clock_update();
-    
-    LL_Clocks.Sysclk = 24000000;
-    LL_Clocks.AHBClk = LL_Clocks.Sysclk;
-    LL_Clocks.APB1Clk = LL_Clocks.Sysclk / 2;
-    LL_Clocks.APB2Clk = LL_Clocks.Sysclk / 2;
+    //获取系统时钟
+    LL_Clocks.Sysclk = rcu_clock_freq_get(CK_SYS);
+    LL_Clocks.AHBClk = rcu_clock_freq_get(CK_AHB);
+    LL_Clocks.APB1Clk = rcu_clock_freq_get(CK_APB1);
+    LL_Clocks.APB2Clk = rcu_clock_freq_get(CK_APB2);
 }
 
 __INLINE_STATIC_ void System_Disable_IRQ(void)
@@ -90,18 +123,18 @@ __INLINE_STATIC_ void System_Soft_Reset(void)
 
 __INLINE_STATIC_ FW_RST_Source_Enum System_Get_RSTSource(void)
 {
-//    if(rcu_flag_get(RCU_FLAG_FWDGTRST) == SET)  return FW_RST_Source_IWDG;
-//    if(rcu_flag_get(RCU_FLAG_EPRST) == SET)     return FW_RST_Source_Pin;
-//    if(rcu_flag_get(RCU_FLAG_PORRST) == SET)    return FW_RST_Source_POR;         //默认为上电复位
-//    if(rcu_flag_get(RCU_FLAG_SWRST) == SET)     return FW_RST_Source_SOFT;
-//    if(rcu_flag_get(RCU_FLAG_WWDGTRST) == SET)  return FW_RST_Source_WWDG;
-//    if(rcu_flag_get(RCU_FLAG_LPRST) == SET)     return FW_RST_Source_LPW;
+    if(rcu_flag_get(RCU_FLAG_FWDGTRST) == SET)  return FW_RST_Source_IWDG;
+    if(rcu_flag_get(RCU_FLAG_EPRST) == SET)     return FW_RST_Source_Pin;
+    if(rcu_flag_get(RCU_FLAG_PORRST) == SET)    return FW_RST_Source_POR;         //默认为上电复位
+    if(rcu_flag_get(RCU_FLAG_SWRST) == SET)     return FW_RST_Source_SOFT;
+    if(rcu_flag_get(RCU_FLAG_WWDGTRST) == SET)  return FW_RST_Source_WWDG;
+    if(rcu_flag_get(RCU_FLAG_LPRST) == SET)     return FW_RST_Source_LPW;
     return FW_RST_Source_Other;
 }
 
 __INLINE_STATIC_ void System_Clear_RSTSource(void)
 {
-//    rcu_all_reset_flag_clear();
+    rcu_all_reset_flag_clear();
 }
 
 

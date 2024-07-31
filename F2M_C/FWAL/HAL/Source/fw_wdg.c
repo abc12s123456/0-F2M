@@ -1,28 +1,3 @@
-/*
- * F2M
- * Copyright (C) 2024 abc12s123456 382797263@qq.com.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * https://github.com/abc12s123456/F2M
- *
- */
- 
 #include "fw_wdg.h"
 
 #include "fw_debug.h"
@@ -33,7 +8,7 @@
 
 
 /* 内部独立看门狗 */
-static FW_WDG_Type IWDG;
+FW_WDG_Type IWDG;
 static void IWDG_Driver_Probe(void *dev)
 {
     WDG_Driver_Type **drv = (WDG_Driver_Type **)(&IWDG.Device.Driver);
@@ -70,8 +45,10 @@ void WDG_Init(FW_WDG_Type *dev, u32 wdg_time)
     FW_ASSERT(drv);
     FW_ASSERT(drv->Init);
     
-    dev->Monitor_Tick = WDG_MONITOR_TICK_MAX;
     dev->WDG_Time = wdg_time;
+    dev->Monitor_Tick = 0;
+    dev->Monitor_Flag = False;
+    
     drv->Init(dev, wdg_time);
 }
 
@@ -119,16 +96,24 @@ void WDG_FeedDogISR(FW_WDG_Type *dev, u32 period)
     WDG_Driver_Type *drv = FW_Device_GetDriver(dev);
     u32 time = dev->WDG_Time >> 1;
     
-    /* 每二分之一咬狗时间喂一次狗 */
+    /* 中途喂一次狗 */
     if(dev->Monitor_Tick++ * period >= time)
     {
+        if(dev->Monitor_Flag != True)
+        {
+            WDG_BitDog(dev);
+            while(1);
+        }
+        
         dev->Monitor_Tick = 0;
+        dev->Monitor_Flag = False;
         drv->FeedDog(dev);
     }
 }
 
-void WDG_TaskMonitor(FW_WDG_Type *dev, u32 period)
+/* 在被监测的任务中周期性调用，任务的执行周期需远小于喂狗周期 */
+void WDG_TaskMonitor(FW_WDG_Type *dev)
 {
-    
+    dev->Monitor_Flag = True;
 }
 

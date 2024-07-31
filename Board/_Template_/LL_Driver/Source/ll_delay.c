@@ -5,9 +5,13 @@
 #include "fw_delay.h"
 
 
+extern void lv_tick_inc(u32 period);
+
+
 __LI_ void SysTick_Handler(void)
 {
     FW_Delay_TickTock();
+    lv_tick_inc(1);
 }
 
 

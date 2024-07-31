@@ -1,28 +1,3 @@
-/*
- * F2M
- * Copyright (C) 2024 abc12s123456 382797263@qq.com.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * https://github.com/abc12s123456/F2M
- *
- */
-
 #include "fw_delay.h"
 #include "fw_system.h"
 #include "fw_debug.h"
@@ -43,11 +18,14 @@ static          s8  Duration_Us_Bias = 0;        //
 
 
 #if (RTOS_EN == ON)
-__WEAK_ __INLINE_ void FW_OS_TickTock(void){}
+__WEAK_ void FW_OS_TickTock(void){}
 #endif
-__WEAK_ __INLINE_ Bool FW_OS_IsStart(void){return False;}
-__WEAK_ __INLINE_ void FW_OS_Delay(u32 nms){}
-__WEAK_ __INLINE_ u32  FW_OS_GetTickTime(void){return 0;}
+//__WEAK_ __INLINE_ Bool FW_OS_IsStart(void){return False;}
+//__WEAK_ __INLINE_ void FW_OS_Delay(u32 nms){}
+//__WEAK_ __INLINE_ u32  FW_OS_GetTickTime(void){return 0;}
+extern Bool FW_OS_IsStart(void);
+extern void FW_OS_Delay(u32 nms);
+extern u32  FW_OS_GetTickTime(void);
 
 
 /* Delay模块回调函数，可以在应用时由用户配置 */
@@ -255,7 +233,7 @@ void FW_Delay_TickTock(void)
     PF_IH_CB(IH_Pdata);
 #endif
     
-#if (RTOS_EN == ON)
+#if (RTOS_EN == ON && (MODULE_TEST == OFF || (MODULE_TEST == ON && RTOS_TEST == ON)))
     FW_OS_TickTock();
 #endif
 }

@@ -1,36 +1,36 @@
-#ifndef _LL_INCLUDE_H_
-#define _LL_INCLUDE_H_
+#ifndef _LL_INCLUDES_H_
+#define _LL_INCLUDES_H_
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 
-#include "at32f403a_407_acc.h"
-#include "at32f403a_407_adc.h"
-#include "at32f403a_407_bpr.h"
-#include "at32f403a_407_can.h"
-#include "at32f403a_407_crc.h"
-#include "at32f403a_407_crm.h"
-#include "at32f403a_407_dac.h"
-#include "at32f403a_407_debug.h"
-#include "at32f403a_407_def.h"
-#include "at32f403a_407_dma.h"
-#include "at32f403a_407_emac.h"
-#include "at32f403a_407_exint.h"
-#include "at32f403a_407_flash.h"
-#include "at32f403a_407_gpio.h"
-#include "at32f403a_407_i2c.h"
-#include "at32f403a_407_misc.h"
-#include "at32f403a_407_pwc.h"
-#include "at32f403a_407_rtc.h"
-#include "at32f403a_407_sdio.h"
-#include "at32f403a_407_spi.h"
-#include "at32f403a_407_tmr.h"
-#include "at32f403a_407_usart.h"
-#include "at32f403a_407_wdt.h"
-#include "at32f403a_407_wwdt.h"
-#include "at32f403a_407_xmc.h"
+#include "gd32f30x_rcu.h"
+#include "gd32f30x_adc.h"
+#include "gd32f30x_can.h"
+#include "gd32f30x_crc.h"
+#include "gd32f30x_ctc.h"
+#include "gd32f30x_dac.h"
+#include "gd32f30x_dbg.h"
+#include "gd32f30x_dma.h"
+#include "gd32f30x_exti.h"
+#include "gd32f30x_fmc.h"
+#include "gd32f30x_fwdgt.h"
+#include "gd32f30x_gpio.h"
+#include "gd32f30x_i2c.h"
+#include "gd32f30x_pmu.h"
+#include "gd32f30x_bkp.h"
+#include "gd32f30x_rcu.h"
+#include "gd32f30x_rtc.h"
+#include "gd32f30x_sdio.h"
+#include "gd32f30x_spi.h"
+#include "gd32f30x_timer.h"
+#include "gd32f30x_usart.h"
+#include "gd32f30x_wwdgt.h"
+#include "gd32f30x_misc.h"
+#include "gd32f30x_enet.h"
+#include "gd32f30x_exmc.h"
 
 
 #ifdef __cplusplus

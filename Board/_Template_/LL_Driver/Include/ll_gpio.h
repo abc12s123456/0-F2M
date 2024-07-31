@@ -11,7 +11,7 @@ extenrn "C"{
 #include "ll_include.h"
 
 
-#define GPIOx(pin)                (GPIOA + ((((pin) >> 8) - 1) << 12))
+#define GPIOx(pin)                (GPIOA + ((((pin) >> 8) - 1) << 10))
 #define GPIO_PINx(pin)            (1 << ((pin) & 0xFF))
 
 #define GPIO_PORTx_SOURCE(pin)(\

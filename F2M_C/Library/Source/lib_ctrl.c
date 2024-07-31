@@ -1,28 +1,3 @@
-/*
- * F2M
- * Copyright (C) 2024 abc12s123456 382797263@qq.com.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * https://github.com/abc12s123456/F2M
- *
- */
- 
 #include "lib_ctrl.h"
 #include "libc.h"
 
@@ -167,6 +142,7 @@ float SPID_Get(SPID_Type *pid, float target, float step)
 
 
 /* 屏幕 */
+#if 0
 static FW_SPI_Type SSPI0;
 static void SSPI0_Config(void *dev)
 {
@@ -185,6 +161,26 @@ static void SSPI0_Config(void *dev)
     spi->First_Bit = FW_SPI_FirstBit_MSB;
 }
 FW_DEVICE_STATIC_REGIST("sspi0", &SSPI0, SSPI0_Config, SSPI0);
+#else
+#define LCD_SPI_NAME         "spi1"
+static  void LCD_SPI_Pre_Init(void *pdata)
+{
+    FW_SPI_Type *spi = FW_Device_Find(LCD_SPI_NAME);
+    
+    spi->CS_Pin = PB12;
+    spi->SCK_Pin = PB13;
+    spi->MISO_Pin = PIN_NULL;
+    spi->MOSI_Pin = PB15;
+    
+    spi->Baudrate = 400000;
+    spi->Clock_Polarity = FW_SPI_ClockPolarity_H;
+    spi->Clock_Phase = FW_SPI_ClockPhase_Edge2;
+    spi->Data_Width = FW_SPI_DataWidth_8Bits;
+    spi->CS_VL = LEVEL_L;
+    spi->First_Bit = FW_SPI_FirstBit_MSB;
+}
+FW_PRE_INIT(LCD_SPI_Pre_Init, NULL);
+#endif
 
 static LCD8_Type ST7735;
 static void ST7735_Config(void *dev)
@@ -217,7 +213,7 @@ static void LCD_Config(void *dev)
     FW_Device_SetParent(dev, parent);
     FW_Device_SetDriver(dev, FW_Driver_Find("st7735->lcd"));
 }
-FW_DEVICE_STATIC_REGIST("lcd1", &LCD, LCD_Config, LCD1);
+FW_DEVICE_STATIC_REGIST("lcd", &LCD, LCD_Config, LCD1);
 
 
 /* 位置检测 */
@@ -459,7 +455,7 @@ void Test(void)
     FW_ADC_Device_Type *ha0, *ha1;
     
     
-    LCD_Type *lcd = FW_Device_Find("lcd1");
+    LCD_Type *lcd = FW_Device_Find("lcd");
     if(lcd == NULL)
     {
         while(1);

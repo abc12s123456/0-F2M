@@ -10,7 +10,7 @@ extern "C"{
 
 
 /* 板级配置 */
-#define CHIP_TYPE                 "AT32F403AVGT7"                               /*芯片型号*/
+#define CHIP_TYPE                 "GD32F303VCT6"                                /*芯片型号*/
 #define HSE_FREQ                  8000000                                       /*外部高速晶振频率*/
 #define LSE_FREQ                  32768                                         /*外部低速速晶振频率*/
 

@@ -92,7 +92,7 @@ extern "C"{
 #define ETH_TEST                  OFF                                           /* ETH模块测试 */
 #define EXTI_TEST                 OFF                                           /* EXTI模块测试 */
 #define FLASH_TEST                OFF                                           /* 片上Flash模块测试 */
-#define GPIO_TEST                 ON                                           /* GPIO模块测试 */
+#define GPIO_TEST                 OFF                                           /* GPIO模块测试 */
 #define I2C_TEST                  OFF		                                    /* I2C模块测试 */
 #define KEY_TEST                  OFF                                           /* 按键模块测试 */
 #define LCD_TEST                  OFF                                           /* LCD驱动模块测试 */
@@ -113,11 +113,12 @@ extern "C"{
 /*
  * @Sensor
  */
-#define SENSOR_TEST               OFF
+#define SENSOR_TEST               ON
 #if SENSOR_TEST == ON
 #define WF200D_TEST               OFF
 #define WF183D_TEST               OFF
-#define DS18B20_TEST              ON
+#define DS18B20_TEST              OFF
+#define TM7711_TEST               ON
 #endif  /* Sensor_TEST */
 
 
@@ -201,7 +202,7 @@ extern "C"{
 /*
  * @SPI设备
  */
-#define SPI_DEVICE_TEST           ON                                           /* SPI驱动设备测试 */
+#define SPI_DEVICE_TEST           OFF                                           /* SPI驱动设备测试 */
 #if SPI_DEVICE_TEST == ON
 #define GD25X_TEST                OFF                                           /* GD25Q SPI系列外部nor flash测试 */
 #define FM17522_TEST              OFF                                           /* RFID测试 */
