@@ -157,7 +157,10 @@ void MM_Pool_Init(MM_Pool_Type *Pool)
     Pool_Init(Pool);
     
     /*  */
-    if(Pool->Sleep == NULL)  Pool->Sleep_Time = 0;
+    if(Pool->Sleep == NULL)  
+    {
+        Pool->Sleep_Time = 0;
+    }
     else
     {
         if(Pool->Sleep_Time == 0)  Pool->Sleep_Time = MM_SLEEP_TIME;
@@ -250,7 +253,7 @@ void *MM_Pool_Malloc(MM_Pool_Type *Pool, u32 size)
     Pool->Lock_Flag = True;                                     //加锁
     
     index = List_Get_TableIndex(size);
-    size = 1 << (index + 3);                                    //调整为2^n次数
+    size = (1 << (index + 3)) + sizeof(MM_BCT_Type);            //调整为2^n + BCT_Type
     if(size > Pool->Size)  
     {
         Pool->Lock_Flag = False; 
