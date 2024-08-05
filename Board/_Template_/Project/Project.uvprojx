@@ -434,78 +434,12 @@
         </Group>
         <Group>
           <GroupName>——ASP</GroupName>
-          <Files>
-            <File>
-              <FileName>display.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\ASP\display.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>——BSP</GroupName>
-          <Files>
-            <File>
-              <FileName>board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\BSP\board.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>——UI</GroupName>
-          <Files>
-            <File>
-              <FileName>ui.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\ui.c</FilePath>
-            </File>
-            <File>
-              <FileName>PowerUpUI.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\PowerUpUI.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>————custom</GroupName>
-          <Files>
-            <File>
-              <FileName>custom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\custom\custom.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>————generate</GroupName>
-          <Files>
-            <File>
-              <FileName>events_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\generated\events_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>widgets_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\generated\widgets_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>setup_scr_screen.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\generated\setup_scr_screen.c</FilePath>
-            </File>
-            <File>
-              <FileName>gui_guider.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\generated\gui_guider.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_montserratMedium_12.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\UI\generated\guider_fonts\lv_font_montserratMedium_12.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>LL_Driver</GroupName>
