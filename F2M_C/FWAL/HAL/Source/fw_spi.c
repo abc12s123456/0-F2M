@@ -328,6 +328,7 @@ static u32  FW_SPI_WritePOL(void *dev, u32 offset, const void *pdata, u32 num)
     u8 *p = (u8 *)pdata;
     u32 i;
     
+    /* 若底层驱动以Write方式实现轮询写功能，则TX_Byte需要为空。读同理 */
     if(drv->TX_Byte == NULL && drv->Write)  return drv->Write(dev, pdata, num);
     
     for(i = 0; i < num; i++)

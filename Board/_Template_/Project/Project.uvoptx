@@ -152,7 +152,7 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>705</LineNumber>
+          <LineNumber>689</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>134262504</Address>
           <ByteObject>0</ByteObject>
@@ -163,7 +163,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\..\F2M_C\Device\Source\gd25q64.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Project\../../../F2M_C/Device/Source/gd25q64.c\705</Expression>
+          <Expression>\\Project\../../../F2M_C/Device/Source/gd25q64.c\689</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
