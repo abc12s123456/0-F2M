@@ -113,7 +113,7 @@ extern "C"{
 /*
  * @Sensor
  */
-#define SENSOR_TEST               ON
+#define SENSOR_TEST               OFF
 #if SENSOR_TEST == ON
 #define WF200D_TEST               OFF
 #define WF183D_TEST               OFF
@@ -202,12 +202,12 @@ extern "C"{
 /*
  * @SPI设备
  */
-#define SPI_DEVICE_TEST           OFF                                           /* SPI驱动设备测试 */
+#define SPI_DEVICE_TEST           ON                                           /* SPI驱动设备测试 */
 #if SPI_DEVICE_TEST == ON
-#define GD25X_TEST                OFF                                           /* GD25Q SPI系列外部nor flash测试 */
+#define GD25X_TEST                ON                                           /* GD25Q SPI系列外部nor flash测试 */
 #define FM17522_TEST              OFF                                           /* RFID测试 */
 #define FATFS_TEST                OFF                                           /* FatFs测试 */
-#define ST7735_TEST               ON
+#define ST7735_TEST               OFF
 #endif  /* SPI_DEVICE_TEST */
 
 
@@ -251,27 +251,6 @@ extern "C"{
 
 
 #endif  /* OTHER_TEST */
-
-
-//#define TASK_LAYER_TEST           OFF
-//#define ZS_UI_TEST                OFF
-//#define BERN_TEST                 OFF
-
-//#define BLN_LED_TEST              OFF
-
-//#define MOTOR_TEST                OFF
-
-//#define GUI_TEST                  OFF
-//#define TC4056_TEST               OFF
-//#define FLOW_TEST                 OFF
-
-//#define COLOR_TEST                OFF
-
-//#define RBTREE_TEST               OFF                                           /* 红黑树测试 */
-
-//#define ST77_TEST                 OFF
-
-//#define JSON_TEST                 OFF
 
 
 #ifdef __cplusplus

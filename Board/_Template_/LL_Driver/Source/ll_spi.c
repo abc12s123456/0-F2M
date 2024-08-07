@@ -14,25 +14,48 @@
 (u32)INVALUE)
 
 
+extern FW_SPI_Type SPI0_Device;
+extern FW_SPI_Type SPI1_Device;
+extern FW_SPI_Type SPI2_Device;
+
+
 __INLINE_STATIC_ u8 SPI_IRQHandler(FW_SPI_Type *dev)
 {
-    return False;
+    u32 spi = (u32)dev->SPIx;
+    
+    if(spi_i2s_interrupt_flag_get(spi, SPI_I2S_INT_FLAG_TBE) == SET)
+    {
+        FW_SPI_TX_ISR(dev);
+    }
+    
+    else if(spi_i2s_interrupt_flag_get(spi, SPI_I2S_INT_FLAG_RBNE) == SET)
+    {
+        FW_SPI_RX_ISR(dev);
+    }
+    
+    else
+    {
+        /**/
+        return False;
+    }
+    
+    return True;
 }
 
 
 __LI_ void SPI0_IRQHandler(void)
 {
-
+    FW_DEVICE_LIH(&SPI0_Device, SPI_IRQHandler);
 }
 
 __LI_ void SPI1_IRQHandler(void)
 {
-
+    FW_DEVICE_LIH(&SPI1_Device, SPI_IRQHandler);
 }
 
 __LI_ void SPI2_IRQHandler(void)
 {
-
+    FW_DEVICE_LIH(&SPI2_Device, SPI_IRQHandler);
 }
 
 __INLINE_STATIC_ void SPI_IO_Init(FW_SPI_Type *dev)
@@ -109,11 +132,16 @@ __INLINE_STATIC_ u32 SPI_Clock_GetDIV(FW_SPI_Type *dev)
 }
 
 
-#define RCU_DMAx(spi)(\
-(spi == SPI0) ? RCU_DMA0 :\
-(spi == SPI1) ? RCU_DMA0 :\
-(spi == SPI2) ? RCU_DMA1 :\
+#define RCU_DMAx(dma)(\
+(dma == DMA0) ? RCU_DMA0 :\
+(dma == DMA1) ? RCU_DMA1 :\
 (rcu_periph_enum)INVALUE)
+
+//#define RCU_DMAx(spi)(\
+//(spi == SPI0) ? RCU_DMA0 :\
+//(spi == SPI1) ? RCU_DMA0 :\
+//(spi == SPI2) ? RCU_DMA1 :\
+//(rcu_periph_enum)INVALUE)
 
 #define DMAx(spi)(\
 (spi == SPI0) ? DMA0 :\
@@ -205,11 +233,31 @@ __INLINE_STATIC_ void SPI_Init(FW_SPI_Type *dev)
     trm = FW_SPI_GetTRM(dev, TOR_TX);
     if(trm == TRM_DMA)
     {
-    
+        rcu_periph_clock_enable(RCU_DMAx(dma));
+        
+        dma_deinit(dma, dma_tx_ch);
+        dma_init_struct.periph_addr  = (u32)&SPI_DATA(spi);
+        dma_init_struct.memory_addr  = (u32)FW_SPI_GetDMABBase(dev, TOR_TX);
+        dma_init_struct.direction    = DMA_MEMORY_TO_PERIPHERAL;
+        dma_init_struct.memory_width = DMA_MEMORY_WIDTH_8BIT;
+        dma_init_struct.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
+        dma_init_struct.priority     = DMA_PRIORITY_LOW;
+        dma_init_struct.number       = FW_SPI_GetDMABSize(dev, TOR_TX);
+        dma_init_struct.periph_inc   = DMA_PERIPH_INCREASE_DISABLE;
+        dma_init_struct.memory_inc   = DMA_MEMORY_INCREASE_ENABLE;
+        dma_init(dma, dma_tx_ch, &dma_init_struct);
+        
+        dma_circulation_disable(dma, dma_tx_ch);
+        dma_memory_to_memory_disable(dma, dma_tx_ch);
+        
+        dma_channel_disable(dma, dma_tx_ch);
+        
+        spi_dma_disable(spi, SPI_DMA_TRANSMIT);
     }
     else if(trm == TRM_INT)
     {
-    
+        nvic_irq_enable(SPIx_IRQn(spi), 3, 3);
+        spi_i2s_interrupt_disable(spi, SPI_I2S_INT_FLAG_TBE);
     }
     else
     {
@@ -219,11 +267,31 @@ __INLINE_STATIC_ void SPI_Init(FW_SPI_Type *dev)
     trm = FW_SPI_GetTRM(dev, TOR_RX);
     if(trm == TRM_DMA)
     {
-    
+        rcu_periph_clock_enable(RCU_DMAx(dma));
+        
+        dma_deinit(dma, dma_rx_ch);
+        dma_init_struct.periph_addr  = (u32)&SPI_DATA(spi);
+        dma_init_struct.memory_addr  = (u32)FW_SPI_GetDMABBase(dev, TOR_RX);
+        dma_init_struct.direction    = DMA_PERIPHERAL_TO_MEMORY;
+        dma_init_struct.memory_width = DMA_MEMORY_WIDTH_8BIT;
+        dma_init_struct.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
+        dma_init_struct.priority     = DMA_PRIORITY_MEDIUM;
+        dma_init_struct.number       = FW_SPI_GetDMABSize(dev, TOR_RX);
+        dma_init_struct.periph_inc   = DMA_PERIPH_INCREASE_DISABLE;
+        dma_init_struct.memory_inc   = DMA_MEMORY_INCREASE_ENABLE;
+        dma_init(dma, dma_rx_ch, &dma_init_struct);
+        
+        dma_circulation_disable(dma, dma_rx_ch);
+        dma_memory_to_memory_disable(dma, dma_rx_ch);
+        
+        dma_channel_disable(dma, dma_rx_ch);
+        
+        spi_dma_disable(spi, SPI_DMA_RECEIVE);
     }
     else if(trm == TRM_INT)
     {
-    
+        nvic_irq_enable(SPIx_IRQn(spi), 3, 3);
+        spi_i2s_interrupt_disable(spi, SPI_I2S_INT_FLAG_RBNE);
     }
     else
     {
@@ -259,11 +327,24 @@ __INLINE_STATIC_ void SPI_TX_CTL(FW_SPI_Type *dev, u8 state)
     
     if(trm == TRM_DMA)
     {
-    
+        u32 dma = DMAx(spi);
+        dma_channel_enum dma_tx_ch = DMA_CHx(spi, TOR_TX);
+        
+        if(state)
+        {
+            dma_channel_enable(dma, dma_tx_ch);
+        }
+        else
+        {
+            dma_channel_disable(dma, dma_tx_ch);
+        }
     }
     else if(trm == TRM_INT)
     {
-    
+        if(state)
+            spi_i2s_interrupt_enable(spi, SPI_I2S_INT_FLAG_TBE);
+        else
+            spi_i2s_interrupt_disable(spi, SPI_I2S_INT_FLAG_TBE);
     }
     else
     {
@@ -278,11 +359,24 @@ __INLINE_STATIC_ void SPI_RX_CTL(FW_SPI_Type *dev, u8 state)
     
     if(trm == TRM_DMA)
     {
-    
+        u32 dma = DMAx(spi);
+        dma_channel_enum dma_rx_ch = DMA_CHx(spi, TOR_RX);
+        
+        if(state)
+        {
+            dma_channel_enable(dma, dma_rx_ch);
+        }
+        else
+        {
+            dma_channel_disable(dma, dma_rx_ch);
+        }
     }
     else if(trm == TRM_INT)
     {
-    
+        if(state)
+            spi_i2s_interrupt_enable(spi, SPI_I2S_INT_FLAG_RBNE);
+        else
+            spi_i2s_interrupt_disable(spi, SPI_I2S_INT_FLAG_RBNE);
     }
     else
     {
@@ -312,6 +406,54 @@ __INLINE_STATIC_ u8   SPI_Wait_RC(FW_SPI_Type *dev)
     return (u8)spi_i2s_flag_get(spi, SPI_FLAG_RBNE);
 }
 
+__INLINE_STATIC_ u32  SPI_Write(FW_SPI_Type *dev, const u8 *pdata, u32 num)
+{
+    u32 spi = (u32)dev->SPIx;
+    u32 dma = DMAx(spi);
+    dma_channel_enum dma_tx_ch = DMA_CHx(spi, TOR_TX);
+    
+    dma_channel_disable(dma, dma_tx_ch);
+    
+    dma_flag_clear(dma, dma_tx_ch, DMA_FLAG_FTF);
+    
+    dma_memory_address_config(dma, dma_tx_ch, (u32)pdata);
+    dma_transfer_number_config(dma, dma_tx_ch, num);
+    dma_memory_increase_enable(dma, dma_tx_ch);
+    
+    dma_channel_enable(dma, dma_tx_ch);
+    spi_dma_enable(spi, SPI_DMA_TRANSMIT);
+    while(dma_flag_get(dma, dma_tx_ch, DMA_FLAG_FTF) != SET);
+    spi_dma_disable(spi, SPI_DMA_TRANSMIT);
+}
+
+__INLINE_STATIC_ u32  SPI_Read(FW_SPI_Type *dev, u8 *pdata, u32 num)
+{
+    u32 spi = (u32)dev->SPIx;
+    u32 dma = DMAx(spi);
+    dma_channel_enum dma_tx_ch = DMA_CHx(spi, TOR_TX);
+    dma_channel_enum dma_rx_ch = DMA_CHx(spi, TOR_RX);
+    
+    dma_channel_disable(dma, dma_tx_ch);
+    dma_channel_disable(dma, dma_rx_ch);
+    
+    dma_flag_clear(dma, dma_rx_ch, DMA_FLAG_FTF);
+    
+    dma_memory_address_config(dma, dma_tx_ch, (u32)pdata);
+    dma_transfer_number_config(dma, dma_tx_ch, num);
+    
+    dma_memory_address_config(dma, dma_rx_ch, (u32)pdata);
+    dma_transfer_number_config(dma, dma_rx_ch, num);
+    
+    spi_i2s_data_receive(spi);
+    
+    dma_channel_enable(dma, dma_tx_ch);
+    dma_channel_enable(dma, dma_rx_ch);
+    spi_dma_enable(spi, SPI_DMA_RECEIVE);
+    spi_dma_enable(spi, SPI_DMA_TRANSMIT);
+    while(dma_flag_get(dma, dma_rx_ch, DMA_FLAG_FTF) != SET);
+    spi_dma_disable(spi, SPI_DMA_TRANSMIT);
+    spi_dma_disable(spi, SPI_DMA_RECEIVE);
+}
 
 
 
@@ -330,6 +472,9 @@ __CONST_STATIC_ FW_SPI_Driver_Type HSPI_Driver =
     
     .Wait_TC = SPI_Wait_TC,
     .Wait_RC = SPI_Wait_RC,
+    
+    .Write   = SPI_Write,
+    .Read    = SPI_Read,
 };
 FW_DRIVER_REGIST("ll->spi", &HSPI_Driver, HSPI);
 

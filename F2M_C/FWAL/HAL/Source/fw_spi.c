@@ -74,7 +74,17 @@ u32  FW_SPI_GetDMABSize(FW_SPI_Type *dev, u8 tr)
 
 void FW_SPI_DeInit(FW_SPI_Type *dev)
 {
+    FW_SPI_Driver_Type *drv;
 
+    drv = FW_Device_GetDriver(dev);
+    if(drv == NULL)
+    {
+        LOG_D("%s driver is invalid\r\n", dev->Device.Name);
+        return;
+    }
+    
+    FW_ASSERT(drv->DeInit);
+    drv->DeInit(dev);
 }
 
 void FW_SPI_Init(FW_SPI_Type *dev)
@@ -127,7 +137,7 @@ void FW_SPI_Init(FW_SPI_Type *dev)
     {
         dev->CS_Set = drv->CS_Set;
     }
-
+    
     FW_ASSERT(drv->Init);
     drv->Init(dev);
 }
@@ -318,7 +328,7 @@ static u32  FW_SPI_WritePOL(void *dev, u32 offset, const void *pdata, u32 num)
     u8 *p = (u8 *)pdata;
     u32 i;
     
-    if(drv->Write)  return drv->Write(dev, pdata, num);
+    if(drv->TX_Byte == NULL && drv->Write)  return drv->Write(dev, pdata, num);
     
     for(i = 0; i < num; i++)
     {
@@ -357,36 +367,6 @@ static u32  FW_SPI_WriteINT(void *dev, u32 offset, const void *pdata, u32 num)
 
 static u32  FW_SPI_WriteDMA(void *dev, u32 offset, const void *pdata, u32 num)
 {
-//    FW_SPI_Type *spi = (FW_SPI_Type *)dev;
-//    FW_SPI_Driver_Type *drv = FW_Device_GetDriver(spi);
-//    RB_Type *fifo = spi->Config.TX_FIFO;
-//    SGD_Type *dma = spi->Config.TX_DMA;
-//    
-//    FW_Lock();
-//    
-//    /* 没有数据或发送缓存空间不足 */
-//    if(num == 0 ||
-//       num > fifo->Size - RB_Get_DataLength(fifo))
-//    {
-//        FW_Unlock();
-//        return 0;
-//    }
-//    
-//    RB_Write(fifo, pdata, num);
-//    
-//    if(spi->Config.TX_EN == False)
-//    {
-//        /* 先发送一个字节，唤起发送完成中断，剩余数据在TC中断中进行发送 */
-//        RB_Read(fifo, dma->Buffer, sizeof(u8));
-//        drv->TX_CTL(spi, Disable);
-//        drv->Set_TDL(spi, sizeof(u8));
-//        drv->TX_CTL(spi, Enable);
-//        while(drv->Wait_TC(spi) != True);
-//    }
-//    
-//    FW_Unlock();
-//    
-//    return num;
     FW_SPI_Driver_Type *drv = FW_Device_GetDriver(dev);
     return drv->Write(dev, pdata, num);
 }
@@ -397,7 +377,7 @@ static u32  FW_SPI_ReadPOL(void *dev, u32 offset, void *pdata, u32 num)
     u8 *p = (u8 *)pdata;
     u32 i;
     
-    if(drv->Read)  return drv->Read(dev, pdata, num);
+    if(drv->RX_Byte == NULL && drv->Read)  return drv->Read(dev, pdata, num);
     
     for(i = 0; i < num; i++)
     {
@@ -415,8 +395,6 @@ static u32  FW_SPI_ReadINT(void *dev, u32 offset, void *pdata, u32 num)
 
 static u32  FW_SPI_ReadDMA(void *dev, u32 offset, void *pdata, u32 num)
 {
-//    FW_SPI_Type *spi = (FW_SPI_Type *)dev;
-//    return RB_Read(spi->Config.RX_FIFO, pdata, num);
     FW_SPI_Driver_Type *drv = FW_Device_GetDriver(dev);
     return drv->Read(dev, pdata, num);
 }

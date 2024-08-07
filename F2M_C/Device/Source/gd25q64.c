@@ -550,7 +550,7 @@ static void SSPI0_Config(void *dev)
 }
 FW_DEVICE_STATIC_REGIST("sspi0", &SSPI0, SSPI0_Config, SSPI0);
 
-#else
+#elif 0
 
 #define SNOR_SPI_NAME        "spi2"
 static void SNOR_SPI_Config(void *pdata)
@@ -561,6 +561,28 @@ static void SNOR_SPI_Config(void *pdata)
     spi->SCK_Pin = PB3;
     spi->MISO_Pin = PB4;
     spi->MOSI_Pin = PB5;
+    
+    spi->Config.TX_Mode = TRM_DMA;
+    spi->Config.RX_Mode = TRM_DMA;
+    
+    spi->Baudrate = 15000000;
+    spi->First_Bit = FW_SPI_FirstBit_MSB;
+    spi->Clock_Phase = FW_SPI_ClockPhase_Edge2;
+    spi->Clock_Polarity = FW_SPI_ClockPolarity_H;
+}
+FW_PRE_INIT(SNOR_SPI_Config, NULL);
+
+#else
+
+#define SNOR_SPI_NAME        "spi0"
+static void SNOR_SPI_Config(void *pdata)
+{
+    FW_SPI_Type *spi = FW_Device_Find(SNOR_SPI_NAME);
+    
+    spi->CS_Pin = PA4;
+    spi->SCK_Pin = PA5;
+    spi->MISO_Pin = PA6;
+    spi->MOSI_Pin = PA7;
     
     spi->Config.TX_Mode = TRM_DMA;
     spi->Config.RX_Mode = TRM_DMA;
@@ -583,7 +605,7 @@ static void GD25Q64_Config(void *dev)
     FW_Device_SetParent(snor, FW_Device_Find(SNOR_SPI_NAME));
     FW_Device_SetDriver(snor, FW_Driver_Find("spi->dev"));
     
-    snor->WP_Pin = PA11;
+    snor->WP_Pin = PB2;
 }
 FW_DEVICE_STATIC_REGIST("gd25q64", &GD25Q64, GD25Q64_Config, GD25Q64);
 
@@ -643,25 +665,9 @@ void Test(void)
     MM_Init(6 * 1024);
     
     FW_GPIO_Init(VCC_EN, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
-    FW_GPIO_SET(VCC_EN);
+    FW_GPIO_CLR(VCC_EN);
     
     FW_Delay_Ms(1000);
-    
-//    spi = FW_Device_Find(SNOR_SPI_NAME);
-//    if(spi == NULL)
-//    {
-//        while(1);
-//    }
-//    
-//    spi->CS_Pin = PA4;
-//    spi->SCK_Pin = PA5;
-//    spi->MISO_Pin = PA6;
-//    spi->MOSI_Pin = PA7;
-//    
-//    spi->Baudrate = 15000000;
-//    spi->First_Bit = FW_SPI_FirstBit_MSB;
-//    spi->Clock_Polarity = FW_SPI_ClockPolarity_H;
-//    spi->Clock_Phase = FW_SPI_ClockPhase_Edge2;
     
     flash = FW_Device_Find("eflash");
     if(flash == NULL)
@@ -676,7 +682,7 @@ void Test(void)
     
     #else
     
-//    i = Flash_Get_CID(flash, msg, sizeof(msg));
+    i = Flash_Get_CID(flash, msg, sizeof(msg));
     
     addr = 0;
     
