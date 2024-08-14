@@ -212,14 +212,14 @@ static void FW_SPI_IH_RX(void *dev)
 {
     FW_SPI_Type *spi = (FW_SPI_Type *)dev;
     FW_SPI_Driver_Type *drv = FW_Device_GetDriver(spi);
-    RB_Type *fifo = spi->Config.RX_FIFO;
+    RB_Type *rx_fifo = spi->Config.RX_FIFO;
     u8 value;
     
     FW_Lock();
-    if(fifo->Size)
+    if(rx_fifo->Size)
     {
         value = drv->RX_Byte(spi);
-        RB_Write(fifo, &value, sizeof(u8));
+        RB_Write(rx_fifo, &value, sizeof(u8));
     }
     FW_Unlock();
 }
@@ -345,23 +345,13 @@ static u32  FW_SPI_WriteINT(void *dev, u32 offset, const void *pdata, u32 num)
     FW_SPI_Driver_Type *drv = FW_Device_GetDriver(spi);
     RB_Type *fifo = spi->Config.TX_FIFO;
     
-    FW_Lock();
+    if(num == 0)  return 0;
+
+    RB_PMB_Write(fifo, pdata, num);
     
-    /* 没有数据或发送缓存空间不足 */
-    if(num == 0 ||
-       num > fifo->Size - RB_Get_DataLength(fifo))
-    {
-        FW_Unlock();
-        return 0;
-    }
-    
-    /* 将发送数据填入发送缓存 */
-    RB_Write(fifo, pdata, num);
-    
-    FW_Unlock();
-    
-    /* 开启发送中断 */
     drv->TX_CTL(spi, Enable);
+    while(RB_Get_DataLength(fifo) > 0);
+    drv->TX_CTL(spi, Disable);
     
     return num;
 }
@@ -391,7 +381,29 @@ static u32  FW_SPI_ReadPOL(void *dev, u32 offset, void *pdata, u32 num)
 static u32  FW_SPI_ReadINT(void *dev, u32 offset, void *pdata, u32 num)
 {
     FW_SPI_Type *spi = (FW_SPI_Type *)dev;
-    return RB_Read(spi->Config.RX_FIFO, pdata, num);
+    FW_SPI_Driver_Type *drv = FW_Device_GetDriver(spi);
+    RB_Type *tx_fifo = spi->Config.TX_FIFO;
+    RB_Type *rx_fifo = spi->Config.RX_FIFO;
+    u8 value = 0xFF;
+    
+    if(num == 0)  return 0;
+    
+    RB_PMB_Set(tx_fifo, &value, sizeof(u8));
+    RB_PMB_Set(rx_fifo, pdata, num);
+    
+    drv->RX_Byte(spi);
+    
+    drv->RX_CTL(spi, Enable);
+    while(RB_Get_DataLength(rx_fifo) < num)
+    {
+        RB_PMB_Write(tx_fifo, &value, sizeof(u8));
+        drv->TX_CTL(spi, Enable);
+        while(RB_Get_DataLength(tx_fifo) > 0);
+    }
+    drv->TX_CTL(spi, Disable);
+    drv->RX_CTL(spi, Disable);
+    
+    return num;
 }
 
 static u32  FW_SPI_ReadDMA(void *dev, u32 offset, void *pdata, u32 num)

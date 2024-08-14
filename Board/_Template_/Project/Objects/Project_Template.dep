@@ -3,10 +3,10 @@ CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
 F (..\..\..\Document\1¡¢´íÎó¡¢¾¯¸æÐÞ¸´¼ÇÂ¼.txt)(0x66AA371D)()
 F (..\..\..\Document\2¡¢µ÷ÊÔ¡¢ÐÞ¸Ä¼ÇÂ¼.txt)(0x66B0DCD3)()
 F (.\Include\project_config.h)(0x662F1897)()
-F (.\Include\project_debug.h)(0x66B38289)()
+F (.\Include\project_debug.h)(0x66BCBC7E)()
 F (..\Application\main.c)(0x663D7576)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 F (..\Application\Task\main_task.c)(0x662B3F6B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\main_task.o --omf_browse .\objects\main_task.crf --depend .\objects\main_task.d)
 I (..\Application\ASP\display.h)(0x662B3F6B)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
@@ -16,7 +16,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -32,7 +32,7 @@ I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_uart.h)(0x66B0D05E)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 F (..\LL_Driver\Source\ll_system.c)(0x662B3F6B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\ll_system.o --omf_browse .\objects\ll_system.crf --depend .\objects\ll_system.d)
 I (..\LL_Driver\Include\ll_include.h)(0x662B3F6B)
 I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x662B40AE)
@@ -74,7 +74,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -125,7 +125,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -177,7 +177,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -228,7 +228,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -280,7 +280,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -291,7 +291,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -335,7 +335,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -353,7 +353,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -438,7 +438,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -450,7 +450,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 F (..\LL_Driver\Source\ll_s2ram.c)(0x662B3F6B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\ll_s2ram.o --omf_browse .\objects\ll_s2ram.crf --depend .\objects\ll_s2ram.d)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_s2ram.h)(0x66B0D090)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
@@ -507,7 +507,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -566,7 +566,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -616,7 +616,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -668,7 +668,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -678,7 +678,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 F (..\LL_Driver\Source\ll_timer.c)(0x6639D0E9)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\ll_timer.o --omf_browse .\objects\ll_timer.crf --depend .\objects\ll_timer.d)
 I (..\LL_Driver\Include\ll_include.h)(0x662B3F6B)
@@ -722,7 +722,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -775,7 +775,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -786,7 +786,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -831,7 +831,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -846,6 +846,62 @@ I (..\..\..\F2M_C\FWAL\HAL\Include\fw_timer.h)(0x66B0D0C5)
 I (..\..\..\F2M_C\Device\DAL\Include\pwm.h)(0x66B36C5A)
 I (..\..\..\F2M_C\Device\DAL\Include\qencoder.h)(0x66B36C2E)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
+F (..\LL_Driver\Source\ll_can.c)(0x66BC8071)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\ll_can.o --omf_browse .\objects\ll_can.crf --depend .\objects\ll_can.d)
+I (..\LL_Driver\Include\ll_include.h)(0x662B3F6B)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\core_cm4.h)(0x662B40AE)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\core_cmInstr.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\core_cmFunc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\core_cm4_simd.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_libopt.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_can.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x662B40AE)
+I (..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x662B40AE)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_can.h)(0x66BC81D6)
+I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
+I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
+I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
+I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
+I (.\Include\project_config.h)(0x662F1897)
+I (.\Include\project_debug.h)(0x66BCBC7E)
+I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
+I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
+I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
+I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
+I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
+I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
+I (..\LL_Driver\Include\ll_system.h)(0x662B3F6B)
 F (..\LL_Driver\Startup\startup_gd32f30x_hd.s)(0x6645D590)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 529" --pd "GD32F30X_HD SETA 1"--list .\listings\startup_gd32f30x_hd.lst --xref -o .\objects\startup_gd32f30x_hd.o --depend .\objects\startup_gd32f30x_hd.d)
 F (..\LL_Driver\USBD\MSC\Source\bbb_scsi_driver.c)(0x662B3F6B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\bbb_scsi_driver.o --omf_browse .\objects\bbb_scsi_driver.crf --depend .\objects\bbb_scsi_driver.d)
 I (..\LL_Driver\USBD\MSC\Include\bbb_scsi_driver.h)(0x662B3F6B)
@@ -928,7 +984,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -993,7 +1049,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -1022,7 +1078,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
@@ -1171,7 +1227,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
@@ -1320,7 +1376,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1337,7 +1393,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1366,13 +1422,13 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
-F (..\..\..\F2M_C\Component\Source\rbuffer.c)(0x66B0D24E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\rbuffer.o --omf_browse .\objects\rbuffer.crf --depend .\objects\rbuffer.d)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+F (..\..\..\F2M_C\Component\Source\rbuffer.c)(0x66BCB402)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\rbuffer.o --omf_browse .\objects\rbuffer.crf --depend .\objects\rbuffer.d)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1389,7 +1445,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1398,7 +1454,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\Component\Include\mm.h)(0x66B0D234)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -1414,7 +1470,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1436,7 +1492,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1459,7 +1515,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1474,12 +1530,8 @@ I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_spi.h)(0x66B0D09C)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_system.h)(0x66B0D029)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_usb.h)(0x66B0D06D)
-I (..\..\..\F2M_C\Component\Include\mm.h)(0x66B0D234)
 F (..\..\..\F2M_C\Device\Source\wf200d.c)(0x66B0D198)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\wf200d.o --omf_browse .\objects\wf200d.crf --depend .\objects\wf200d.d)
 I (..\..\..\F2M_C\Device\Include\wf200d.h)(0x66B0D198)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
@@ -1487,7 +1539,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1500,9 +1552,9 @@ I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66B0D0A7)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66BCB573)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_spi.h)(0x66B0D09C)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -1514,7 +1566,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1527,9 +1579,9 @@ I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66B0D0A7)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66BCB573)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_uart.h)(0x66B0D05E)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -1541,7 +1593,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1555,13 +1607,13 @@ I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Device\DAL\Include\wifi.h)(0x66B36C5A)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_uart.h)(0x66B0D05E)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 F (..\..\..\F2M_C\Device\Source\fm17522.c)(0x66B0D1C5)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fm17522.o --omf_browse .\objects\fm17522.crf --depend .\objects\fm17522.d)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
@@ -1582,7 +1634,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_spi.h)(0x66B0D09C)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\Device\DAL\Include\mifare.h)(0x66B36C2E)
 F (..\..\..\F2M_C\Device\Source\ds18b20.c)(0x66B0D1C5)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\ds18b20.o --omf_browse .\objects\ds18b20.crf --depend .\objects\ds18b20.d)
 I (..\..\..\F2M_C\Device\Include\ds18b20.h)(0x66B0D1C5)
@@ -1591,7 +1643,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1614,7 +1666,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1629,7 +1681,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_spi.h)(0x66B0D09C)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 F (..\..\..\F2M_C\Device\Source\gyy0709.c)(0x66B0D1F5)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\gyy0709.o --omf_browse .\objects\gyy0709.crf --depend .\objects\gyy0709.d)
@@ -1639,7 +1691,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1653,7 +1705,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_uart.h)(0x66B0D05E)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 F (..\..\..\F2M_C\Device\Source\tm7711.c)(0x66B0D20D)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\tm7711.o --omf_browse .\objects\tm7711.crf --depend .\objects\tm7711.d)
 I (..\..\..\F2M_C\Device\Include\tm7711.h)(0x66B0D20D)
@@ -1662,7 +1714,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1684,7 +1736,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1697,14 +1749,14 @@ I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
-F (..\..\..\F2M_C\Device\DAL\Source\led.c)(0x66B36C20)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+F (..\..\..\F2M_C\Device\DAL\Source\led.c)(0x66BCBEF4)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
 I (..\..\..\F2M_C\Device\DAL\Include\led.h)(0x66B36C20)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1718,6 +1770,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\stiming.h)(0x66B0D23A)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
+I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 F (..\..\..\F2M_C\Device\DAL\Source\mifare.c)(0x66B36C2E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\mifare.o --omf_browse .\objects\mifare.crf --depend .\objects\mifare.d)
 I (..\..\..\F2M_C\Device\DAL\Include\mifare.h)(0x66B36C2E)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
@@ -1725,7 +1778,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1745,7 +1798,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1765,7 +1818,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1783,7 +1836,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1801,7 +1854,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1819,7 +1872,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1836,7 +1889,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1855,7 +1908,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1871,7 +1924,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1888,7 +1941,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1908,7 +1961,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1928,7 +1981,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1949,7 +2002,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1969,7 +2022,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1980,7 +2033,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
@@ -1993,7 +2046,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2013,7 +2066,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2035,7 +2088,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2055,7 +2108,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2074,7 +2127,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2086,7 +2139,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_system.h)(0x66B0D029)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
@@ -2097,7 +2150,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2110,7 +2163,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_uart.h)(0x66B0D05E)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 F (..\..\..\F2M_C\FWAL\HAL\Source\fw_usb.c)(0x66B0CF9D)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_usb.o --omf_browse .\objects\fw_usb.crf --depend .\objects\fw_usb.d)
@@ -2120,7 +2173,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2140,7 +2193,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2161,7 +2214,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2182,7 +2235,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2202,7 +2255,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2222,7 +2275,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2236,14 +2289,14 @@ I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Device\DAL\Include\lcd.h)(0x66B36C36)
-F (..\..\..\F2M_C\FWAL\HAL\Source\fw_spi.c)(0x66B38A96)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_spi.o --omf_browse .\objects\fw_spi.crf --depend .\objects\fw_spi.d)
+F (..\..\..\F2M_C\FWAL\HAL\Source\fw_spi.c)(0x66BCBCB2)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_spi.o --omf_browse .\objects\fw_spi.crf --depend .\objects\fw_spi.d)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_spi.h)(0x66B0D09C)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2255,7 +2308,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_system.h)(0x66B0D029)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
@@ -2267,7 +2320,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2279,17 +2332,17 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 F (..\..\..\F2M_C\FWAL\HAL\Source\fw_i2c.c)(0x66B0CFCA)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_i2c.o --omf_browse .\objects\fw_i2c.crf --depend .\objects\fw_i2c.d)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66B0D0A7)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66BCB573)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2301,19 +2354,19 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_system.h)(0x66B0D029)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
-F (..\..\..\F2M_C\FWAL\HAL\Source\fw_si2c.c)(0x66B0CFCA)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_si2c.o --omf_browse .\objects\fw_si2c.crf --depend .\objects\fw_si2c.d)
-I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66B0D0A7)
+F (..\..\..\F2M_C\FWAL\HAL\Source\fw_si2c.c)(0x66BCB78F)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_si2c.o --omf_browse .\objects\fw_si2c.crf --depend .\objects\fw_si2c.d)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_i2c.h)(0x66BCB573)
 I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2325,7 +2378,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
-I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66B0D24E)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 F (..\..\..\F2M_C\FWAL\HAL\Source\fw_timer.c)(0x66B0CFDD)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_timer.o --omf_browse .\objects\fw_timer.crf --depend .\objects\fw_timer.d)
@@ -2335,7 +2388,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2356,7 +2409,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2376,7 +2429,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2396,7 +2449,7 @@ I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2411,6 +2464,30 @@ I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
 I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 I (..\..\..\F2M_C\FWAL\HAL\Include\fw_delay.h)(0x66B0D02F)
 I (..\..\..\F2M_C\Component\Include\mm.h)(0x66B0D234)
+F (..\..\..\F2M_C\FWAL\HAL\Source\fw_can.c)(0x66BC8225)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\fw_can.o --omf_browse .\objects\fw_can.crf --depend .\objects\fw_can.d)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_can.h)(0x66BC81D6)
+I (..\..\..\F2M_C\FWAL\Include\fw_device.h)(0x66B0D0EF)
+I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
+I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
+I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
+I (.\Include\project_config.h)(0x662F1897)
+I (.\Include\project_debug.h)(0x66BCBC7E)
+I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
+I (..\..\..\F2M_C\FWAL\Include\fw_list.h)(0x662B40AE)
+I (..\..\..\F2M_C\FWAL\Include\fw_driver.h)(0x66B0D0EF)
+I (..\..\..\F2M_C\Component\Include\serial.h)(0x66B0D255)
+I (..\..\..\F2M_C\Component\Include\rbuffer.h)(0x66BCB3C1)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_system.h)(0x66B0D029)
+I (..\..\..\F2M_C\FWAL\HAL\Include\fw_gpio.h)(0x66B0D03C)
+I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
+I (..\..\..\F2M_C\FWAL\Include\fw_print.h)(0x66B0D0EF)
 F (..\..\..\F2M_C\Library\Source\lib_bsc.c)(0x66B0D131)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\lib_bsc.o --omf_browse .\objects\lib_bsc.crf --depend .\objects\lib_bsc.d)
 I (..\..\..\F2M_C\Library\Include\lib_bsc.h)(0x66B0D137)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
@@ -2443,7 +2520,7 @@ I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\ctype.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x5D9AD212)
 I (..\..\..\F2M_C\FWAL\Include\fw_debug.h)(0x66B0D004)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 F (..\..\..\F2M_C\Protocol\Source\smodem_master.c)(0x66B0D287)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Include -I ..\Application\ASP -I ..\Application\ASP\Include -I ..\Application\BSP -I ..\Application\BSP\Include -I ..\LL_Driver\Include -I ..\LL_Driver\USBD\MSC\Include -I ..\..\..\F2M_C\Component\Include -I ..\..\..\F2M_C\Device\Include -I ..\..\..\F2M_C\Device\DAL\Include -I ..\..\..\F2M_C\FWAL\Include -I ..\..\..\F2M_C\FWAL\HAL\Include -I ..\..\..\F2M_C\Library\Include -I ..\..\..\F2M_C\Protocol\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS -I ..\..\..\Firmware\GD32F30x_Firmware_Library\CMSIS\GD\GD32F30x\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_standard_peripheral\Include -I ..\..\..\Firmware\GD32F30x_Firmware_Library\GD32F30x_usbd_driver\Include -I ..\..\..\Third_Party\LVGL\src -I ..\..\..\Third_Party\LVGL\src\core -I ..\..\..\Third_Party\LVGL\src\draw -I ..\..\..\Third_Party\LVGL\src\extra -I ..\..\..\Third_Party\LVGL\src\font -I ..\..\..\Third_Party\LVGL\src\gpu -I ..\..\..\Third_Party\LVGL\src\hal -I ..\..\..\Third_Party\LVGL\src\misc -I ..\..\..\Third_Party\LVGL\src\widgets -I ..\Ports\LVGL -I ..\Application\UI\custom -I ..\Application\UI\generated -I ..\Application\UI\generated\guider_customer_fonts -I ..\Application\UI\generated\guider_fonts -I ..\..\..\Third_Party\cJSON -I ..\Ports\fatfs -I ..\..\..\Third_Party\fatfs\source -I ..\..\..\Third_Party\littlefs -I ..\Ports\littlefs --locale=english-I.\RTE\_Template-I"D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include"-I"D:\Program Files (x86)\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DGD32F30X_HD -DGD32F30X_HD -D__FPU_PRESENT -DUSE_USBFS-o .\objects\smodem_master.o --omf_browse .\objects\smodem_master.crf --depend .\objects\smodem_master.d)
 I (..\..\..\F2M_C\Protocol\Include\smodem_master.h)(0x66B0D287)
 I (..\..\..\F2M_C\FWAL\Include\fw_type.h)(0x664C0D67)
@@ -2451,7 +2528,7 @@ I (..\..\..\F2M_C\Component\Include\stiming.h)(0x66B0D23A)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -2468,7 +2545,7 @@ I (..\..\..\F2M_C\Component\Include\stiming.h)(0x66B0D23A)
 I (..\..\..\F2M_C\FWAL\Include\fw_define.h)(0x662B40AE)
 I (..\..\..\F2M_C\FWAL\Include\fw_config.h)(0x66B0D004)
 I (.\Include\project_config.h)(0x662F1897)
-I (.\Include\project_debug.h)(0x66B38289)
+I (.\Include\project_debug.h)(0x66BCBC7E)
 I (..\..\..\F2M_C\Library\Include\libc.h)(0x662B40AE)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x5D9AD218)

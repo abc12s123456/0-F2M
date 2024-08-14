@@ -524,6 +524,11 @@
               <FileType>1</FileType>
               <FilePath>..\LL_Driver\Source\ll_dac.c</FilePath>
             </File>
+            <File>
+              <FileName>ll_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LL_Driver\Source\ll_can.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -950,6 +955,11 @@
               <FileName>fw_dac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\F2M_C\FWAL\HAL\Source\fw_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>fw_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\F2M_C\FWAL\HAL\Source\fw_can.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -228,3 +228,28 @@ __INLINE_STATIC_ void Pin_CTL(LED_Type *dev, u8 state)
         FW_GPIO_Write(dev->Pin, !dev->Level);
 }
 
+
+
+
+#include "fw_debug.h"
+#if MODULE_TEST && LED_TEST
+
+
+void Test(void)
+{
+    LED_Type LED;
+    
+    LED_DeInit(&LED);
+    LED.Pin = PA15;
+    LED.Level = LEVEL_H;
+    LED_Init(&LED);
+    
+    while(1)
+    {
+        LED_Exq_Breath(&LED, 10000);
+    }
+}
+
+
+#endif
+

@@ -47,7 +47,9 @@ typedef struct
     u32 Full_Flag : 1;
     u32 Dynamic_Flag : 1;
     
-    u32 : 30;
+    u32 PMB_Flag : 1;                  //pdata map buffer
+    
+    u32 : 29;
 }RB_Type;
 
 
@@ -61,6 +63,10 @@ void RB_Clear_Buffer(RB_Type *rb);
 void RB_Fill_Buffer(RB_Type *rb, u8 value);
 u32  RB_Get_BufferSize(RB_Type *rb);
 u32  RB_Get_DataLength(RB_Type *rb);
+
+void RB_PMB_Set(RB_Type *rb, const u8 *pdata, u32 size);
+u32  RB_PMB_Write(RB_Type *rb, const u8 *pdata, u32 num);
+void RB_PMB_Clear(RB_Type *rb);
 
 u32  RB_Write(RB_Type *rb, const u8 *pdata, u32 num);
 u32  RB_Read(RB_Type *rb, u8 *pdata, u32 num);

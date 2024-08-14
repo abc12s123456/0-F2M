@@ -111,6 +111,7 @@ Bool RB_Init(RB_Type *rb, u32 size)
     rb->Tail_Index = 0;
     rb->Full_Flag = False;
     rb->Dynamic_Flag = False;
+    rb->PMB_Flag = False;
     
     RB_Unlock();
     
@@ -175,17 +176,55 @@ u32  RB_Get_DataLength(RB_Type *rb)
     return tmp;
 }
 
+void RB_PMB_Set(RB_Type *rb, const u8 *pdata, u32 size)
+{
+    RB_Lock();
+    rb->Buffer = (u8 *)pdata;
+    rb->Size = size;
+    rb->PMB_Flag = True;
+    rb->Full_Flag = False;
+    rb->Head_Index = 0;
+    rb->Tail_Index = 0;
+    RB_Unlock();
+}
+
+u32  RB_PMB_Write(RB_Type *rb, const u8 *pdata, u32 num)
+{
+    RB_Lock();
+    rb->Buffer = (u8 *)pdata;
+    rb->Size = num;
+    rb->PMB_Flag = True;
+    rb->Full_Flag = True;
+    RB_Unlock();
+    return num;
+}
+
+void RB_PMB_Clear(RB_Type *rb)
+{
+    FW_Lock();
+    rb->Buffer = NULL;
+    rb->Size = 0;
+    rb->PMB_Flag = False;
+    rb->Full_Flag = False;
+    rb->Head_Index = 0;
+    rb->Tail_Index = 0;
+    FW_Unlock();
+}
+
 u32  RB_Write(RB_Type *rb, const u8 *pdata, u32 num)
 {
     u32 remain;
     s32 tmp;
     
-    if(num == 0)  return 0;
+    if(num == 0 || rb->Buffer == NULL)  return 0;
     
-    /* pdata与缓存地址重叠 */
-    tmp = (u32)pdata - (u32)rb->Buffer;
-    tmp = (tmp < 0) ? -tmp : tmp;
-    if(tmp <= RB_Get_BufferSize(rb))  return 0;
+    if(rb->PMB_Flag != True)
+    {
+        /* pdata与缓存地址重叠 */
+        tmp = (u32)pdata - (u32)rb->Buffer;
+        tmp = (tmp < 0) ? -tmp : tmp;
+        if(tmp <= RB_Get_BufferSize(rb))  return 0;
+    }
     
     RB_Lock();
     
@@ -228,12 +267,15 @@ u32  RB_Read(RB_Type *rb, u8 *pdata, u32 num)
     u32 retain;
     s32 tmp;
     
-    if(num == 0)  return 0;
+    if(num == 0 || rb->Buffer == NULL)  return 0;
     
-    /* pdata与RB缓存地址重叠 */
-    tmp = (u32)pdata - (u32)rb->Buffer;
-    tmp = (tmp < 0) ? -tmp : tmp;
-    if(tmp <= RB_Get_BufferSize(rb))  return 0;
+    if(rb->PMB_Flag != True)
+    {
+        /* pdata与RB缓存地址重叠 */
+        tmp = (u32)pdata - (u32)rb->Buffer;
+        tmp = (tmp < 0) ? -tmp : tmp;
+        if(tmp <= RB_Get_BufferSize(rb))  return 0;
+    }
     
     RB_Lock();
     

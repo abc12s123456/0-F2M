@@ -63,9 +63,9 @@ __INLINE_STATIC_ void SI2C_Start(FW_I2C_Type *dev)
     SCL_OUT(dev, LEVEL_H);
     
     SDA_OUT(dev, LEVEL_H);
-    FW_Delay_Us(10);
+    FW_Delay_Us(dev->SDTime);
     SDA_OUT(dev, LEVEL_L);
-    FW_Delay_Us(10);
+    FW_Delay_Us(dev->SDTime);
     
     SCL_OUT(dev, LEVEL_L);
 }
@@ -82,9 +82,9 @@ __INLINE_STATIC_ void SI2C_Stop(FW_I2C_Type *dev)
     SCL_OUT(dev, LEVEL_H);
     
     SDA_OUT(dev, LEVEL_L);
-    FW_Delay_Us(10);
+    FW_Delay_Us(dev->SDTime);
     SDA_OUT(dev, LEVEL_H);
-    FW_Delay_Us(10);
+    FW_Delay_Us(dev->SDTime);
     
     SCL_OUT(dev, LEVEL_L);
 }
@@ -115,9 +115,9 @@ __INLINE_STATIC_ void SI2C_Write_Byte(FW_I2C_Type *dev, u8 value)
             }    
             value <<= 1;                         //下一个bit
             SCL_OUT(dev, LEVEL_H);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             SCL_OUT(dev, LEVEL_L);
-//            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
         }
     }
     else
@@ -134,8 +134,9 @@ __INLINE_STATIC_ void SI2C_Write_Byte(FW_I2C_Type *dev, u8 value)
             }    
             value >>= 1;                         //下一个bit
             SCL_OUT(dev, LEVEL_H);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             SCL_OUT(dev, LEVEL_L);
+            FW_Delay_Us(dev->SDTime);
         }
     }
 }
@@ -160,9 +161,9 @@ __INLINE_STATIC_ u8 SI2C_Read_Byte(FW_I2C_Type *dev)
         for(u8 i = 0; i < 8; i++)
         {
             SCL_OUT(dev, LEVEL_L);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             SCL_OUT(dev, LEVEL_H);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             value <<= 1;                         //MSB开始读取
             value |= SDA_IN(dev);
         }
@@ -172,9 +173,9 @@ __INLINE_STATIC_ u8 SI2C_Read_Byte(FW_I2C_Type *dev)
         for(u8 i = 0; i < 8; i++)
         {
             SCL_OUT(dev, LEVEL_L);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             SCL_OUT(dev, LEVEL_H);
-            FW_Delay_Us(10);
+            FW_Delay_Us(dev->SDTime);
             value <<= i;                          //LSB开始读取
             value |= SDA_IN(dev);
         }
@@ -187,35 +188,39 @@ __INLINE_STATIC_ u8 SI2C_Read_Byte(FW_I2C_Type *dev)
 /**/
 
 /**
+@功能：非应答信号
+@参数：dev, I2C端口对象
+@返回：无
+@说明：
+*/
+__INLINE_STATIC_ void SI2C_NAK(FW_I2C_Type *dev)
+{
+    SDA_OUT(dev, LEVEL_H);
+    FW_Delay_Us(dev->SDTime);
+    
+    SCL_OUT(dev, LEVEL_H);
+    FW_Delay_Us(dev->SDTime);
+    
+    SCL_OUT(dev, LEVEL_L);
+    FW_Delay_Us(dev->SDTime);
+}
+
+/**
 @功能：应答信号
 @参数：dev, I2C端口对象
 @返回：无
 @说明：
 */
-__INLINE_STATIC_ void SI2C_ACK(FW_I2C_Type *dev, u8 ack)
+__INLINE_STATIC_ void SI2C_ACK(FW_I2C_Type *dev)
 {
-    if(ack)                                      //非应答信号
-    {
-        SDA_OUT(dev, LEVEL_H);
-        FW_Delay_Us(5);
-        
-        SCL_OUT(dev, LEVEL_H);
-        FW_Delay_Us(10);
-        
-        SCL_OUT(dev, LEVEL_L);
-        FW_Delay_Us(5);
-    }
-    else                                         //应答信号
-    {
-        SDA_OUT(dev, LEVEL_L);
-        FW_Delay_Us(5);
-        
-        SCL_OUT(dev, LEVEL_H);
-        FW_Delay_Us(10);
-        
-        SCL_OUT(dev, LEVEL_L);
-        FW_Delay_Us(5);
-    }
+    SDA_OUT(dev, LEVEL_L);
+    FW_Delay_Us(dev->SDTime);
+    
+    SCL_OUT(dev, LEVEL_H);
+    FW_Delay_Us(dev->SDTime);
+    
+    SCL_OUT(dev, LEVEL_L);
+    FW_Delay_Us(dev->SDTime);
 }
 /**/
 
@@ -227,317 +232,140 @@ __INLINE_STATIC_ void SI2C_ACK(FW_I2C_Type *dev, u8 ack)
 */
 __INLINE_STATIC_ void FW_SI2C_Init(FW_I2C_Type *dev)
 {
-    FW_GPIO_Init(dev->SCL_Pin, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
-    FW_GPIO_Init(dev->SDA_Pin, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
+    FW_GPIO_Init(dev->SCL_Pin, FW_GPIO_Mode_Out_ODN, FW_GPIO_Speed_Low);
+    FW_GPIO_Init(dev->SDA_Pin, FW_GPIO_Mode_Out_ODN, FW_GPIO_Speed_Low);
+    
     FW_GPIO_SET(dev->SCL_Pin);
     FW_GPIO_SET(dev->SDA_Pin);
+    
+    /* 模拟I2C通信速率最大100Kbps */
+    if(dev->Baudrate >= 1000000)
+    {
+        dev->SDTime = 1;
+    }
+    else
+    {
+        dev->SDTime = 1000000 / dev->Baudrate;
+    }
 }
 /**/
 
-///**
-//@功能：模拟I2C向设备写一个字节
-//@参数：Type, I2C端口对象
-//       addr, 数据写入地址
-//       Data, 写入的数据
-//@返回：无
-//@说明：
-//*/
-//void FW_SI2C_WriteByte(FW_I2C_Type *dev, u8 *paddr, u8 num_addr, u8 value)
-//{
-//    u8 i;
-//    
-//    SI2C_Start(dev);                                  //起始信号
-//    
-//    if(dev->ID)                                  //从设备地址不为0
-//    {
-//        SI2C_Write_Byte(dev, dev->ID);                //写入从设备地址
-//        SI2C_ACK(dev, 0);                             //发送应答信号
-//    }
-//    
-//    for(i = 0; i < num_addr; i++)
-//    {
-//        SI2C_Write_Byte(dev, paddr[num_addr - 1 - i]);
-//        SI2C_ACK(dev, 0);
-//    }
-//    FW_Delay_Ms(dev->D0);
-//    
-////    Write_Byte(dev, addr);                      //写入数据地址
-////    ACK(dev, 0);
-//    
-//    SI2C_Write_Byte(dev, value);                       //写数据
-//    SI2C_ACK(dev, 0);
-//    FW_Delay_Ms(dev->D2);
-//    
-//    SI2C_Stop(dev);                                    //结束信号
-//    FW_Delay_Ms(dev->D3);                         //
-//}
-///**/
-
-///**
-//@功能：模拟I2C读取一个字节
-//@参数：Type, I2C端口对象
-//       addr, 读取数据的地址
-//@返回：读取到的数据
-//@说明：
-//*/
-//u8 FW_SI2C_ReadByte(FW_I2C_Type *dev, u8 *paddr, u8 num_addr)
-//{
-//    u8 value = 0;
-//    u8 i;
-//    
-//    SI2C_Start(dev);
-//    
-//    if(dev->ID)
-//    {
-//        SI2C_Write_Byte(dev, dev->ID);
-//        SI2C_ACK(dev, 0);
-//    }
-//    
-//    for(i = 0; i < num_addr; i++)
-//    {
-//        SI2C_Write_Byte(dev, paddr[num_addr - 1 - i]);
-//        SI2C_ACK(dev, 0);
-//    }
-//    FW_Delay_Ms(dev->D0);
-//    
-//    SI2C_Start(dev);                                  //重启，进行读操作
-//    if(dev->ID)
-//    {
-//        SI2C_Write_Byte(dev, dev->ID + 1);            //
-//        SI2C_ACK(dev, 0);
-//    }
-//    FW_Delay_Ms(dev->D1);
-//    
-//    value = SI2C_Read_Byte(dev);                      //读数据
-//    FW_Delay_Ms(dev->D2);
-//    
-//    SCL_OUT(dev, LEVEL_L);                       //SLC拉低，发送非应答，结束操作
-//    SI2C_ACK(dev, 1);
-//    SI2C_Stop(dev);
-//    FW_Delay_Ms(dev->D3);
-//    
-//    return value;
-//}
-///**/
-
-//__INLINE_STATIC_ void FW_SI2C_SetDelay(FW_I2C_Type *dev, u8 d0, u8 d1, u8 d2, u8 d3)
-//{
-//    dev->D0 = d0;
-//    dev->D1 = d1;
-//    dev->D2 = d2;
-//    dev->D3 = d3;
-//}
-///**/
-
-#if 1
 /* 模拟I2C中，addr的高8位保存有效地址的位数 */
 __INLINE_STATIC_ u32  FW_SI2C_Write(FW_I2C_Type *dev, u32 addr, const u8 *pdata, u32 num)
 {
-    #if 0
-    u32 i;
-    
-    SI2C_Start(dev);
-    
-    SI2C_Write_Byte(dev, dev->ID);
-    SI2C_ACK(dev, 0);
-    
-    SI2C_Write_Byte(dev, addr);
-    SI2C_ACK(dev, 0);
-    
-    for(i = 0; i < num; i++)
-    {
-        SI2C_Write_Byte(dev, *pdata++);
-        SI2C_ACK(dev, 0);
-    }
-    
-    SI2C_Stop(dev);
-    
-    FW_Delay_Ms(5);
-    #else
     u32 i;
     u8 addr_num;
     u8 addr_value;
     
     SI2C_Start(dev);
     
-    SI2C_Write_Byte(dev, dev->ID);
-    SI2C_ACK(dev, 0);
-    FW_Delay_Ms(dev->D0);
+    if(dev->Device_Addr_Mode == FW_I2C_DAM_10Bits)
+    {
+        u8 addr_h, addr_l;
+        addr_h = FW_I2C_Get10BAddrH(dev->ID);
+        addr_l = FW_I2C_Get10BAddrL(dev->ID);
+        
+        SI2C_Write_Byte(dev, addr_h);
+        SI2C_ACK(dev);
+        
+        SI2C_Write_Byte(dev, addr_l);
+        SI2C_ACK(dev);
+    }
+    else
+    {
+        SI2C_Write_Byte(dev, dev->ID);
+        SI2C_ACK(dev);
+    }
     
     /* addr = addr_num[31 : 24] + addr_h[23 : 16] + addr_m[15 : 8] + addr_l[7 : 0] */
-    addr_num = (u8)((addr >> 24) + 1);
+//    addr_num = (u8)((addr >> 24) + 1);
+    addr_num = dev->Access_Addr_Mode + 1;
     for(i = 0; i < addr_num; i++)
     {
         addr_value = (u8)((addr >> (i << 3)) & 0xFF);
         SI2C_Write_Byte(dev, addr_value);
-        SI2C_ACK(dev, 0);
+        SI2C_ACK(dev);
     }
-    FW_Delay_Ms(dev->D1);
     
     for(i = 0; i < num; i++)
     {
         SI2C_Write_Byte(dev, *pdata++);
-//        SI2C_ACK(dev, 0);
-//        FW_Delay_Ms(dev->D2);
+//        SI2C_ACK(dev);
     }
     
     SI2C_Stop(dev);
-    FW_Delay_Ms(dev->D3);
     
     return num;
-    #endif
 }
 
 __INLINE_STATIC_ u32  FW_SI2C_Read(FW_I2C_Type *dev, u32 addr, u8 *pdata, u32 num)
 {
-    #if 0
-    u32 i;
-    
-    SI2C_Start(dev);
-    
-    SI2C_Write_Byte(dev, dev->ID);
-    SI2C_ACK(dev, 0);
-    
-    SI2C_Write_Byte(dev, addr);
-    SI2C_ACK(dev, 0);
-    
-    SI2C_Start(dev);
-    
-    SI2C_Write_Byte(dev, dev->ID + 1);
-    SI2C_ACK(dev, 0);
-    
-    for(i = 0; i < num; i++)
-    {
-        *pdata++ = SI2C_Read_Byte(dev);
-    }
-    
-    SCL_OUT(dev, LEVEL_L);
-    SI2C_ACK(dev, 1);
-    
-    SI2C_Stop(dev);
-    
-    return num;
-    
-    #else
     u32 i;
     u8 addr_num;
     u8 addr_value;
     
     SI2C_Start(dev);
     
-    SI2C_Write_Byte(dev, dev->ID);
-    SI2C_ACK(dev, 0);
-    FW_Delay_Ms(dev->D0);
+    if(dev->Device_Addr_Mode == FW_I2C_DAM_10Bits)
+    {
+        u8 addr_h, addr_l;
+        addr_h = FW_I2C_Get10BAddrH(dev->ID);
+        addr_l = FW_I2C_Get10BAddrL(dev->ID);
+        
+        SI2C_Write_Byte(dev, addr_h);
+        SI2C_ACK(dev);
+        
+        SI2C_Write_Byte(dev, addr_l);
+        SI2C_ACK(dev);
+    }
+    else
+    {
+        SI2C_Write_Byte(dev, dev->ID);
+        SI2C_ACK(dev);
+    }
     
-    addr_num = (u8)((addr >> 24) + 1);
+//    addr_num = (u8)((addr >> 24) + 1);
+    addr_num = dev->Access_Addr_Mode + 1;
     for(i = 0; i < addr_num; i++)
     {
         addr_value = (u8)((addr >> (i << 3)) & 0xFF);
         SI2C_Write_Byte(dev, addr_value);
-        SI2C_ACK(dev, 0);
+        SI2C_ACK(dev);
     }
-    FW_Delay_Ms(dev->D1);
     
     SI2C_Start(dev);
     
-    SI2C_Write_Byte(dev, dev->ID | 0x01);
-    SI2C_ACK(dev, 0);
-    FW_Delay_Ms(dev->D0);
+    if(dev->Device_Addr_Mode == FW_I2C_DAM_10Bits)
+    {
+        u8 addr_h, addr_l;
+        addr_h = FW_I2C_Get10BAddrH(dev->ID);
+        addr_l = FW_I2C_Get10BAddrL(dev->ID);
+        
+        SI2C_Write_Byte(dev, addr_h | 0x01);
+        SI2C_ACK(dev);
+        
+        SI2C_Write_Byte(dev, addr_l);
+        SI2C_ACK(dev);
+    }
+    else
+    {
+        SI2C_Write_Byte(dev, dev->ID | 0x01);
+        SI2C_ACK(dev);
+    }
     
     for(i = 0; i < num; i++)
     {
         *pdata++ = SI2C_Read_Byte(dev);
-//        SI2C_ACK(dev, 0);
-//        FW_Delay_Ms(dev->D2);
+        SI2C_ACK(dev);
     }
     
     SCL_OUT(dev, LEVEL_L);
-    SI2C_ACK(dev, 1);
+    SI2C_NAK(dev);
     
     SI2C_Stop(dev);
-    FW_Delay_Ms(dev->D3);
-    
-    return num;
-    #endif
-}
-
-//void FW_SI2C_SetDelay(FW_I2C_Type *dev, u8 d0, u8 d1, u8 d2, u8 d3)
-//{
-//    dev->D0 = d0;
-//    dev->D1 = d1;
-//    dev->D2 = d2;
-//    dev->D3 = d3;
-//}
-
-#else
-void FW_SI2C_Write(FW_I2C_Type *dev, u8 *paddr, u8 num_addr, u8 *pdata, u32 num)
-{
-    u32 i;
-    
-    Start(dev);
-    
-    Write_Byte(dev, dev->ID);
-    ACK(dev, 0);
-    
-    FW_Delay_Ms(dev->D0);
-    
-    for(i = 0; i < num_addr; i++)
-    {
-        Write_Byte(dev, paddr[num_addr - 1 - i]);
-        ACK(dev, 0);
-    }
-    FW_Delay_Ms(dev->D1);
-    
-    for(i = 0; i < num; i++)
-    {
-        Write_Byte(dev, *pdata++);
-        ACK(dev, 0);
-        FW_Delay_Ms(dev->D2);
-    }
-    
-    Stop(dev);
-    
-    FW_Delay_Ms(dev->D3);
-}
-
-u32  FW_SI2C_Read(FW_I2C_Type *dev, u8 *paddr, u8 num_addr, u8 *pdata, u32 num)
-{
-    u32 i;
-    
-    Start(dev);
-    
-    Write_Byte(dev, dev->ID);
-    ACK(dev, 0);
-    FW_Delay_Ms(dev->D0);
-    
-    for(i = 0; i < num_addr; i++)
-    {
-        Write_Byte(dev, paddr[num_addr - 1 - i]);
-        ACK(dev, 0);
-    }
-    FW_Delay_Ms(dev->D1);
-    
-    Start(dev);
-    
-    Write_Byte(dev, dev->ID + 1);
-    ACK(dev, 0);
-    FW_Delay_Ms(dev->D0);
-    
-    for(i = 0; i < num; i++)
-    {
-        *pdata++ = Read_Byte(dev);
-        ACK(dev, 0);
-        FW_Delay_Ms(dev->D2);
-    }
-    
-    SCL_OUT(dev, LEVEL_L);
-    ACK(dev, 1);
-    Stop(dev);
-    FW_Delay_Ms(dev->D3);
     
     return num;
 }
-#endif
 
 
 
@@ -546,13 +374,9 @@ u32  FW_SI2C_Read(FW_I2C_Type *dev, u8 *paddr, u8 num_addr, u8 *pdata, u32 num)
 __CONST_STATIC_ FW_I2C_Driver_Type SI2C_Driver =
 {
     .Init = FW_SI2C_Init,
-//    .TX_Byte = FW_SI2C_WriteByte,
-//    .RX_Byte = FW_SI2C_ReadByte,
+    
     .Write = FW_SI2C_Write,
     .Read = FW_SI2C_Read,
 };
 FW_DRIVER_REGIST("io->i2c", &SI2C_Driver, SI2C);
-
-
-
 

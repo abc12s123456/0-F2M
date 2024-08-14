@@ -34,15 +34,6 @@ extern "C"{
 #include "serial.h"
 
 
-/**
- * I2C驱动编号
- * 外部扩展可以有多个不同的驱动
- */
-#define I2C_DRV_NATIVE_NUM        0x00      //原生
-#define I2C_DRV_IOSIM_NUM         0x01      //IO模拟
-#define I2C_DRV_EXT_NUM           0x02      //扩展
-
-
 /* 起始操作位 */
 typedef enum
 {
@@ -54,10 +45,18 @@ typedef enum
 /* 设备地址格式 */
 typedef enum
 {
-    FW_I2C_DeviceAddr_7Bits = 0,
-    FW_I2C_DeviceAddr_10Bits = 1,
-}FW_I2C_DeviceAddr_Enum;
+    FW_I2C_DAM_7Bits = 0,
+    FW_I2C_DAM_10Bits = 1,
+    FW_I2C_DAM_Dual = 2,
+}FW_I2C_Device_Addr_Mode_Enum, FW_I2C_DAM_Enum;
 
+
+typedef enum
+{
+    FW_I2C_AAM_8Bits = 0,
+    FW_I2C_AAM_16Bits,
+    FW_I2C_AAM_32Bits,
+}FW_I2C_Access_Addr_Mode_Enum, FW_I2C_AAM_Enum;
 
 
 typedef struct FW_I2C   FW_I2C_Type;
@@ -82,21 +81,29 @@ struct FW_I2C
     u16  RX_DMA_Buffer_Size;
     
     /* I2C波特率，Bmax = 5Mbps */
-    u32  Baudrate : 24;
+    u32  Baudrate : 23;
     
     u32  First_Bit : 1;
     
+    /* 设备地址模式 */
+    u32  Device_Addr_Mode : 2;
+    
+    /* 访问地址模式 */
+    u32  Access_Addr_Mode : 2;
+    
+    u32  : 4;
+    
     /* 针对某些设备的必要延时时间，单位：ms */
-    u32  D0 : 7;
-    u32  D1 : 7;
-    u32  D2 : 7;
-    u32  D3 : 7;
+    u32  D0 : 4;
+    u32  D1 : 4;
+    u32  D2 : 4;
+    u32  D3 : 4;
     
     /* I2C设备ID(即设备地址) */
-    u32  ID : 10;
+    u32  ID : 16;
     
-    /* 地址模式 */
-    u32  Addr_Mode : 1;
+    /* 模拟I2C的延时时间，单位：us */
+    u32 SDTime : 16;
     
     void *I2Cx;
 };
@@ -108,6 +115,8 @@ typedef struct
     void (*Init)(FW_I2C_Type *dev);
     
     void (*CTL)(FW_I2C_Type *dev, u8 state);
+    void (*TX_CTL)(FW_I2C_Type *dev, u8 state);
+    void (*RX_CTL)(FW_I2C_Type *dev, u8 state);
     
 //    void (*TX_Byte)(FW_I2C_Type *dev, u8 value);
 //    u8   (*RX_Byte)(FW_I2C_Type *dev);
@@ -125,12 +134,6 @@ typedef struct
 }FW_I2C_Driver_Type;
 
 
-/*  */
-__INLINE_STATIC_ u32  FW_I2C_GetAccAddr(u32 addr, u32 num)
-{
-    return ((num << 24) | addr);
-}
-
 void FW_I2C_SetPort(FW_I2C_Type *dev, void *i2c);
 void *FW_I2C_GetPort(FW_I2C_Type *dev);
 u8   FW_I2C_GetTRM(FW_I2C_Type *dev, u8 tr);
@@ -146,6 +149,27 @@ u32  FW_I2C_Write(FW_I2C_Type *dev, u32 addr, const u8 *pdata, u32 num);
 u32  FW_I2C_Read(FW_I2C_Type *dev, u32 addr, u8 *pdata, u32 num);
 
 void FW_I2C_SetDelay(FW_I2C_Type *dev, u8 d0, u8 d1, u8 d2, u8 d3);
+
+
+/*  */
+__INLINE_STATIC_ u32  FW_I2C_GetActualAddr(u32 addr, u32 num)
+{
+    return ((num << 24) | addr);
+}
+
+__INLINE_STATIC_ u8   FW_I2C_Get10BAddrH(u16 addr)
+{
+    addr >>= 7;
+    addr &= 0x06;
+    addr |= 0xF0;
+    return (u8)addr;
+}
+
+__INLINE_STATIC_ u8   FW_I2C_Get10BAddrL(u16 addr)
+{
+    return (u8)addr;
+}
+
 
 
 #ifdef __cplusplus
