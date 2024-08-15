@@ -751,6 +751,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\F2M_C\Device\Source\tm7711.c</FilePath>
             </File>
+            <File>
+              <FileName>hc595.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\F2M_C\Device\Source\hc595.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

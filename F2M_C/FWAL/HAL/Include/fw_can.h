@@ -67,6 +67,26 @@ typedef enum
 }FW_CAN_FF_Enum;
 
 
+typedef enum
+{
+    FW_CAN_TX_State_OK,
+    FW_CAN_TX_State_Failed,
+    FW_CAN_TX_State_Pending,
+    FW_CAN_TX_State_NoMailbox,
+    FW_CAN_TX_State_Unknown,
+}FW_CAN_TX_State_Enum;
+
+
+//typedef struct
+//{
+//    u32 ID;
+//    u32 Type : 1;
+//    u32 Format : 1;
+//    u32 Length : 4;
+//    u32 : 26;
+//}FW_CAN_FI_Type;
+
+
 typedef struct
 {
 //    u32 STD_ID;                   //
@@ -80,10 +100,12 @@ typedef struct
 }FW_CAN_Frame_Type;
 
 
-typedef struct
-{
-    FW_SList_Type List;
-}FW_CAN_Node_Type;
+//typedef struct
+//{
+////    FW_CAN_Frame_Type *Buffer;
+//    RB_Type FIFO;
+//    FW_SList_Type List;
+//}FW_CAN_Node_Type;
 
 
 typedef struct
@@ -102,7 +124,11 @@ typedef struct
     u32 Mode : 2;                 //工作模式(正常、回环、静默、静默回环)
     u32 Fiter : 1;                //接收过滤方式(列表、掩码)
     
-    u32 : 9;
+    u32 Mailbox_Num : 8;          //邮箱编号
+    
+    u32 : 1;
+//    u32 Mult_Node_EN : 1;         //多节点模式使能位
+//    u32 Node_Buffer_Size : 8;     //CAN节点接收缓存大小
     
     __RO_ void *CANx;             //
 }FW_CAN_Type;
@@ -141,8 +167,8 @@ void FW_CAN_CTL(FW_CAN_Type *dev, u8 state);
 void FW_CAN_TXCTL(FW_CAN_Type *dev, u8 state);
 void FW_CAN_RXCTL(FW_CAN_Type *dev, u8 state);
 
-u32  FW_CAN_Write(FW_CAN_Type *dev, u32 offset, const u8 *pdata, u32 num);
-u32  FW_CAN_Read(FW_CAN_Type *dev, u32 offset, u8 *pdata, u32 num);
+u32  FW_CAN_Write(FW_CAN_Type *dev, FW_CAN_Frame_Type *frame, const u8 *pdata, u32 num);
+u32  FW_CAN_Read(FW_CAN_Type *dev, FW_CAN_Frame_Type *frame, u8 *pdata, u32 num);
 
 void FW_CAN_RX_ISR(FW_CAN_Type *dev);
 void FW_CAN_TX_ISR(FW_CAN_Type *dev);

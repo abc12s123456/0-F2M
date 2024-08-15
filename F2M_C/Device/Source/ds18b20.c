@@ -107,8 +107,8 @@ __INLINE_STATIC_ u8   DS_Get_Temprature(Sensor_Type *sensor, s32 *pdata)
 {
     DS18B20_Type *dev = FW_Device_GetParent(sensor);
     FW_OW_Type *ow = FW_Device_GetParent(dev);
-    u8 i;
-    u8 msg[9];
+//    u8 i;
+//    u8 msg[9];
     
     u8 temp_h, temp_l;
     u16 temp;

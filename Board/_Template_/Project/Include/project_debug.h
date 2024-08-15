@@ -96,7 +96,7 @@ extern "C"{
 #define I2C_TEST                  OFF		                                    /* I2C模块测试 */
 #define KEY_TEST                  OFF                                           /* 按键模块测试 */
 #define LCD_TEST                  OFF                                           /* LCD驱动模块测试 */
-#define LED_TEST                  ON                                           /* LED驱动模块测试 */
+#define LED_TEST                  OFF                                           /* LED驱动模块测试 */
 #define MM_TEST                   OFF                                           /* 内存管理测试 */
 #define OS_TEST                   OFF                                           /* OS测试 */
 #define PMU_TEST                  OFF                                           /* PWR模块测试 */
@@ -187,15 +187,16 @@ extern "C"{
 /*
  * @IO设备
  */
-#define IO_DEVICE_TEST            OFF                                           /* IO驱动设备测试 */
+#define IO_DEVICE_TEST            ON                                           /* IO驱动设备测试 */
 #if IO_DEVICE_TEST == ON
+#define HC595_TEST                ON
 #define HC165_TEST                OFF                                           /* HC165模块测试 */
 #define YX3P_TEST                 OFF                                           /* YX3P语音芯片驱动测试 */
 #define TM7711_TEST               OFF                                           /* ADC转换芯片驱动测试 */
 #define STSPIN220_TEST            OFF                                           /* STSPIN220电机驱动芯片驱动测试 */
 #define ILI9341_TEST              OFF                                           /* ILI9341 LCD模块测试 */
 #define QENCODER_TEST             OFF                                           /* 正交编码器测试 */
-#define GYY0709_TEST              ON
+#define GYY0709_TEST              OFF
 #endif  /* IO_DEVICE_TEST */
 
 

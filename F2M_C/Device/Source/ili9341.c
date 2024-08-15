@@ -108,14 +108,8 @@ __INLINE_STATIC_ void ILI_Init(LCD_Type *dev)
     void *p, *q;
     
     p = FW_Device_GetDriver(lcd8);
-    if(p == NULL)
-    {
-        LOG_D("ILI9341驱动为空");
-        return;
-    }
-    
     q = FW_Driver_Find("bus->lcd8");
-    if(q && p == q)
+    if(p && p == q)
     {
         /* 总线方式驱动 */
         lcd8->Init = Bus_Init;

@@ -949,11 +949,6 @@ extern "{"
 #define GPIO_RET_INVALUE     (0xFFFFFFFF)
 
 
-/* GPIO驱动编号 */
-#define GPIO_DRV_NAT_NUM     0
-#define GPIO_DRV_EXT_NUM     2 
-
-
 typedef enum
 {
     FW_GPIO_Mode_AIN = 0,                   //模拟输入
@@ -1000,10 +995,15 @@ typedef struct FW_GPIO
 {
     FW_Device_Type Device;
     
+    u32 Port_Num : 8;
+    u32 Pin_Num : 8;
+    
     u32 Default_Mode : 8;
     u32 Default_Speed : 4;
     
-    u32 : 20;
+    u32 : 4;
+    
+    void *IO_Buffer;
     
     void (*Pin_Toggle)(struct FW_GPIO *pdev, u16 pin);
 }FW_GPIO_Type;

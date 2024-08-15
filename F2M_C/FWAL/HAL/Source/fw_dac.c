@@ -76,7 +76,7 @@ void FW_DAC_Init(FW_DAC_Type *dev)
             dev->Buffer = MM_Malloc(dev->Buffer_Num * dev->Offset);
             if(dev->Buffer == NULL)
             {
-                LOG_D("DAC»º´æÉêÇëÊ§°Ü\r\n");
+                LOG_D("DACç¼“å­˜ç”³è¯·å¤±è´¥\r\n");
                 return;
             }
         }
@@ -122,8 +122,7 @@ void FW_DAC_TriggerCTL(FW_DAC_Type *dev, u8 state)
     drv->Trigger_CTL(dev, state);
 }
 
-
-/* Èí¼þ´¥·¢·½Ê½Ð´Èë */
+/* è½¯ä»¶è§¦å‘æ–¹å¼å†™å…¥ */
 static void FW_DAC_ST_Write(FW_DAC_Type *dev, const void *pdata, u32 num)
 {
     FW_DAC_Driver_Type *drv = FW_Device_GetDriver(dev);
@@ -138,7 +137,7 @@ static void FW_DAC_ST_Write(FW_DAC_Type *dev, const void *pdata, u32 num)
     }
 }
 
-/* Ó²¼þ´¥·¢·½Ê½Ð´Èë */
+/* ç¡¬ä»¶è§¦å‘æ–¹å¼å†™å…¥ */
 static void FW_DAC_HT_Write(FW_DAC_Type *dev, const void *pdata, u32 num)
 {
     FW_DAC_Driver_Type *drv = FW_Device_GetDriver(dev);
@@ -147,7 +146,7 @@ static void FW_DAC_HT_Write(FW_DAC_Type *dev, const void *pdata, u32 num)
     
     if(num > dev->Buffer_Num)  num = dev->Buffer_Num;
     
-    /* Buffer¿ÉÒÔÖ±½ÓÓ³Éäµ½Ö»¶ÁÇø */
+    /* Bufferå¯ä»¥ç›´æŽ¥æ˜ å°„åˆ°åªè¯»åŒº */
     if(dev->Buffer != pdata)
     {
         memcpy(dev->Buffer, pdata, num * dev->Offset);

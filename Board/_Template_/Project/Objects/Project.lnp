@@ -45,6 +45,7 @@
 ".\objects\st7735.o"
 ".\objects\gyy0709.o"
 ".\objects\tm7711.o"
+".\objects\hc595.o"
 ".\objects\key.o"
 ".\objects\led.o"
 ".\objects\mifare.o"

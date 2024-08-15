@@ -279,7 +279,7 @@ __INLINE_STATIC_ u8   CAN_Frame_Write(FW_CAN_Type *dev, FW_CAN_Frame_Type *frame
     msg.tx_dlen = frame->Length;
     memcpy(msg.tx_data, frame->Data, frame->Length);
     
-    can_message_transmit(can, &msg);
+    dev->Mailbox_Num = can_message_transmit(can, &msg);
     
     return frame->Length;
 }
@@ -315,6 +315,21 @@ __INLINE_STATIC_ u8   CAN_Frame_Read(FW_CAN_Type *dev, FW_CAN_Frame_Type *frame)
     memcpy(frame->Data, msg.rx_data, frame->Length);
     
     return frame->Length;
+}
+
+__INLINE_STATIC_ u8   CAN_Wait_TC(FW_CAN_Type *dev)
+{
+    can_transmit_state_enum state = can_transmit_states((u32)dev->CANx, dev->Mailbox_Num);
+    if(state == CAN_TRANSMIT_OK)  return FW_CAN_TX_State_OK;
+    if(state == CAN_TRANSMIT_FAILED)  return FW_CAN_TX_State_Failed;
+    if(state == CAN_TRANSMIT_PENDING)  return FW_CAN_TX_State_Pending;
+    if(state == CAN_TRANSMIT_NOMAILBOX)  return FW_CAN_TX_State_NoMailbox;
+    return FW_CAN_TX_State_Unknown;
+}
+
+__INLINE_STATIC_ u8   CAN_Wait_RC(FW_CAN_Type *dev)
+{
+    
 }
 
 
