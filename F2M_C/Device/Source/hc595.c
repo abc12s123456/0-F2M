@@ -62,8 +62,8 @@ __INLINE_STATIC_ void IO_HC595_Write(HC595_Type *dev, const u8 *pdata, u32 num)
         
         for(i = 0; i < 8; i++)
         {
-            FW_GPIO_Write(dev->SER_Pin, value & 0x01);
-            value >>= 1;
+            FW_GPIO_Write(dev->SER_Pin, value & 0x80);
+            value <<= 1;
             FW_GPIO_CLR(dev->SCK_Pin);
             FW_Delay_Us(1);
             FW_GPIO_SET(dev->SCK_Pin);
@@ -77,30 +77,33 @@ __INLINE_STATIC_ void IO_HC595_Write(HC595_Type *dev, const u8 *pdata, u32 num)
 }
 
 
-/* SPI驱动 */
+/* SPI驱动, CS->RCK, SCK->SCK, MOSI->SER, OE、SCLR可由IO控制，也可直接有效电平 */
 __INLINE_STATIC_ void SPI_HC595_Init(HC595_Type *dev)
 {
-
+    FW_SPI_Type *spi = FW_Device_GetParent(dev);
+    spi->First_Bit = FW_SPI_FirstBit_MSB;
+    FW_SPI_Init(spi);
 }
 
 __INLINE_STATIC_ void SPI_HC595_CTL(HC595_Type *dev, u8 state)
 {
-
+    FW_GPIO_Write(dev->OE_Pin, state);
 }
 
 __INLINE_STATIC_ void SPI_HC595_Write(HC595_Type *dev, const u8 *pdata, u32 num)
 {
-
+    FW_SPI_Type *spi = FW_Device_GetParent(dev);
+    
+    FW_SPI_CSSet(spi, Enable);
+    FW_SPI_Write(spi, 0, pdata, num);
+    FW_SPI_CSSet(spi, Disable);
 }
 
 
 
 
-/* GPIO */
-__INLINE_STATIC_ void HC595_Port_Init(FW_GPIO_Type *gpio, u16 port, FW_GPIO_Mode_Enum mode, FW_GPIO_Speed_Enum speed)
+void HC595_Init(HC595_Type *dev)
 {
-    HC595_Type *dev = FW_Device_GetParent(gpio);
-    char *name = FW_Device_GetName(dev);
     void *p, *q;
     
     p = FW_Device_GetDriver(dev);
@@ -110,17 +113,51 @@ __INLINE_STATIC_ void HC595_Port_Init(FW_GPIO_Type *gpio, u16 port, FW_GPIO_Mode
         dev->Init = SPI_HC595_Init;
         dev->CTL = SPI_HC595_CTL;
         dev->Write = SPI_HC595_Write;
-        goto Init;
     }
     else
     {
         dev->Init = IO_HC595_Init;
         dev->CTL = IO_HC595_CTL;
         dev->Write = IO_HC595_Write;
-        goto Init;
     }
     
-    Init:
+    dev->Init(dev);
+}
+
+void HC595_CTL(HC595_Type *dev, u8 state)
+{
+    dev->CTL(dev, state);
+}
+
+void HC595_Write(HC595_Type *dev, const u8 *pdata, u32 num)
+{
+    dev->Write(dev, pdata, num);
+}
+
+
+
+
+/* driver for gpio */
+__INLINE_STATIC_ void HC595_Port_Init(FW_GPIO_Type *gpio, u16 port, FW_GPIO_Mode_Enum mode, FW_GPIO_Speed_Enum speed)
+{
+    HC595_Type *dev = FW_Device_GetParent(gpio);
+    void *p, *q;
+    
+    p = FW_Device_GetDriver(dev);
+    q = FW_Device_Find("spi->dev");
+    if(p && p == q)
+    {
+        dev->Init = SPI_HC595_Init;
+        dev->CTL = SPI_HC595_CTL;
+        dev->Write = SPI_HC595_Write;
+    }
+    else
+    {
+        dev->Init = IO_HC595_Init;
+        dev->CTL = IO_HC595_CTL;
+        dev->Write = IO_HC595_Write;
+    }
+    
     dev->Init(dev);
 }
 
@@ -133,8 +170,8 @@ __INLINE_STATIC_ void HC595_Port_Write(FW_GPIO_Type *gpio, u16 port, u32 value)
     
     if(buffer == NULL)  return;
     
-    buffer[num - 1] = (u8)value;
-    dev->Write(dev, buffer, num);
+    buffer[gpio->Port_Num - num] = (u8)value;
+    dev->Write(dev, buffer, gpio->Port_Num);
 }
 
 
@@ -171,13 +208,13 @@ FW_DEVICE_STATIC_REGIST(HC595_DEV_NAME, &HC595, HC595_Config, HC595);
 
 #define EXT_GPIO_NAME        "ex_gpio"
 static FW_GPIO_Type EXT_GPIO;
-static u8 IO_Val[5];
+static u8 IO_Val[8];
 static void EXT_GPIO_Config(void *dev)
 {
     FW_GPIO_Type *gpio = dev;
 
     gpio->Pin_Num = 8;
-    gpio->Port_Num = 5;
+    gpio->Port_Num = sizeof(IO_Val);
     gpio->IO_Buffer = IO_Val;
     
     FW_Device_SetParent(gpio, FW_Device_Find(HC595_DEV_NAME));
@@ -191,14 +228,311 @@ void Test(void)
 {
     FW_GPIO_Type *gpio = FW_Device_Find(EXT_GPIO_NAME);
     u16 port = PORT0;
-    u8 value = 0;
+    u8 *p = gpio->IO_Buffer;
+    u8 i = 0;
     
     GPIO_PortInit(gpio, port, FW_GPIO_Mode_Out_PPN, FW_GPIO_Speed_Low);
     
+    memset(gpio->IO_Buffer, 0xFF, gpio->Port_Num);
+    
     while(1)
     {
-        GPIO_PortWrite(gpio, port, value++);
-        FW_Delay_Ms(500);
+//        GPIO_PortWrite(gpio, port, value++);
+        GPIO_PortWrite(gpio, PORT0, p[7]);
+        
+        #if 1
+        switch(i++)
+        {
+            case 0:
+                p[7] = 0x00;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+                
+            case 1:
+                p[7] = 0x00;
+                p[6] = 0x00;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+            
+            case 2:
+                p[7] = 0xFF;
+                p[6] = 0x00;
+                p[5] = 0x00;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+            
+            case 3:
+                p[7] = 0x00;
+                p[6] = 0xFF;
+                p[5] = 0x00;
+                p[4] = 0x00;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+            
+            case 4:
+                p[7] = 0x00;
+                p[6] = 0x00;
+                p[5] = 0xFF;
+                p[4] = 0x00;
+                p[3] = 0x00;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+            
+            case 5:
+                p[7] = 0xFF;
+                p[6] = 0x00;
+                p[5] = 0x00;
+                p[4] = 0xFF;
+                p[3] = 0x00;
+                p[2] = 0x00;
+                p[1] = 0xFF;
+                p[0] = 0xFF;
+                break;
+            
+            case 6:
+                p[7] = 0x00;
+                p[6] = 0xFF;
+                p[5] = 0x00;
+                p[4] = 0x00;
+                p[3] = 0xFF;
+                p[2] = 0x00;
+                p[1] = 0x00;
+                p[0] = 0xFF;
+                break;
+            
+            case 7:
+                p[7] = 0x00;
+                p[6] = 0x00;
+                p[5] = 0xFF;
+                p[4] = 0x00;
+                p[3] = 0x00;
+                p[2] = 0xFF;
+                p[1] = 0x00;
+                p[0] = 0x00;
+                break;
+            
+            case 8:
+                p[7] = 0xFF;
+                p[6] = 0x00;
+                p[5] = 0x00;
+                p[4] = 0xFF;
+                p[3] = 0x00;
+                p[2] = 0x00;
+                p[1] = 0xFF;
+                p[0] = 0x00;
+                break;
+            
+            case 9:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0x00;
+                p[4] = 0x00;
+                p[3] = 0xFF;
+                p[2] = 0x00;
+                p[1] = 0x00;
+                p[0] = 0xFF;
+                break;
+            
+            case 10:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0x00;
+                p[3] = 0x00;
+                p[2] = 0xFF;
+                p[1] = 0x00;
+                p[0] = 0x00;
+                break;
+            
+            case 11:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0x00;
+                p[2] = 0x00;
+                p[1] = 0xFF;
+                p[0] = 0x00;
+                break;
+            
+            case 12:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0x00;
+                p[1] = 0x00;
+                p[0] = 0xFF;
+                break;
+            
+            case 13:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0x00;
+                p[0] = 0x00;
+                break;
+            
+            case 14:
+                p[7] = 0xFF;
+                p[6] = 0xFF;
+                p[5] = 0xFF;
+                p[4] = 0xFF;
+                p[3] = 0xFF;
+                p[2] = 0xFF;
+                p[1] = 0xFF;
+                p[0] = 0x00;
+                break;
+            
+            case 15:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+                
+            default:
+                break;
+        }
+        if(i >= 16)  i = 0;
+        #else
+        switch(i++)
+        {
+            case 0:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0x00;
+                break;
+                
+            case 1:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0x00;
+                p[7] = 0x00;
+                break;
+            
+            case 2:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0x00;
+                p[6] = 0x00;
+                p[7] = 0xFF;
+                break;
+            
+            case 3:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0x00;
+                p[5] = 0x00;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            case 4:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0x00;
+                p[4] = 0x00;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            case 5:
+                p[0] = 0xFF;
+                p[1] = 0xFF;
+                p[2] = 0x00;
+                p[3] = 0x00;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            case 6:
+                p[0] = 0xFF;
+                p[1] = 0x00;
+                p[2] = 0x00;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            case 7:
+                p[0] = 0x00;
+                p[1] = 0x00;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            case 8:
+                p[0] = 0x00;
+                p[1] = 0xFF;
+                p[2] = 0xFF;
+                p[3] = 0xFF;
+                p[4] = 0xFF;
+                p[5] = 0xFF;
+                p[6] = 0xFF;
+                p[7] = 0xFF;
+                break;
+            
+            default:
+                break;
+        }
+        if(i >= 9)  i = 0;
+        #endif
+        
+        
+        FW_Delay_Ms(125);
     }
 }
 

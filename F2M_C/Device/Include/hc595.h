@@ -40,11 +40,11 @@ struct HC595
 {
     FW_Device_Type Device;
     
-    u16 SER_Pin;             //´®ĞĞÊı¾İÊäÈë¶Ë
-    u16 OE_Pin;              //Êä³öÊ¹ÄÜ¶Ë£¬µÍµçÆ½ÓĞĞ§; ÔÚ²»Ê¹ÓÃIO¿ØÖÆÊ±£¬½ÓµÍµçÆ½
-    u16 RCK_Pin;             //Ëø´æÆ÷Êä³ö¿ØÖÆ
-    u16 SCK_Pin;             //Êı¾İÊäÈëÊ±ÖÓ
-    u16 SCLR_Pin;            //ÒÆÎ»¼Ä´æÆ÷Çå0¶Ë£¬µÍµçÆ½ÓĞĞ§£»ÔÚ²»Ê¹ÓÃIO¿ØÖÆÊ±£¬½Ó¸ßµçÆ½
+    u16 SER_Pin;             //ä¸²è¡Œæ•°æ®è¾“å…¥ç«¯
+    u16 OE_Pin;              //è¾“å‡ºä½¿èƒ½ç«¯ï¼Œä½ç”µå¹³æœ‰æ•ˆ; åœ¨ä¸ä½¿ç”¨IOæ§åˆ¶æ—¶ï¼Œæ¥ä½ç”µå¹³
+    u16 RCK_Pin;             //é”å­˜å™¨è¾“å‡ºæ§åˆ¶
+    u16 SCK_Pin;             //æ•°æ®è¾“å…¥æ—¶é’Ÿ
+    u16 SCLR_Pin;            //ç§»ä½å¯„å­˜å™¨æ¸…0ç«¯ï¼Œä½ç”µå¹³æœ‰æ•ˆï¼›åœ¨ä¸ä½¿ç”¨IOæ§åˆ¶æ—¶ï¼Œæ¥é«˜ç”µå¹³
     
     u16 OE_VL : 1;
     u16 SCLK_VL : 1;
@@ -55,6 +55,11 @@ struct HC595
     void (*CTL)(HC595_Type *dev, u8 state);
     void (*Write)(HC595_Type *dev, const u8 *pdata, u32 num);
 };
+
+
+void HC595_Init(HC595_Type *dev);
+void HC595_CTL(HC595_Type *dev, u8 state);
+void HC595_Write(HC595_Type *dev, const u8 *pdata, u32 num);
 
 
 #ifdef __cplusplus
