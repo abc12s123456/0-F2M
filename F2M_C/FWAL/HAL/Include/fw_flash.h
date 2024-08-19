@@ -29,6 +29,13 @@
 extern "C"{
 #endif
 
+
+#include "fw_mod_conf.h"
+
+
+#if defined(FLASH_MOD_EN) && FLASH_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -382,6 +389,8 @@ typedef struct
     u32  (*Read)(SNOR_Type *dev, u32 addr, void *pdata, u32 num);
 }SNOR_Driver_Type;
 
+
+#endif  /* defined(FLASH_MOD_EN) && FLASH_MOD_EN */
 
 #ifdef __cplusplus
 }

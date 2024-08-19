@@ -23,6 +23,11 @@
  *
  */
 #include "fw_uart.h"
+
+
+#if defined(UART_MOD_EN) && UART_MOD_EN
+
+
 #include "fw_system.h"
 #include "fw_debug.h"
 #include "fw_print.h"
@@ -561,4 +566,7 @@ static u32  FW_UART_ReadDMA(void *dev, u32 offset, void *pdata, u32 num)
     FW_UART_Type *uart = (FW_UART_Type *)dev;
     return RB_Read(uart->Config.RX_FIFO, pdata, num);
 }
+
+
+#endif  /* defined(UART_MOD_EN) && UART_MOD_EN */
 

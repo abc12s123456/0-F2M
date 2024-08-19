@@ -23,6 +23,11 @@
  *
  */
 #include "fw_system.h"
+
+
+#if defined(SYSTEM_MOD_EN) && SYSTEM_MOD_EN
+
+
 #include "fw_debug.h"
 #include "fw_print.h"
 #include "fw_driver.h"
@@ -220,4 +225,7 @@ void FW_System_ClearRSTSource(void)
     
     Driver->Clear_RSTSource();
 }
+
+
+#endif  /* defined(SYSTEM_MOD_EN) && SYSTEM_MOD_EN */
 

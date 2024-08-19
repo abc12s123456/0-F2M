@@ -6,6 +6,9 @@
 #include "fw_print.h"
 
 
+#if defined(UART_MOD_EN) && UART_MOD_EN
+
+
 #define UARTx(name)(\
 (Isdev(name, "huart1")) ? USART1 :\
 (USART_TypeDef *)INVALUE)
@@ -296,4 +299,7 @@ static void USART1_Config(void *dev)
     FW_Device_SetDriver(&USART1_Device, (void *)&HUART_Driver);
 }
 FW_DEVICE_STATIC_REGIST("uart1", &USART1_Device, USART1_Config, USART1);
+
+
+#endif  /* defined(SUART_MOD_EN) && SUART_MOD_EN */
 

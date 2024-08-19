@@ -5,6 +5,8 @@
 #include "fw_delay.h"
 
 
+#if defined(ADC_MOD_EN) && ADC_MOD_EN
+
 
 #define ADCx(name)(\
 (Isdev(name, "hadc1")) ? ADC1 :\
@@ -482,4 +484,6 @@ void Test(void)
 
 
 #endif
+
+#endif  /* defined(ADC_MOD_EN) && ADC_MOD_EN */
 

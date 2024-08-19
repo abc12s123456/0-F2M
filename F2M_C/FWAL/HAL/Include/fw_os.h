@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(OS_MOD_EN) && OS_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -149,6 +155,8 @@ void FW_OS_RecursLockDelete(void *rlock);
 Bool FW_OS_RecursLockTake(void *rlock, u32 timeout);
 Bool FW_OS_RecursLockRelease(void *rlock);
 
+
+#endif  /* defined(OS_MOD_EN) && OS_MOD_EN */
 
 #ifdef __cplusplus
 }

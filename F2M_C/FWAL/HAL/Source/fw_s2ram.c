@@ -23,6 +23,11 @@
  *
  */
 #include "fw_s2ram.h"
+
+
+#if defined(S2RAM_MOD_EN) && S2RAM_MOD_EN
+
+
 #include "fw_debug.h"
 
 #include "fw_system.h"
@@ -98,4 +103,7 @@ u32  FW_S2RAM_Read(FW_S2RAM_Type *dev, u32 addr, void *pdata, u32 num)
     
     return drv->Read(dev, addr + dev->Base, pdata, num);
 }
+
+
+#endif  /* defined(S2RAM_MOD_EN) && S2RAM_MOD_EN */
 

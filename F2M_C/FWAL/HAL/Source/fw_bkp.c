@@ -23,6 +23,11 @@
  *
  */
 #include "fw_bkp.h"
+
+
+#if defined(BKP_MOD_EN) && BKP_MOD_EN
+
+
 #include "fw_debug.h"
 #include "fw_print.h"
 
@@ -101,4 +106,7 @@ u32  FW_BKP_Read(u32 addr, void *pdata, u32 num)
     
     return Driver->Read(addr, pdata, num);
 }
+
+
+#endif  /* defined(BKP_MOD_EN) && BKP_MOD_EN */
 

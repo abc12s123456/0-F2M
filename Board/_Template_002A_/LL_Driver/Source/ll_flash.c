@@ -3,6 +3,9 @@
 #include "fw_flash.h"
 
 
+#if defined(FLASH_MOD_EN) && FLASH_MOD_EN
+
+
 /* PY32F002A 20KB 128B 实际的扇区大小为4K，但支持page擦除，所以这里使用page作为基本的擦除单元*/
 #define SECTOR_Base(num)  (0x08000000 + (num * 128))
 #define SECTOR_SIZE       128
@@ -206,4 +209,7 @@ void Test(void)
 
 
 #endif
+
+
+#endif  /* defined(FLASH_MOD_EN) && FLASH_MOD_EN */
 

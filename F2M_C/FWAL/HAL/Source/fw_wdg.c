@@ -24,6 +24,10 @@
  */
 #include "fw_wdg.h"
 
+
+#if defined(WDG_MOD_EN) && WDG_MOD_EN
+
+
 #include "fw_debug.h"
 #include "fw_print.h"
 
@@ -140,4 +144,7 @@ void WDG_TaskMonitor(FW_WDG_Type *dev)
 {
     dev->Monitor_Flag = True;
 }
+
+
+#endif  /* defined(WDG_MOD_EN) && WDG_MOD_EN */
 

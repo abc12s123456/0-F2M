@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(SYSTEM_MOD_EN) && SYSTEM_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -136,6 +142,9 @@ void FW_System_SoftReset(void);
 
 u8   FW_System_GetRSTSource(void);
 void FW_System_ClearRSTSource(void);
+
+
+#endif  /* defined(SYSTEM_MOD_EN) && SYSTEM_MOD_EN */
 
 
 #ifdef __cplusplus

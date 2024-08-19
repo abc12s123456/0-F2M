@@ -23,6 +23,11 @@
  *
  */
 #include "fw_os.h"
+
+
+#if defined(OS_MOD_EN) && OS_MOD_EN
+
+
 #include "fw_print.h"
 
 
@@ -481,4 +486,7 @@ Bool FW_OS_RecursLockRelease(void *rlock)
     return Driver->OS_RLockRelease(rlock);
 }
 /**/
+
+
+#endif  /* defined(OS_MOD_EN) && OS_MOD_EN */
 

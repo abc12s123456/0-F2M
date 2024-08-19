@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(SPI_MOD_EN) && SPI_MOD_EN
+
+
 #include "fw_device.h"
 #include "serial.h"
 
@@ -182,6 +188,8 @@ void FW_SPI_RC_ISR(FW_SPI_Type *dev);
 void FW_SPI_TX_ISR(FW_SPI_Type *dev);
 void FW_SPI_TC_ISR(FW_SPI_Type *dev);
 
+
+#endif  /* defined(SPI_MOD_EN) && SPI_MOD_EN */
 
 #ifdef __cplusplus
 }

@@ -92,7 +92,7 @@ extern "C"{
 #define ETH_TEST                  OFF                                           /* ETH模块测试 */
 #define EXTI_TEST                 OFF                                           /* EXTI模块测试 */
 #define FLASH_TEST                OFF                                           /* 片上Flash模块测试 */
-#define GPIO_TEST                 OFF                                           /* GPIO模块测试 */
+#define GPIO_TEST                 ON                                           /* GPIO模块测试 */
 #define I2C_TEST                  OFF		                                    /* I2C模块测试 */
 #define KEY_TEST                  OFF                                           /* 按键模块测试 */
 #define LCD_TEST                  OFF                                           /* LCD驱动模块测试 */
@@ -187,7 +187,7 @@ extern "C"{
 /*
  * @IO设备
  */
-#define IO_DEVICE_TEST            ON                                           /* IO驱动设备测试 */
+#define IO_DEVICE_TEST            OFF                                           /* IO驱动设备测试 */
 #if IO_DEVICE_TEST == ON
 #define HC595_TEST                ON
 #define HC165_TEST                OFF                                           /* HC165模块测试 */

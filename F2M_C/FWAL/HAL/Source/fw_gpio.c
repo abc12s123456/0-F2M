@@ -23,6 +23,11 @@
  *
  */
 #include "fw_gpio.h"
+
+
+#if defined(GPIO_MOD_EN) && GPIO_MOD_EN
+
+
 #include "fw_debug.h"
 #include "fw_print.h"
 
@@ -233,4 +238,7 @@ __INLINE_STATIC_ void FW_GPIO_ToggleUseLAPI(FW_GPIO_Type *dev, u16 pin)
     
     drv->Pin_Toggle(dev, pin);
 }
+
+
+#endif  /* defined(GPIO_MOD_EN) && GPIO_MOD_EN */
 

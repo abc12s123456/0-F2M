@@ -24,6 +24,10 @@
  */
 #include "fw_timer.h"
 
+
+#if defined(TIM_MOD_EN) && TIM_MOD_EN
+
+
 #include "fw_debug.h"
 
 
@@ -247,3 +251,6 @@ void Test(void)
 
 
 #endif
+
+#endif  /* defined(TIM_MOD_EN) && TIM_MOD_EN */
+

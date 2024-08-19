@@ -23,6 +23,11 @@
  *
  */
 #include "fw_spi.h"
+
+
+#if defined(SPI_MOD_EN) && SPI_MOD_EN
+
+
 #include "fw_system.h"
 #include "fw_gpio.h"
 #include "fw_debug.h"
@@ -411,4 +416,7 @@ static u32  FW_SPI_ReadDMA(void *dev, u32 offset, void *pdata, u32 num)
     FW_SPI_Driver_Type *drv = FW_Device_GetDriver(dev);
     return drv->Read(dev, pdata, num);
 }
+
+
+#endif  /* defined(SPI_MOD_EN) && SPI_MOD_EN */
 

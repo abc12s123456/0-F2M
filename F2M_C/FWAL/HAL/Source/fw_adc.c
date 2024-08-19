@@ -23,6 +23,11 @@
  *
  */
 #include "fw_adc.h"
+
+
+#if defined(ADC_MOD_EN) && ADC_MOD_EN
+
+
 #include "fw_print.h"
 #include "fw_gpio.h"
 
@@ -527,6 +532,5 @@ static void FW_ADC_BindDevice(FW_ADC_Device_Type *dev)
 }
 
 
-
-
+#endif  /* defined(ADC_MOD_EN) && ADC_MOD_EN */
 

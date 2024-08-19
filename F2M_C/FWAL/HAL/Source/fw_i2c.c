@@ -23,6 +23,11 @@
  *
  */
 #include "fw_i2c.h"
+
+
+#if defined(I2C_MOD_EN) && I2C_MOD_EN
+
+
 #include "fw_system.h"
 #include "fw_gpio.h"
 #include "fw_debug.h"
@@ -196,4 +201,7 @@ static u32  FW_I2C_ReadDMA(void *dev, u32 addr, void *pdata, u32 num)
 {
     return 0;
 }
+
+
+#endif  /* defined(I2C_MOD_EN) && I2C_MOD_EN */
 

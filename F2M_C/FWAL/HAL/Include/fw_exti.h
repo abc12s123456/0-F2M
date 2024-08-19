@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(EXTI_MOD_EN) && EXTI_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -95,6 +101,8 @@ void FW_EXTI_BindCB(FW_EXTI_Type *dev, void (*cb)(void *), void *pdata);
 //void FW_EXTI_IH_ISR(FW_EXTI_Type *dev);
 void FW_EXTI_IH_ISR(FW_EXTI_IRQ_Type *irq);
 
+
+#endif  /* defined(EXTI_MOD_EN) && EXTI_MOD_EN */
 
 #ifdef __cplusplus
 }

@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(SUART_MOD_EN) && SUART_MOD_EN
+
+
 /* 模拟要实现的是uart驱动的一个实例 */
 #include "fw_device.h"
 
@@ -63,6 +69,8 @@ u32  FW_SUART_Read(FW_SUART_Type *pdev, u8 *pdata, u32 num);
 void FW_SUART_PrintInit(FW_SUART_Type *pdev);
 int  FW_SUART_Printf(const char *format, ...);
 
+
+#endif  /* defined(SUART_MOD_EN) && SUART_MOD_EN */
 
 #ifdef __cplusplus
 }

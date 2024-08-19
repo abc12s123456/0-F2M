@@ -23,6 +23,11 @@
  *
  */
 #include "fw_spi.h"
+
+
+#if defined (SSPI_MOD_EN) && SSPI_MOD_EN
+
+
 #include "fw_gpio.h"
 #include "fw_delay.h"
 
@@ -225,3 +230,5 @@ __CONST_STATIC_ FW_SPI_Driver_Type SSPI_Driver =
 };
 FW_DRIVER_REGIST("io->spi", &SSPI_Driver, SSPI);
 
+
+#endif  /* defined (SSPI_MOD_EN) && SSPI_MOD_EN */

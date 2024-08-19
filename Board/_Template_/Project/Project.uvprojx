@@ -410,6 +410,11 @@
               <FileType>5</FileType>
               <FilePath>.\Include\project_debug.h</FilePath>
             </File>
+            <File>
+              <FileName>project_mod_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\project_mod_conf.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

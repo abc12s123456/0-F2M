@@ -5,6 +5,9 @@
 #include "fw_gpio.h"
 
 
+#if defined(EXTI_MOD_EN) && EXTI_MOD_EN
+
+
 //#define LL_EXTI_LINE_x(pin)(\
 //(GPIO_Pin_x(pin) == LL_GPIO_PIN_0) ? LL_EXTI_LINE_0 :\
 //(GPIO_Pin_x(pin) == LL_GPIO_PIN_1) ? LL_EXTI_LINE_1 :\
@@ -322,4 +325,6 @@ void Test(void)
 
 
 #endif
+
+#endif  /* defined(EXTI_MOD_EN) && EXTI_MOD_EN */
 

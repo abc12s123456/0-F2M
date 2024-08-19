@@ -23,6 +23,11 @@
  *
  */
 #include "fw_pwr.h"
+
+
+#if defined(PWR_MOD_EN) && PWR_MOD_EN
+
+
 #include "fw_debug.h"
 
 
@@ -87,4 +92,7 @@ void FW_PWR_IH(void)
     FW_PWR_Type *dev = &PWR;
     if(dev->IH_CB)  dev->IH_CB(dev->IH_Pdata);
 }
+
+
+#endif  /* defined(PWR_MOD_EN) && PWR_MOD_EN */
 

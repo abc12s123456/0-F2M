@@ -23,6 +23,11 @@
  *
  */
 #include "fw_delay.h"
+
+
+#if defined(DELAY_MOD_EN) && DELAY_MOD_EN
+
+
 #include "fw_system.h"
 #include "fw_debug.h"
 #include "fw_print.h"
@@ -44,12 +49,17 @@ static          s8  Duration_Us_Bias = 0;        //
 #if (RTOS_EN == ON)
 __WEAK_ void FW_OS_TickTock(void){}
 #endif
-//__WEAK_ __INLINE_ Bool FW_OS_IsStart(void){return False;}
-//__WEAK_ __INLINE_ void FW_OS_Delay(u32 nms){}
-//__WEAK_ __INLINE_ u32  FW_OS_GetTickTime(void){return 0;}
+
+
+#if defined(OS_MOD_EN) && OS_MOD_EN
 extern Bool FW_OS_IsStart(void);
 extern void FW_OS_Delay(u32 nms);
 extern u32  FW_OS_GetTickTime(void);
+#else
+__WEAK_ __INLINE_ Bool FW_OS_IsStart(void){return False;}
+__WEAK_ __INLINE_ void FW_OS_Delay(u32 nms){}
+__WEAK_ __INLINE_ u32  FW_OS_GetTickTime(void){return 0;}
+#endif
 
 
 /* Delay模块回调函数，可以在应用时由用户配置 */
@@ -463,4 +473,7 @@ __INLINE_STATIC_ void FW_Delay_DefMs(u32 nms)
         }
     }
 }
+
+
+#endif  /* defined(DELAY_MOD_EN) && DELAY_MOD_EN */
 

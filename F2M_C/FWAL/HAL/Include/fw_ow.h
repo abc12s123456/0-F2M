@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(OW_MOD_EN) && OW_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -51,6 +57,8 @@ Bool FW_OW_WaitACK(FW_OW_Type *dev);
 u32  FW_OW_Write(FW_OW_Type *dev, const u8 *pdata, u32 num);
 u32  FW_OW_Read(FW_OW_Type *dev, u8 *pdata, u32 num);
 
+
+#endif  /* defined(OW_MOD_EN) && OW_MOD_EN */
 
 #ifdef __cplusplus
 }

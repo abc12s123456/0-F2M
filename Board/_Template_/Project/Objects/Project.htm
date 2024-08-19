@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Aug 18 20:53:21 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Aug 19 21:22:53 2024
 <BR><P>
 <H3>Maximum Stack Usage =        340 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -3764,9 +3764,9 @@ Local Symbols
 <P><STRONG><a name="[dc]"></a>UART_DeInit</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, ll_uart.o(i.UART_DeInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = UART_DeInit &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_SetPort
-<LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop
+<BR>[Calls]<UL><LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_deinit
+<LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_SetPort
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_uart.o(.constdata)
@@ -3795,12 +3795,12 @@ Local Symbols
 <P><STRONG><a name="[352]"></a>UART_IRQHandler</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, ll_uart.o(i.UART_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_IRQHandler &rArr; usart_interrupt_flag_get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_TX_ISR
-<LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_TC_ISR
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_RX_ISR
+<BR>[Calls]<UL><LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_RX_ISR
 <LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_RC_ISR
 <LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_flag_get
 <LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_flag_clear
+<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_TX_ISR
+<LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_TC_ISR
 </UL>
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
@@ -3812,11 +3812,7 @@ Local Symbols
 <P><STRONG><a name="[dd]"></a>UART_Init</STRONG> (Thumb, 1238 bytes, Stack size 64 bytes, ll_uart.o(i.UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = UART_Init &rArr; usart_baudrate_set &rArr; rcu_clock_freq_get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
-<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_SetPort
-<LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
+<BR>[Calls]<UL><LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetDMABSize
 <LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetDMABBase
 <LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_IO_Init
@@ -3836,6 +3832,10 @@ Local Symbols
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_to_memory_disable
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_init
 <LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_deinit
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
+<LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_SetPort
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_uart.o(.constdata)
@@ -3850,26 +3850,26 @@ Local Symbols
 <P><STRONG><a name="[e0]"></a>UART_RX_CTL</STRONG> (Thumb, 238 bytes, Stack size 32 bytes, ll_uart.o(i.UART_RX_CTL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = UART_RX_CTL &rArr; dma_channel_enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
+<BR>[Calls]<UL><LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_receive_config
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_enable
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_disable
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_uart.o(.constdata)
 </UL>
 <P><STRONG><a name="[e5]"></a>UART_Set_TDL</STRONG> (Thumb, 208 bytes, Stack size 32 bytes, ll_uart.o(i.UART_Set_TDL))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = UART_Set_TDL &rArr; dma_channel_enable
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = UART_Set_TDL &rArr; dma_transfer_number_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetDMABBase
+<BR>[Calls]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetDMABBase
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_address_config
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_clear
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_uart.o(.constdata)
 </UL>
@@ -3883,13 +3883,13 @@ Local Symbols
 <P><STRONG><a name="[df]"></a>UART_TX_CTL</STRONG> (Thumb, 258 bytes, Stack size 32 bytes, ll_uart.o(i.UART_TX_CTL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = UART_TX_CTL &rArr; dma_channel_enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
+<BR>[Calls]<UL><LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FW_UART_GetTRM
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop
 <LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_transmit_config
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_enable
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_interrupt_disable
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_uart.o(.constdata)
 </UL>
@@ -4203,8 +4203,7 @@ Local Symbols
 <P><STRONG><a name="[101]"></a>ADC_Init</STRONG> (Thumb, 508 bytes, Stack size 64 bytes, ll_adc.o(i.ADC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = ADC_Init &rArr; ADC_Channel_Config &rArr; adc_regular_channel_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
+<BR>[Calls]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_adc_clock_config
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_enable
@@ -4228,6 +4227,7 @@ Local Symbols
 <LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Channel_Config
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_init
 <LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_deinit
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ll_adc.o(.constdata)
@@ -4287,14 +4287,14 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[333]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_interrupt_flag_get
 <LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_interrupt_flag_clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1_IRQHandler
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0_UP_IRQHandler
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER7_UP_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER7_UP_IRQHandler
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER6_IRQHandler
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER5_IRQHandler
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER4_IRQHandler
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER3_IRQHandler
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER2_IRQHandler
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1_IRQHandler
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0_UP_IRQHandler
 </UL>
 
 <P><STRONG><a name="[114]"></a>TIM_CTL</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, ll_timer.o(i.TIM_CTL))
@@ -4553,13 +4553,13 @@ Local Symbols
 <P><STRONG><a name="[118]"></a>SPI_Init</STRONG> (Thumb, 932 bytes, Stack size 104 bytes, ll_spi.o(i.SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = SPI_Init &rArr; SPI_IO_Init &rArr; FW_GPIO_Init &rArr; GPIO_PinInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
+<BR>[Calls]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_to_memory_disable
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_init
 <LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_deinit
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 <LI><a href="#[31a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_init
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_i2s_interrupt_disable
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_enable
@@ -4597,14 +4597,14 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> ll_spi.o(.constdata)
 </UL>
 <P><STRONG><a name="[121]"></a>SPI_Read</STRONG> (Thumb, 330 bytes, Stack size 32 bytes, ll_spi.o(i.SPI_Read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SPI_Read &rArr; dma_channel_enable
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SPI_Read &rArr; dma_transfer_number_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_address_config
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_get
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_clear
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 <LI><a href="#[31c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_i2s_data_receive
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_dma_enable
 <LI><a href="#[318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_dma_disable
@@ -4647,14 +4647,14 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> ll_spi.o(.constdata)
 </UL>
 <P><STRONG><a name="[120]"></a>SPI_Write</STRONG> (Thumb, 210 bytes, Stack size 32 bytes, ll_spi.o(i.SPI_Write))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SPI_Write &rArr; dma_channel_enable
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SPI_Write &rArr; dma_transfer_number_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_address_config
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_get
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_clear
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_dma_enable
 <LI><a href="#[318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_dma_disable
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_increase_enable
@@ -4676,14 +4676,14 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> ll_dac.o(.constdata)
 </UL>
 <P><STRONG><a name="[123]"></a>DAC_Init</STRONG> (Thumb, 476 bytes, Stack size 72 bytes, ll_dac.o(i.DAC_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = DAC_Init &rArr; GPIO_PinInit
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = DAC_Init &rArr; dma_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
-<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
+<BR>[Calls]<UL><LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_init
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_clear
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_wave_mode_config
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_trigger_source_config
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_trigger_enable
@@ -4709,13 +4709,13 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> ll_dac.o(.constdata)
 </UL>
 <P><STRONG><a name="[128]"></a>DAC_Trigger_CTL</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, ll_dac.o(i.DAC_Trigger_CTL))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = DAC_Trigger_CTL &rArr; dma_channel_enable
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = DAC_Trigger_CTL &rArr; dma_transfer_number_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_get
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_flag_clear
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_trigger_enable
 <LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_trigger_disable
 <LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac_software_trigger_enable
@@ -4868,8 +4868,8 @@ Local Symbols
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Strfind
 <LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RB_Set_Index
 <LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RB_Offset_Index
-<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RB_Read_Inter
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RB_Read_Fisrt
@@ -5776,12 +5776,12 @@ Local Symbols
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP8266_Get_RDL
 <LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP8266_Get_RBuff
 <LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT_Send
-<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strstr
 <LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> esp8266.o(.constdata)
 </UL>
@@ -7683,16 +7683,16 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[387]"></a>dma_periph_and_channel_check</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gd32f30x_dma.o(i.dma_periph_and_channel_check))
-<BR><BR>[Called By]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
-<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_enable
+<BR><BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_enable
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_get
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_transfer_number_config
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_to_memory_disable
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_address_config
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_init
 <LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_deinit
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_circulation_disable
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_enable
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_channel_disable
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dma_memory_increase_enable
 </UL>
 

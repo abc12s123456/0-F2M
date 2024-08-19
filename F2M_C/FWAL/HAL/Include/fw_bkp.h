@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(BKP_MOD_EN) && BKP_MOD_EN
+
+
 #include "fw_device.h"
 
     
@@ -65,6 +71,8 @@ u32  FW_BKP_GetSize(void);
 u32  FW_BKP_Write(u32 addr, const void *pdata, u32 num);
 u32  FW_BKP_Read(u32 addr, void *pdata, u32 num);
 
+
+#endif  /* defined(BKP_MOD_EN) && BKP_MOD_EN */
 
 #ifdef __cplusplus
 }

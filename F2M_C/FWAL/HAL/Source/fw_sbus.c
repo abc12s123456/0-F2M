@@ -23,6 +23,11 @@
  *
  */
 #include "fw_sbus.h"
+
+
+#if defined(SBUS_MOD_EN) && SBUS_MOD_EN
+
+
 #include "fw_gpio.h"
 #include "fw_delay.h"
 
@@ -120,4 +125,7 @@ u32  FW_SBus_Read(FW_SBus_Type *dev, u8 *pdata, u32 num)
     
     return num;
 }
+
+
+#endif  /* defined(SBUS_MOD_EN) && SBUS_MOD_EN */
 

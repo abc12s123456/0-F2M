@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(ADC_MOD_EN) && ADC_MOD_EN
+
+
 #include "fw_device.h"
 #include "rbuffer.h"
 
@@ -314,6 +320,9 @@ u32  FW_ADC_Read(FW_ADC_Device_Type *dev, void *pdata, u32 num);
 u32  FW_ADC_GetVref(FW_ADC_Device_Type *dev);
 s32  FW_ADC_GetTemp(FW_ADC_Device_Type *dev);
 u32  FW_ADC_GetVbat(FW_ADC_Device_Type *dev);
+
+
+#endif  /* defined(ADC_MOD_EN) && ADC_MOD_EN */
 
 
 #ifdef __cplusplus

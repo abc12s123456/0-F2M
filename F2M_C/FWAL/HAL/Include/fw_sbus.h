@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(SBUS_MOD_EN) && SBUS_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -45,6 +51,8 @@ Bool FW_SBus_Init(FW_SBus_Type *dev);
 u32  FW_SBus_Write(FW_SBus_Type *dev, const u8 *pdata, u32 num);
 u32  FW_SBus_Read(FW_SBus_Type *dev, u8 *pdata, u32 num);
 
+
+#endif  /* defined(SBUS_MOD_EN) && SBUS_MOD_EN */
 
 #ifdef __cplusplus
 }

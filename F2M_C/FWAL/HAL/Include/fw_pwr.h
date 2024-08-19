@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(PWR_MOD_EN) && PWR_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -114,6 +120,8 @@ void FW_PWR_SetCB(void (*cb)(void *), void *pdata);
 
 void FW_PWR_IH(void);
 
+
+#endif  /* defined(PWR_MOD_EN) && PWR_MOD_EN */
 
 #ifdef __cplusplus
 }

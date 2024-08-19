@@ -30,6 +30,12 @@ extern "{"
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(GPIO_MOD_EN) && GPIO_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -1217,6 +1223,8 @@ __INLINE_STATIC_ u32  FW_GPIO_PortRead(u16 port)
 
 #endif  /* #if defined(GPIO_RELOAD_EN) && (GPIO_RELAOD_EN) */
 
+
+#endif  /* defined(GPIO_MOD_EN) && GPIO_MOD_EN */
 
 #ifdef __cplusplus
 }

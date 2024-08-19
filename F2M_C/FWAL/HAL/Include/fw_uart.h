@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(UART_MOD_EN) && UART_MOD_EN
+
+
 #include "fw_device.h"
 #include "serial.h"
 
@@ -198,6 +204,8 @@ do{\
     else  VA_ARGS_NUM_ERR();\
 }while(0)
 
+
+#endif  /* defined(UART_MOD_EN) && UART_MOD_EN */
 
 #ifdef __cplusplus
 }

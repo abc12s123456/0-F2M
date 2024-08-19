@@ -30,9 +30,10 @@ extern "C"{
 #endif
 
 
-/*
-ram that supports resetting
-*/
+#include "fw_mod_conf.h"
+
+
+#if defined(S2RAM_MOD_EN) && S2RAM_MOD_EN
 
 
 #include "fw_device.h"
@@ -66,6 +67,8 @@ void FW_S2RAM_Clear(FW_S2RAM_Type *dev);
 u32  FW_S2RAM_Write(FW_S2RAM_Type *dev, u32 addr, const void *pdata, u32 num);
 u32  FW_S2RAM_Read(FW_S2RAM_Type *dev, u32 addr, void *pdata, u32 num);
 
+
+#endif  /* defined(S2RAM_MOD_EN) && S2RAM_MOD_EN */
 
 #ifdef __cplusplus
 }

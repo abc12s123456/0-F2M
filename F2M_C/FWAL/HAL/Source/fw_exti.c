@@ -23,6 +23,11 @@
  *
  */
 #include "fw_exti.h"
+
+
+#if defined(EXTI_MOD_EN) && EXTI_MOD_EN
+
+
 #include "fw_system.h"
 #include "fw_gpio.h"
 #include "fw_debug.h"
@@ -156,7 +161,7 @@ void FW_EXTI_IH_ISR(FW_EXTI_IRQ_Type *irq)
 }
 
 
-
+#endif  /* defined(EXTI_MOD_EN) && EXTI_MOD_EN */
 
 
 

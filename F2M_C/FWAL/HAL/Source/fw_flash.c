@@ -24,6 +24,10 @@
  */
 #include "fw_flash.h"
 
+
+#if defined(FLASH_MOD_EN) && FLASH_MOD_EN
+
+
 #include "fw_debug.h"
 #include "fw_print.h"
 
@@ -495,4 +499,7 @@ u32  Flash_Read(FW_Flash_Type *dev, u32 addr, void *pdata, u32 num)
     return drv->Read(dev, addr, pdata, num);
 }
 /**/
+
+
+#endif  /* defined(FLASH_MOD_EN) && FLASH_MOD_EN */
 

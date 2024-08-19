@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(I2C_MOD_EN) && I2C_MOD_EN
+
+
 #include "fw_device.h"
 #include "serial.h"
 
@@ -171,6 +177,7 @@ __INLINE_STATIC_ u8   FW_I2C_Get10BAddrL(u16 addr)
 }
 
 
+#endif  /* defined(I2C_MOD_EN) && I2C_MOD_EN */
 
 #ifdef __cplusplus
 }

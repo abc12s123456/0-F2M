@@ -23,6 +23,11 @@
  *
  */
 #include "fw_suart.h"
+
+
+#if defined(SUART_MOD_EN) && SUART_MOD_EN
+
+
 #include "fw_uart.h"
 #include "fw_gpio.h"
 #include "fw_delay.h"
@@ -411,3 +416,6 @@ void Test(void)
 
 #endif
 #endif
+
+#endif  /* defined(SUART_MOD_EN) && SUART_MOD_EN */
+

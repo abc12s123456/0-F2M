@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(DELAY_MOD_EN) && DELAY_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -89,6 +95,9 @@ u32  FW_Delay_GetUsDuration(fdtt start_time);
 
 void FW_Delay_RoughUs(u32 nus);
 void FW_Delay_RoughMs(u32 nms);
+
+
+#endif /* defined(DELAY_MOD_EN) && DELAY_MOD_EN */
 
 
 #ifdef __cplusplus

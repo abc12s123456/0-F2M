@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(TIM_MOD_EN) && TIM_MOD_EN
+
+
 #include "fw_device.h"
 #include "pwm.h"
 #include "qencoder.h"
@@ -183,7 +189,7 @@ void FW_TIM_ITCTL(FW_TIM_Type *dev, u8 state);
 void FW_TIM_BindCB(FW_TIM_Type *dev, void (*cb)(void *), void *pdata);
 
 
-
+#endif  /* defined(TIM_MOD_EN) && TIM_MOD_EN */
 
 #ifdef __cplusplus
 }

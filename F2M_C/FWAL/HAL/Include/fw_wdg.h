@@ -30,6 +30,12 @@ extern "C"{
 #endif
 
 
+#include "fw_mod_conf.h"
+
+
+#if defined(WDG_MOD_EN) && WDG_MOD_EN
+
+
 #include "fw_device.h"
 
 
@@ -197,6 +203,8 @@ __INLINE_STATIC_ void FW_WWDG_BindCB(void (*cb)(void *), void *pdata)
     WDG_BindCB(&WWDG, cb, pdata);
 }
 
+
+#endif  /* defined(WDG_MOD_EN) && WDG_MOD_EN */
 
 #ifdef __cplusplus
 }

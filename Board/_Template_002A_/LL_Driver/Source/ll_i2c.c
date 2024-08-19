@@ -8,6 +8,9 @@
 #include "fw_system.h"
 
 
+#if defined(I2C_MOD_EN) && I2C_MOD_EN
+
+
 #define I2Cx(name)(\
 (Isdev(name, "hi2c1")) ? I2C1 :\
 (I2C_TypeDef *)INVALUE)
@@ -323,4 +326,6 @@ void Test(void)
 
 
 #endif
+
+#endif  /* defined(I2C_MOD_EN) && I2C_MOD_EN */
 

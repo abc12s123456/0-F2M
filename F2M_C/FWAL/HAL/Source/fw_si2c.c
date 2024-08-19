@@ -23,6 +23,11 @@
  *
  */
 #include "fw_i2c.h"
+
+
+#if defined(SI2C_MOD_EN) && SI2C_MOD_EN
+
+
 #include "fw_gpio.h"
 #include "fw_delay.h"
 
@@ -379,4 +384,7 @@ __CONST_STATIC_ FW_I2C_Driver_Type SI2C_Driver =
     .Read = FW_SI2C_Read,
 };
 FW_DRIVER_REGIST("io->i2c", &SI2C_Driver, SI2C);
+
+
+#endif  /* defined(SI2C_MOD_EN) && SI2C_MOD_EN */
 

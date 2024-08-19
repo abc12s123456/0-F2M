@@ -2,6 +2,10 @@
 
 #include "fw_wdg.h"
 
+
+#if defined(WDG_MOD_EN) && WDG_MOD_EN
+
+
 /*
 预分频系数  最小超时(ms)  最大超时(ms)
     4          0.125         512
@@ -160,4 +164,6 @@ void Test(void)
 
 
 #endif
+
+#endif  /* defined(WDG_MOD_EN) && WDG_MOD_EN */
 

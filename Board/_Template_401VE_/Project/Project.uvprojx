@@ -34,7 +34,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>$$Device:STM32F401VETx$CMSIS\SVD\STM32F401xE.svd</SFDFile>
-          <bCustSvd>0</bCustSvd>
+          <bCustSvd>1</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
