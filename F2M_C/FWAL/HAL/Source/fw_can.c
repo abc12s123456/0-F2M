@@ -113,8 +113,8 @@ void FW_CAN_Init(FW_CAN_Type *dev)
     
     memcpy(&dev->Config, &sgtr.Config, sizeof(SGC_Type));
     
-    FW_ASSERT(drv->DeInit);
-    drv->DeInit(dev);
+    FW_ASSERT(drv->Init);
+    drv->Init(dev);
 }
 
 void FW_CAN_CTL(FW_CAN_Type *dev, u8 state)
@@ -259,7 +259,8 @@ static u32  FW_CAN_ReadPOL(void *dev, u32 ptr, void *pdata, u32 num)
 
 static u32  FW_CAN_ReadINT(void *dev, u32 ptr, void *pdata, u32 num)
 {
-    return num;
+    FW_CAN_Type *can = dev;
+    return RB_Read(can->Config.RX_FIFO, pdata, num * sizeof(FW_CAN_Frame_Type));
 }
 
 static u32  FW_CAN_ReadDMA(void *dev, u32 ptr, void *pdata, u32 num)

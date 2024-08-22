@@ -115,7 +115,7 @@
 
 
 
-///* Internal Flash Driver */
+/* Internal Flash Driver */
 //__CONST_STATIC_ FW_Flash_Driver_Type IFlash_Driver =
 //{
 //    .Get_SectorNum  = IFlash_Get_SectorNum,

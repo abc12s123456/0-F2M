@@ -17,6 +17,52 @@ extern FW_CAN_Type CAN0_Device;
 extern FW_CAN_Type CAN1_Device;
 
 
+__INLINE_STATIC_ u8 CAN_IRQHandler(FW_CAN_Type *dev)
+{
+//    u32 can = (u32)dev->CANx;
+    
+    FW_CAN_RX_ISR(dev);
+    
+//    if(can_interrupt_flag_get(can, CAN_INT_FLAG_RFF0) == SET)
+//    {
+//        can_interrupt_flag_clear(can, CAN_INT_FLAG_RFF0);
+//    }
+//    
+//    else if(can_interrupt_flag_get(can, CAN_INT_FLAG_RFF1) == SET)
+//    {
+//        can_interrupt_flag_clear(can, CAN_INT_FLAG_RFF1);
+//    }
+//    
+//    else if(can_interrupt_flag_get(can, CAN_INT_FLAG_MTF0) == SET)
+//    {
+//        can_interrupt_flag_clear(can, CAN_INT_FLAG_MTF0);
+//    }
+//    
+//    else if(can_interrupt_flag_get(can, CAN_INT_FLAG_MTF1) == SET)
+//    {
+//        can_interrupt_flag_clear(can, CAN_INT_FLAG_MTF1);
+//    }
+//    
+//    else if(can_interrupt_flag_get(can, CAN_INT_FLAG_MTF2) == SET)
+//    {
+//        can_interrupt_flag_clear(can, CAN_INT_FLAG_MTF2);
+//    }
+//    
+//    else
+//    {
+//        return False;
+//    }
+    
+    return True;
+}
+
+
+__LI_ void CAN0_RX1_IRQHandler(void)
+{
+    FW_DEVICE_LIH(&CAN0_Device, CAN_IRQHandler);
+}
+
+
 __INLINE_STATIC_ void CAN_IO_Init(FW_CAN_Type *dev)
 {
     u32 can = (u32)dev->CANx;
@@ -42,7 +88,7 @@ __INLINE_STATIC_ void CAN_IO_Init(FW_CAN_Type *dev)
     }
     else if(can == CAN1)
     {
-        /* ½öÊÊÓÃÓÚ»¥ÁªÐÍ */
+        /* ä»…é€‚ç”¨äºŽäº’è”åž‹ */
         if(rx_pin == PB12 && tx_pin == PB13){}
         else if(rx_pin == PB5 && tx_pin == PB6)
         {
@@ -134,9 +180,9 @@ __INLINE_STATIC_ void CAN_Init(FW_CAN_Type *dev)
     
     /*
                      LL_Clocks.APB1Clk 
-    baudrate = ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-               (bs1 + bs2 + 3) * prescaler
-    ÆäÖÐ
+    baudrate = â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+               (bs1 + bs2 + 2) * prescaler
+    value range
     bs1 [1~16]
     bs2 [1~8]
     prescaler [1~512]
@@ -146,13 +192,13 @@ __INLINE_STATIC_ void CAN_Init(FW_CAN_Type *dev)
     sync = 1;
     while(1)
     {
-        if((tmp / prescaler) > 27)  
+        if((tmp / prescaler) > 26)  
         {
             prescaler++;
         }
         else
         {
-            tmp = tmp / prescaler - 3;
+            tmp = tmp / prescaler - 2;
             bs1 = 1;
             while(1)
             {
@@ -170,6 +216,9 @@ __INLINE_STATIC_ void CAN_Init(FW_CAN_Type *dev)
         }
     }
     
+    can_struct_para_init(CAN_INIT_STRUCT, &can_parameter);
+    can_struct_para_init(CAN_FILTER_STRUCT, &can_filter);
+    
     /* initialize */
     can_parameter.time_triggered        = DISABLE;
     can_parameter.auto_bus_off_recovery = DISABLE;
@@ -180,28 +229,26 @@ __INLINE_STATIC_ void CAN_Init(FW_CAN_Type *dev)
     can_parameter.working_mode          = mode;
     can_parameter.resync_jump_width     = sync - 1;
     can_parameter.time_segment_1        = bs1 - 1;
-    can_parameter.time_segment_2        = bs2 - 2;
-    can_parameter.prescaler             = prescaler - 1;
+    can_parameter.time_segment_2        = bs2 - 1;
+    can_parameter.prescaler             = prescaler;
     can_init(can, &can_parameter);
     
-    if(dev->Fiter == FW_CAN_Filter_List)
-    {
-        filter = CAN_FILTERMODE_LIST;
-    }
+    /* filter */
+    if(can == CAN0)
+        can_filter.filter_number  = 0;
     else
-    {
-        filter = CAN_FILTERMODE_MASK;
-    }
+        can_filter.filter_number  = 15;
     
-    /* filter */  
-    can_filter.filter_number      = 0;  
-    can_filter.filter_mode        = filter;
+    if(dev->Filter == FW_CAN_Filter_List)
+        can_filter.filter_mode    = CAN_FILTERMODE_LIST;
+    else
+        can_filter.filter_mode    = CAN_FILTERMODE_MASK;
     can_filter.filter_bits        = CAN_FILTERBITS_32BIT;
     can_filter.filter_list_high   = can_id >> 16;
     can_filter.filter_list_low    = can_id & 0xFF;
     can_filter.filter_mask_high   = can_id >> 16;
     can_filter.filter_mask_low    = can_id & 0xFF;  
-    can_filter.filter_fifo_number = CAN_FIFO0;
+    can_filter.filter_fifo_number = CAN_FIFO1;
     can_filter.filter_enable      = ENABLE;
     can_filter_init(&can_filter);
     
@@ -220,7 +267,7 @@ __INLINE_STATIC_ void CAN_Init(FW_CAN_Type *dev)
     if(trm == TRM_INT)
     {
         nvic_irq_enable(CANx_IRQn(can, TOR_RX), 3, 3);
-        can_interrupt_enable(can, CAN_INT_RFNE0);
+        can_interrupt_enable(can, CAN_INT_RFNE1);
     }
     else
     {
@@ -362,4 +409,63 @@ FW_DEVICE_STATIC_REGIST("can0", &CAN0_Device, CAN_Config, CAN0);
 
 static FW_CAN_Type CAN1_Device;
 FW_DEVICE_STATIC_REGIST("can1", &CAN1_Device, CAN_Config, CAN1);
+
+
+
+
+#include "fw_debug.h"
+#if MODULE_TEST && CAN_TEST
+#include "fw_delay.h"
+
+
+#define CAN_DEV_NAME         "can0"
+static void CAN_Pre_Config(void *pdata)
+{
+    FW_CAN_Type *can = FW_Device_Find(CAN_DEV_NAME);
+    
+    can->Mode = FW_CAN_Mode_LoopBack;
+    can->Baudrate = 500000;
+    can->Config.TX_Mode = TRM_POL;
+    can->Config.RX_Mode = TRM_INT;
+    can->ID = 0;
+    can->Filter = FW_CAN_Filter_Mask;
+}
+FW_PRE_INIT(CAN_Pre_Config, NULL);
+
+
+void Test(void)
+{
+    FW_CAN_Type *can = FW_Device_Find(CAN_DEV_NAME);
+    FW_CAN_Frame_Type frame, tmp[U8_MAX];
+    u8 msg[U8_MAX];
+    u8 i, len;
+    
+    FW_CAN_Init(can);
+    
+    frame.ID = can->ID;
+    frame.Format = FW_CAN_FF_STD;
+    frame.Type = FW_CAN_FT_Data;
+    frame.Length = 8;
+    
+    for(i = 0; i < U8_MAX; i++)
+    {
+        msg[i] = i + 1;
+    }
+    
+    while(1)
+    {
+        FW_CAN_Write(can, &frame, msg, sizeof(msg));
+        
+        len = FW_CAN_Read(can, NULL, (u8 *)tmp, 1);
+        if(len)
+        {
+            len = len;
+        }
+        
+        FW_Delay_Ms(10);
+    }
+}
+
+
+#endif
 

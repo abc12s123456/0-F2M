@@ -31,10 +31,6 @@ FW_INIT_DECLARE(Device_Init_Table, FW_Function_Type);
 FW_INIT_DECLARE(Board_Init_Table, FW_Function_Type);
 
 
-//__WEAK_ void FW_System_Init(void){}
-//__WEAK_ void FW_Delay_Init(void){}
-
-
 #if defined(__CC_ARM) || defined(__CLANG_ARM)
 int $Sub$$main(void)
 {

@@ -117,12 +117,8 @@ void FW_System_Init(void)
     
     Driver->Init();
     
-//    FW_SDI();
-    
     PLock = ILock;
     PUnlock = IUnlock;
-    
-//    FW_SEI();
 }
 
 void FW_System_DisableIRQ(void)

@@ -11,19 +11,19 @@ LL_Clocks_Type LL_Clocks;
 __LI_ void NMI_Handler(void)
 {
 #if HSE_EN
-    if(rcu_interrupt_flag_get(RCU_INT_FLAG_HXTALSTB) == SET)
-    {
-        //使能内部时钟
-        rcu_osci_on(RCU_IRC8M);
-        while(rcu_flag_get(RCU_FLAG_IRC8MSTB) != SET);
-        
-        //使用内部时钟作为PLL输入
-        rcu_pll_config(RCU_PLLSRC_IRC8M_DIV2, RCU_PLL_MUL30);  //PLL_CLK = 8MHz / 2 * 30 = 120MHz
-        rcu_osci_on(RCU_PLL_CK);
-        while(rcu_flag_get(RCU_FLAG_PLLSTB) != SET);
-    
-        rcu_interrupt_flag_clear(RCU_INT_FLAG_HXTALSTB_CLR);
-    }
+//    if(rcu_interrupt_flag_get(RCU_INT_FLAG_HXTALSTB) == SET)
+//    {
+//        //使能内部时钟
+//        rcu_osci_on(RCU_IRC8M);
+//        while(rcu_flag_get(RCU_FLAG_IRC8MSTB) != SET);
+//        
+//        //使用内部时钟作为PLL输入
+//        rcu_pll_config(RCU_PLLSRC_IRC8M_DIV2, RCU_PLL_MUL30);  //PLL_CLK = 8MHz / 2 * 30 = 120MHz
+//        rcu_osci_on(RCU_PLL_CK);
+//        while(rcu_flag_get(RCU_FLAG_PLLSTB) != SET);
+//    
+//        rcu_interrupt_flag_clear(RCU_INT_FLAG_HXTALSTB_CLR);
+//    }
 #endif
 }
 
@@ -40,18 +40,18 @@ __INLINE_STATIC_ void System_Init(void)
     while(LL_RCC_HSE_IsReady() != SET);
     
     //sysclk = HSE / PLLM * PLLN / PLLP (max = 84M)
-    LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE, LL_RCC_PLLM_DIV_8, 400, LL_RCC_PLLP_DIV_4);
+    LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE, LL_RCC_PLLM_DIV_8, 336, LL_RCC_PLLP_DIV_4);
     #else
     LL_RCC_HSI_Enable();
     while(LL_RCC_HSI_IsReady() != SET);
     
     LL_RCC_HSI_SetCalibTrimming(16);
     
-    LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI, LL_RCC_PLLM_DIV_8, 400, LL_RCC_PLLP_DIV_4);
+    LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI, LL_RCC_PLLM_DIV_16, (84 * 4), LL_RCC_PLLP_DIV_4);
     #endif
     
     /* Set FLASH latency */
-    LL_FLASH_SetLatency(LL_FLASH_LATENCY_3);
+    LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);
     
     /* Main PLL configuration and activation */
     LL_RCC_PLL_Enable();
@@ -64,14 +64,16 @@ __INLINE_STATIC_ void System_Init(void)
     LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
 
     /* Set APB1 & APB2 prescaler */
-    LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
-    LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+    LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+    LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_2);
     
     LL_RCC_GetSystemClocksFreq(&clock);
     LL_Clocks.Sysclk = clock.SYSCLK_Frequency;
     LL_Clocks.AHBClk = clock.HCLK_Frequency;
     LL_Clocks.APB1Clk = clock.PCLK1_Frequency;
     LL_Clocks.APB2Clk = clock.PCLK2_Frequency;
+    
+    SystemCoreClock = 84000000;
 }
 
 //{

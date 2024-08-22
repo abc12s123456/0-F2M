@@ -44,7 +44,7 @@ static void IFlash_Driver_Probe(void *dev)
     {
         /* internal flash driver is not instanced */
         LOG_D("未找到内部闪存驱动\r\n");
-        while(1);
+//        while(1);
     }
 }
 FW_DEVICE_STATIC_REGIST("iflash", &IFlash, IFlash_Driver_Probe, IFlash);

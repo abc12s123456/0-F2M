@@ -45,7 +45,7 @@ static void IWDG_Driver_Probe(void *dev)
     {
         /* internal iwdg driver is not instanced */
         LOG_D("internal iwdg driver is not instanced\r\n");
-        while(1);
+//        while(1);
     }
 }
 FW_DEVICE_STATIC_REGIST("iwdg", &IWDG, IWDG_Driver_Probe, IWDG);
@@ -60,7 +60,7 @@ static void WWDG_Driver_Probe(void *dev)
     {
         /* internal iwdg driver is not instanced */
         LOG_D("internal wwdg driver is not instanced\r\n");
-        while(1);
+//        while(1);
     }
 }
 FW_DEVICE_STATIC_REGIST("wwdg", &WWDG, WWDG_Driver_Probe, WWDG);

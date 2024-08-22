@@ -195,10 +195,10 @@ __INLINE_STATIC_ void Pin_Init(FW_GPIO_Type *dev, u16 pin, FW_GPIO_Mode_Enum mod
     LL_GPIO_InitTypeDef gpio_initstruct;
     
     gpio_initstruct.Pin        = GPIO_Pin_x(pin);
-    gpio_initstruct.Mode       = LL_GPIO_MODE_OUTPUT;
-    gpio_initstruct.Speed      = LL_GPIO_SPEED_FREQ_LOW;
-    gpio_initstruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-    gpio_initstruct.Pull       = LL_GPIO_PULL_NO;
+    gpio_initstruct.Mode       = gpio_mode;
+    gpio_initstruct.Speed      = gpio_speed;
+    gpio_initstruct.OutputType = gpio_output;
+    gpio_initstruct.Pull       = gpio_pull;
     
     LL_GPIO_Init(GPIOx(pin), &gpio_initstruct);
 }
@@ -278,20 +278,29 @@ FW_DRIVER_REGIST("ll->gpio", &HGPIO_Driver, HGPIO);
 #include "fw_debug.h"
 #if MODULE_TEST && GPIO_TEST
 #include "fw_delay.h"
+#include "fw_uart.h"
+
+#include "lib_int.h"
 
 
 void Test(void)
 {
-    u16 ve = PD1;
-    u16 led = PA0;
+    u16 ve = PE3;
+    u16 led = PE2;
     u16 key = PA1;
-    u32 cnt = 500;
+    u32 cnt = 250;
+    u32 i;
+    char t[10];
     
     FW_GPIO_Init(ve, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
     FW_GPIO_Init(led, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
     FW_GPIO_Init(key, FW_GPIO_Mode_IPD, FW_GPIO_Speed_Low);
     
     FW_GPIO_SET(ve);
+    
+    FW_UART_PrintInit(PA4, 9600);
+    
+    printf("hello world\r\n");
     
     while(1)
     {
@@ -305,6 +314,17 @@ void Test(void)
         FW_Delay_Ms(cnt);
         FW_GPIO_CLR(led);
         FW_Delay_Ms(cnt);
+        
+        FW_GPIO_SET(ve);
+        i = FW_Delay_GetMsStart();
+        FW_Delay_Us(cnt * 1000);
+        i = FW_Delay_GetMsDuration(i);
+        
+        FW_GPIO_CLR(ve);
+        i = FW_Delay_GetMsStart();
+        FW_Delay_Us(cnt * 1000);
+        i = FW_Delay_GetMsDuration(i);
+        printf("i=250\r\n");
     }
 }
 
