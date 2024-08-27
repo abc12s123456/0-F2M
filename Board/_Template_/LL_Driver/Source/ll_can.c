@@ -376,7 +376,7 @@ __INLINE_STATIC_ u8   CAN_Wait_TC(FW_CAN_Type *dev)
 
 __INLINE_STATIC_ u8   CAN_Wait_RC(FW_CAN_Type *dev)
 {
-    
+    return 0;
 }
 
 
