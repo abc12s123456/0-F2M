@@ -77,8 +77,16 @@ void STiming_Init(STiming_Type *t, u32 (*get_tick)(void))
     t->Done_Flag = True;                       //定时器未执行时，认为定时完成
 
     t->CB = NULL;
+    t->Pdata = NULL;
+    
+    t->Init_Flag = True;
 }
 /**/
+
+Bool STiming_IsInit(STiming_Type *t)
+{
+    return (Bool)t->Init_Flag;
+}
 
 void STiming_SetCB(STiming_Type *t, void (*cb)(void *), void *pdata)
 {
@@ -190,6 +198,11 @@ void STiming_Close(STiming_Type *t)
 }
 /**/
 
+Bool STiming_IsOpen(STiming_Type *t)
+{
+    return (Bool)t->Switch_Flag;
+}
+
 /**
 @功能：软件定时器完成
 @参数：Type, 定时器对象
@@ -204,4 +217,9 @@ void STiming_Done(STiming_Type *t)
     STiming_Unlock();
 }
 /**/
+
+Bool STiming_IsDone(STiming_Type *t)
+{
+    return (Bool)t->Ignore_Flag;
+}
 

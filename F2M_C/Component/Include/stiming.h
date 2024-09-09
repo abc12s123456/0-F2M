@@ -63,24 +63,28 @@ typedef struct
     
     __WS_ u32 Mode : 1;           //计时模式
     
+    __RO_ u32 Init_Flag : 1;      //初始化标识
     __RO_ u32 Get_Flag : 1;       //起始时刻获取标识
     __RO_ u32 Switch_Flag : 1;    //定时器开关标识
     __RO_ u32 Ignore_Flag : 1;    //定时器忽略标识
     __RO_ u32 Done_Flag : 1;      //定时完成标识
     
-    __RE_ u32 RE : 28;
+    __RE_ u32 RE : 26;
 }STiming_Type;
 
 
 void STiming_DeInit(STiming_Type *t);
 void STiming_Init(STiming_Type *t, u32 (*get_tick)(void));
+Bool STiming_IsInit(STiming_Type *t);
 u32  STiming_GetTick(STiming_Type *t);
 void STiming_SetCB(STiming_Type *t, void (*cb)(void *), void *pdata);
 Bool STiming_Start(STiming_Type *t, u32 timing_time);
 void STiming_Reset(STiming_Type *t);
 void STiming_Open(STiming_Type *t);
 void STiming_Close(STiming_Type *t);
+Bool STiming_IsOpen(STiming_Type *t);
 void STiming_Done(STiming_Type *t);
+Bool STiming_IsDone(STiming_Type *t);
 
 
 #if __cplusplus
