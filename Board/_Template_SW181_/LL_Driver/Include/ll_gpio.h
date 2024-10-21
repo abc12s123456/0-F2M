@@ -12,7 +12,7 @@ extenrn "C"{
 
 
 #define GPIOx(pin)                (GPIO_TypeDef *)(APB_BASE + (((pin) & 0xFF00) << 4))
-#define GPIO_PORTx(pin)           (PORT_TypeDef *)((((pin) & 0xFF00) == PORTG) ? PORTG_BASE : (APB_BASE + (((pin) >> 4) + 0x90)))
+#define GPIO_PORTx(pin)           (PORT_TypeDef *)((((pin) & 0xFF00) == 0x0700) ? PORTG_BASE : (APB_BASE + (((pin) >> 4) + 0xF0)))
 #define GPIO_PINx(pin)            ((pin) & 0xFF)
 
 

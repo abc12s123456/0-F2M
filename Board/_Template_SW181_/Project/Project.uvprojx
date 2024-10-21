@@ -336,7 +336,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--locale=english</MiscControls>
-              <Define>GD32F30X_HD,__FPU_PRESENT,USE_USBFS,</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath>.\Include;..\Application\ASP;..\Application\ASP\Include;..\Application\BSP;..\Application\BSP\Include;..\LL_Driver\Include;..\LL_Driver\USBD\MSC\Include;..\..\..\F2M_C\Component\Include;..\..\..\F2M_C\Device\Include;..\..\..\F2M_C\Device\DAL\Include;..\..\..\F2M_C\FWAL\Include;..\..\..\F2M_C\FWAL\HAL\Include;..\..\..\F2M_C\Library\Include;..\..\..\F2M_C\Protocol\Include;..\..\..\Firmware\SWM181\SWM181_StdPeriph_Driver;..\..\..\Firmware\SWM181\CMSIS\CoreSupport;..\..\..\Firmware\SWM181\CMSIS\DeviceSupport;..\..\..\Third_Party\LVGL\src;..\..\..\Third_Party\LVGL\src\core;..\..\..\Third_Party\LVGL\src\draw;..\..\..\Third_Party\LVGL\src\extra;..\..\..\Third_Party\LVGL\src\font;..\..\..\Third_Party\LVGL\src\gpu;..\..\..\Third_Party\LVGL\src\hal;..\..\..\Third_Party\LVGL\src\misc;..\..\..\Third_Party\LVGL\src\widgets;..\Ports\LVGL;..\Application\UI\custom;..\Application\UI\generated;..\Application\UI\generated\guider_customer_fonts;..\Application\UI\generated\guider_fonts;..\..\..\Third_Party\cJSON;..\Ports\fatfs;..\..\..\Third_Party\fatfs\source;..\..\..\Third_Party\littlefs;..\Ports\littlefs</IncludePath>
             </VariousControls>
@@ -678,6 +678,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\F2M_C\Device\Source\hc595.c</FilePath>
             </File>
+            <File>
+              <FileName>a76xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\F2M_C\Device\Source\a76xx.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -717,6 +722,11 @@
               <FileName>wifi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\F2M_C\Device\DAL\Source\wifi.c</FilePath>
+            </File>
+            <File>
+              <FileName>mqtt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\F2M_C\Device\DAL\Source\mqtt.c</FilePath>
             </File>
           </Files>
         </Group>

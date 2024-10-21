@@ -305,23 +305,13 @@ __WEAK_ int fputc(int ch, FILE *f)
 }
 /**/
 
-//void FW_UART_PrintInit(FW_UART_Type *dev)
-//{
-//    Printer = dev;
-//}
-///**/
-
-//void FW_UART_SetPrint(FW_UART_Type *dev)
-//{
-//    Printer = dev;
-//}
-
 void UART_PrintInit(FW_UART_Type *dev, u16 pin, u32 baudrate)
 {
     FW_UART_Driver_Type *drv;
     
     if(dev != NULL)
     {
+        FW_UART_Init(dev);
         Printer = dev;
         return;
     }
@@ -336,7 +326,6 @@ void UART_PrintInit(FW_UART_Type *dev, u16 pin, u32 baudrate)
     dev->TX_Pin = pin;
     
     FW_UART_Init(dev);
-    
     Printer = dev;
 }
 
@@ -461,10 +450,11 @@ static u32  FW_UART_WritePOL(void *dev, u32 offset, const void *pdata, u32 num)
     
     u8 *p = (u8 *)pdata;
     u8 (*pf)(FW_UART_Type *) = FW_UART_WaitNull;
+    u32 i;
     
     if(drv->Wait_TC)  pf = drv->Wait_TC;
     
-    while(num--)
+    for(i = 0; i < num; i++)
     {
         drv->TX_Byte(uart, *p++);
         while(pf(uart) != True);

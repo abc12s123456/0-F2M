@@ -108,29 +108,29 @@ __INLINE_STATIC_ void Pin_Init(FW_GPIO_Type *gpio, u16 pin, FW_GPIO_Mode_Enum mo
             break;
     }
     
-    GPIO_Init(GPIOx(pin), PINx(pin), dir, pull_up, pull_down, open_drain);
+    GPIO_Init(GPIOx(pin), GPIO_PINx(pin), dir, pull_up, pull_down, open_drain);
 }
 
 __INLINE_STATIC_ void Pin_Write(FW_GPIO_Type *gpio, u16 pin, u8 value)
 {
     (value) ?\
-    GPIO_SetBit(GPIOx(pin), PINx(pin)) :\
-    GPIO_ClrBit(GPIOx(pin), PINx(pin));
+    GPIO_SetBit(GPIOx(pin), GPIO_PINx(pin)) :\
+    GPIO_ClrBit(GPIOx(pin), GPIO_PINx(pin));
 }
 
 __INLINE_STATIC_ u8   Pin_GetOutput(FW_GPIO_Type *gpio, u16 pin)
 {
-    return (u8)GPIO_GetBit(GPIOx(pin), PINx(pin));
+    return (u8)GPIO_GetBit(GPIOx(pin), GPIO_PINx(pin));
 }
 
 __INLINE_STATIC_ u8   Pin_Read(FW_GPIO_Type *gpio, u16 pin)
 {
-    return (u8)GPIO_GetBit(GPIOx(pin), PINx(pin));
+    return (u8)GPIO_GetBit(GPIOx(pin), GPIO_PINx(pin));
 }
 
 __INLINE_STATIC_ void Pin_Toggle(FW_GPIO_Type *gpio, u16 pin)
 {
-    GPIO_InvBit(GPIOx(pin), PINx(pin));
+    GPIO_InvBit(GPIOx(pin), GPIO_PINx(pin));
 }
 
 //__INLINE_STATIC_ void Port_DeInit(u16 port)
@@ -185,38 +185,67 @@ FW_DRIVER_REGIST("ll->gpio", &HGPIO_Driver, HGPIO);
 
 void Test(void)
 {
-    u16 ve = PD1;
-    u16 led = PB4;
-    u16 key = PA0;
-    u32 cnt = 500;
+//    u16 ve = PD1;
+//    u16 led = PB4;
+//    u16 key = PA0;
+//    u32 cnt = 500;
+//    
+//    FW_GPIO_Init(ve, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
+//    FW_GPIO_Init(led, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
+//    FW_GPIO_Init(key, FW_GPIO_Mode_IPD, FW_GPIO_Speed_Low);
+//    
+//    FW_GPIO_SET(ve);
+//    
+//    while(1)
+//    {
+//        if(FW_GPIO_Read(key) == LEVEL_H)
+//        {
+//            cnt += 500;
+//            if(cnt >= 2000)  cnt = 500;
+//        }
+//        
+//        FW_GPIO_SET(led);
+//        FW_Delay_Ms(cnt);
+//        FW_GPIO_CLR(led);
+//        FW_Delay_Ms(cnt);
+//    }
+    u16 m0 = PD0;
+    u16 m1 = PD1;
+    u64 start;
+    u32 duration;
     
-    FW_GPIO_Init(ve, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
-    FW_GPIO_Init(led, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
-    FW_GPIO_Init(key, FW_GPIO_Mode_IPD, FW_GPIO_Speed_Low);
-    
-    FW_GPIO_SET(ve);
+    FW_GPIO_Init(m0, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
+    FW_GPIO_Init(m1, FW_GPIO_Mode_Out_PPU, FW_GPIO_Speed_Low);
     
     while(1)
     {
-        if(FW_GPIO_Read(key) == LEVEL_H)
-        {
-            cnt += 500;
-            if(cnt >= 2000)  cnt = 500;
-        }
+        FW_GPIO_SET(m0);
+        FW_GPIO_SET(m1);
+        start = FW_Delay_GetUsStart();
+        FW_Delay_Ms(500);
+        duration = FW_Delay_GetUsDuration(start);
+        if(duration)  duration = duration;
+        FW_GPIO_CLR(m0);
+        FW_GPIO_CLR(m1);
+        FW_Delay_Ms(500);
         
-        FW_GPIO_SET(led);
-        FW_Delay_Ms(cnt);
-        FW_GPIO_CLR(led);
-        FW_Delay_Ms(cnt);
+        FW_GPIO_CLR(m0);
+        FW_GPIO_SET(m1);
+        FW_Delay_Ms(500);
+        FW_GPIO_SET(m0);
+        FW_GPIO_CLR(m1);
+        FW_Delay_Ms(500);
     }
 }
 
-#elif MODULE_TEST && IR_TEST
+#elif MODULE_TEST && GPIO_TEST
 #include "fw_delay.h"
 
 
 void Test(void)
 {
+    u64 start;
+    
     u16 VCC_EN = PD1;
     u16 IR_IN = PA1;
     

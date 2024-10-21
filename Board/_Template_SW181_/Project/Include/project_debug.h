@@ -187,7 +187,7 @@ extern "C"{
 /*
  * @IO设备
  */
-#define IO_DEVICE_TEST            ON                                           /* IO驱动设备测试 */
+#define IO_DEVICE_TEST            OFF                                           /* IO驱动设备测试 */
 #if IO_DEVICE_TEST == ON
 #define HC595_TEST                ON
 #define HC165_TEST                OFF                                           /* HC165模块测试 */
@@ -215,12 +215,13 @@ extern "C"{
 /*
  * @UART设备
  */
-#define UART_DEVICE_TEST          OFF                                           /* UART驱动设备测试 */
+#define UART_DEVICE_TEST          ON                                           /* UART驱动设备测试 */
 #if UART_DEVICE_TEST == ON
 #define BO2_TEST                  OFF                                           /* 血氧模块测试 */
 #define LORA610_TEST              OFF                                           /* LORA610模块测试 */
 #define ESP8266_TEST              OFF                                           /* ESP8266模块测试 */
 #define OSC3F_TEST                OFF                                           /* OSC3F传感器模块测试 */
+#define A76XX_TEST                ON
 #endif  /* UART_DEVICE_TEST */
 
 

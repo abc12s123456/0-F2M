@@ -85,6 +85,11 @@ __INLINE_STATIC_ u8 UART_IRQHandler(FW_UART_Type *dev)
         FW_UART_RX_ISR(dev);
     }
     
+    else if(UART_INTTimeoutStat(uart) == 1)
+    {
+//        FW_UART_RX_ISR(dev);
+    }
+    
     else if(UART_INTTXThresholdStat(uart) == 1)
     {
         FW_UART_TX_ISR(dev);
@@ -99,22 +104,22 @@ __INLINE_STATIC_ u8 UART_IRQHandler(FW_UART_Type *dev)
 }
 /**/
 
-__LI_ void USART0_IRQHandler(void)
+__LI_ void IRQ0_Handler(void)
 {
     FW_DEVICE_LIH(&UART0_Device, UART_IRQHandler);
 }
 
-__LI_ void USART1_IRQHandler(void)
+__LI_ void IRQ1_Handler(void)
 {
     FW_DEVICE_LIH(&UART1_Device ,UART_IRQHandler);
 }
 
-__LI_ void USART2_IRQHandler(void)
+__LI_ void IRQ2_Handler(void)
 {
     FW_DEVICE_LIH(&UART2_Device ,UART_IRQHandler);
 }
 
-__LI_ void UART3_IRQHandler(void)
+__LI_ void IRQ3_Handler(void)
 {
     FW_DEVICE_LIH(&UART3_Device ,UART_IRQHandler);
 }
@@ -182,8 +187,10 @@ __INLINE_STATIC_ void LL_UART_Init(FW_UART_Type *dev)
     }
     else if(trm == TRM_INT)
     {
-        UART_initStruct.TXThreshold = 1;
+        UART_initStruct.TXThreshold = 0;
         UART_initStruct.TXThresholdIEn = 1;
+//        UART_initStruct.TimeoutTime = 10;
+//        UART_initStruct.TimeoutIEn = 1;
         IRQ_Connect(IRQ0_15_UARTx(uart), IRQx_IRQ(uart), 3);
     }
     else
@@ -197,25 +204,28 @@ __INLINE_STATIC_ void LL_UART_Init(FW_UART_Type *dev)
     {
         UART_initStruct.TimeoutIEn     = 0;
     
-    }
+    }                           
     else if(trm == TRM_INT)
     {
-        UART_initStruct.RXThreshold = 1;
+        UART_initStruct.RXThreshold = 0;
         UART_initStruct.RXThresholdIEn = 1;
-        IRQ_Connect(IRQ0_15_UARTx(uart), IRQx_IRQ(uart), 3);
+        UART_initStruct.TimeoutTime = 10;
+        UART_initStruct.TimeoutIEn = 0;
+        IRQ_Connect(IRQ0_15_UARTx(uart), IRQx_IRQ(uart), 1);
     }
     else
     {
         UART_initStruct.RXThreshold = 1;
         UART_initStruct.RXThresholdIEn = 0;
-    }        
-    
+    }
     
  	UART_initStruct.Baudrate       = dev->Baudrate;
 	UART_initStruct.DataBits       = UART_DATA_8BIT;
 	UART_initStruct.Parity         = UART_PARITY_NONE;
 	UART_initStruct.StopBits       = UART_STOP_1BIT;
  	UART_Init(uart, &UART_initStruct);
+    
+    UART_Open(uart);
 }
 /**/
 
@@ -304,7 +314,7 @@ __INLINE_STATIC_ u8 UART_Wait_TC(FW_UART_Type *dev)
     }
     else
     {
-        return UART_IsTXBusy(uart);
+        return !UART_IsTXBusy(uart);
     }
     
     return 1;
@@ -400,15 +410,47 @@ FW_DEVICE_STATIC_REGIST("uart3", &UART3_Device, UART3_Config, UART3);
 
 #include "fw_debug.h"
 #if MODULE_TEST && UART_TEST
+#include "fw_delay.h"
+
+
+#define PRINT_DEV_NAME  "uart0"
+static void UART_Pre_Init(void *pdata)
+{
+    FW_UART_Type *dev = FW_Device_Find(PRINT_DEV_NAME);
+    dev->TX_Pin = PA5;
+    dev->RX_Pin = PA6;
+    dev->Baudrate = 115200;
+    dev->Config.RX_RB_Size = 64;
+    dev->Config.RX_Mode = TRM_INT;
+}
+FW_BOARD_INIT(UART_Pre_Init, NULL);
 
 
 void Test(void)
 {
-    FW_UART_PrintInit(PA9, 9600);
+    FW_UART_Type *uart = FW_Device_Find(PRINT_DEV_NAME);
+    u8 len;
+    u8 msg[10];
     
+    FW_UART_PrintInit(uart);
+    
+    printf("12345\r\n");
+    printf("123456\r\n");
+    printf("1234567\r\n");
+    printf("12345678\r\n");
+    printf("123456789\r\n");
+    printf("1234567890\r\n");
     printf("hello world\r\n");
     
-    while(1);
+    while(1)
+    {
+        len = FW_UART_Read(uart, 0, msg, 10);
+        if(len)
+        {
+            FW_UART_Write(uart, 0, msg, 10);
+        }
+        FW_Delay_Ms(100);
+    }
 }
 
 

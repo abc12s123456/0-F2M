@@ -185,9 +185,6 @@ void FW_UART_RC_ISR(FW_UART_Type *dev);
 void FW_UART_TX_ISR(FW_UART_Type *dev);
 void FW_UART_TC_ISR(FW_UART_Type *dev);
 
-//void FW_UART_PrintInit(FW_UART_Type *dev);
-//void FW_UART_SetPrint(FW_UART_Type *dev);
-
 void UART_PrintInit(FW_UART_Type *dev, u16 pin, u32 baudrate);
 
 
