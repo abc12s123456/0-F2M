@@ -49,9 +49,11 @@ int $Sub$$main(void)
     extern void FW_System_Init(void);
     FW_System_Init();
     
-    /* 系统延时节拍初始化(使用OS时，应当在OS开启后再执行一次初始化) */
+    #if (defined(RTOS_EN) && !RTOS_EN) || !defined(RTOS_EN)
+    /* 系统延时节拍初始化(使用OS时，应当在OS开启后再执行调用) */
     extern void FW_Delay_Init(void);
     FW_Delay_Init();
+    #endif
     
     /* 设备绑定 */
     extern void FW_Device_PreBind(void);

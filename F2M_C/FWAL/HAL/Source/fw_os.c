@@ -85,9 +85,6 @@ void FW_OS_Start(void)
     
     OS_Start_Flag = True;
     
-    extern void FW_Delay_Init(void);
-    FW_Delay_Init();
-    
     Driver->OS_Start();
 }
 /**/

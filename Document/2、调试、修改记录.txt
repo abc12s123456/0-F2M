@@ -1,2 +1,6 @@
 2024-08-05
 1、MM_Pool_Malloc函数优化，将一个内存块的申请大小由2^n调整为2^n + BCT_Type
+
+2024-10-21
+1、FW_OS_Start()执行时取消FW_Delay_Init,FW_Delay_Init应在任务启动后，在创建的任务
+   中执行；
