@@ -11,14 +11,14 @@ Isdev(name, "dac0") ? DAC0 :\
 Isdev(name, "dac1") ? DAC1 :\
 (u32)INVALUE)
 
-/* ´¥·¢·½Ê½£¬ÉèÖÃÎªPeriodÊ±£¬¸ù¾Ý¾ßÌåÓ²¼þÉèÖÃ´¥·¢Ô´ */
+/* è§¦å‘æ–¹å¼ï¼Œè®¾ç½®ä¸ºPeriodæ—¶ï¼Œæ ¹æ®å…·ä½“ç¡¬ä»¶è®¾ç½®è§¦å‘æº */
 #define DAC_TRIGGER_x(trigger)(\
 (trigger == FW_DAC_Trigger_Software) ? DAC_TRIGGER_SOFTWARE :\
 (trigger == FW_DAC_Trigger_Period) ? DAC_TRIGGER_T6_TRGO :\
 (trigger == FW_DAC_Trigger_EXTI) ? DAC_TRIGGER_EXTI_9 :\
 INVALUE)
 
-/* Êä³ö¾«¶È£¬¶ÔÆë·½Ê½ */
+/* è¾“å‡ºç²¾åº¦ï¼Œå¯¹é½æ–¹å¼ */
 #define DAC_ALIGN_x_x(res, align)(\
 (res == FW_DAC_Resolution_12Bits && align == FW_DAC_Align_Right) ? DAC_ALIGN_12B_R :\
 (res == FW_DAC_Resolution_12Bits && align == FW_DAC_Align_Left) ? DAC_ALIGN_12B_L :\
@@ -49,7 +49,7 @@ __INLINE_STATIC_ void DAC_Init(FW_DAC_Type *dev)
     
     FW_GPIO_Init(dev->Pin, FW_GPIO_Mode_AOUT, FW_GPIO_Speed_High);
     
-    /* ´¥·¢·½Ê½ */
+    /* è§¦å‘æ–¹å¼ */
     if(dev->Trigger == FW_DAC_Trigger_Software)
     {
         dac_trigger_source_config(dac, DAC_TRIGGER_SOFTWARE);
@@ -88,7 +88,7 @@ __INLINE_STATIC_ void DAC_Init(FW_DAC_Type *dev)
                 memory_width = DMA_MEMORY_WIDTH_16BIT;
             }
             
-            /* ¶¨Ê±Æ÷´¥·¢£¬DAC0ºÍDAC1Ê¹ÓÃ²»Í¬µÄ´¥·¢Ô´£¬µ×²ã¹Ì¶¨ÅäÖÃ */
+            /* å®šæ—¶å™¨è§¦å‘ï¼ŒDAC0å’ŒDAC1ä½¿ç”¨ä¸åŒçš„è§¦å‘æºï¼Œåº•å±‚å›ºå®šé…ç½® */
             dac_trigger_source_config(dac, DAC_TRIGGER_T5_TRGO);
         }
         else
@@ -146,10 +146,10 @@ __INLINE_STATIC_ void DAC_Init(FW_DAC_Type *dev)
         dac_dma_enable(dac);
     }
     
-    /* Ê¹ÄÜ´¥·¢ */
+    /* ä½¿èƒ½è§¦å‘ */
     dac_trigger_enable(dac);
     
-    /* Ìí¼ÓÔëÉù²¨ */
+    /* æ·»åŠ å™ªå£°æ³¢ */
     if(dev->Noise == FW_DAC_Noise_LFSR)
     {
         dac_wave_mode_config(dac, DAC_WAVE_MODE_LFSR);
@@ -165,13 +165,13 @@ __INLINE_STATIC_ void DAC_Init(FW_DAC_Type *dev)
         dac_wave_mode_config(dac, DAC_WAVE_DISABLE);
     }
     
-    /* ¿ªÆô»º³å£¬½µµÍÊä³ö×è¿¹£¬Ôö¼ÓÊä³öÇý¶¯ÄÜÁ¦ */
+    /* å¼€å¯ç¼“å†²ï¼Œé™ä½Žè¾“å‡ºé˜»æŠ—ï¼Œå¢žåŠ è¾“å‡ºé©±åŠ¨èƒ½åŠ› */
     if(dev->OB_EN)  dac_output_buffer_enable(dac);
     else  dac_output_buffer_disable(dac);
     
     dac_enable(dac);
     
-    /* ²¢·¢×ª»» */
+    /* å¹¶å‘è½¬æ¢ */
 //    dac_concurrent_enable();
 //    dac_concurrent_data_set(dac, 
 }
@@ -201,7 +201,7 @@ __INLINE_STATIC_ void DAC_Trigger_Config(FW_DAC_Type *dev, u32 freq)
 {
     if(dev->Trigger == FW_DAC_Trigger_Period)
     {
-        /* Í¨¹ýtimer²úÉúÒ»¸öÖÜÆÚÐÔ´¥·¢ÊÂ¼þ£¬´¥·¢DACÊä³ö */
+        /* é€šè¿‡timeräº§ç”Ÿä¸€ä¸ªå‘¨æœŸæ€§è§¦å‘äº‹ä»¶ï¼Œè§¦å‘DACè¾“å‡º */
         FW_TIM_Type *pdev;
         u32 timer;
         
@@ -227,7 +227,7 @@ __INLINE_STATIC_ void DAC_Trigger_Config(FW_DAC_Type *dev, u32 freq)
     }
     else
     {
-        /* EXTI´¥·¢ */
+        /* EXTIè§¦å‘ */
     }
     
 //    u32 timer = TIMER5;
@@ -332,7 +332,7 @@ static void DAC_Pre_Init(void *pdata)
     dac->Buffer = (u8 *)Wave;
     dac->Buffer_Num = Arrayof(Wave);
     /*
-     * Êä³ö²¨ÐÎµÄÆµÂÊµÈÓÚ(freq / num)
+     * è¾“å‡ºæ³¢å½¢çš„é¢‘çŽ‡ç­‰äºŽ(freq / num)
      */
 }
 FW_PRE_INIT(DAC_Pre_Init, NULL);
@@ -423,7 +423,7 @@ static void DAC_Pre_Init(void *pdata)
     
     dac->Buffer_Num = 512;
     /*
-     * Êä³ö²¨ÐÎµÄÆµÂÊµÈÓÚ(freq / num)
+     * è¾“å‡ºæ³¢å½¢çš„é¢‘çŽ‡ç­‰äºŽ(freq / num)
      */
 }
 FW_PRE_INIT(DAC_Pre_Init, NULL);
