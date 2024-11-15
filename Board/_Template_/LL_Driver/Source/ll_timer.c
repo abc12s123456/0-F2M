@@ -204,13 +204,13 @@ __INLINE_STATIC_ void TIM_DeInit(FW_TIM_Type *dev)
 }
 /**/
 
-__INLINE_STATIC_ void TIM_Init(FW_TIM_Type *dev)
-{
-    char *name = FW_Device_GetName(dev);
-    u32 timer = (u32)TIMERx(name);
-    FW_TIM_SetPort(dev, (void *)timer);
-}
-/**/
+//__INLINE_STATIC_ void TIM_Init(FW_TIM_Type *dev)
+//{
+//    char *name = FW_Device_GetName(dev);
+//    u32 timer = (u32)TIMERx(name);
+//    FW_TIM_SetPort(dev, (void *)timer);
+//}
+///**/
 
 __INLINE_STATIC_ u32  TIM_Get_Clock(FW_TIM_Type *dev)
 {

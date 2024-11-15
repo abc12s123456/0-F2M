@@ -10,6 +10,60 @@ extern "C"{
 #include "fw_config.h"
 
 
+#define CRC32_EN              ON
+#define CRC32_MPEG2_EN        ON
+
+#define CRC16_IBM_EN          ON
+#define CRC16_MAXIM_EN        ON
+#define CRC16_USB_EN          ON
+#define CRC16_MODBUS_EN       ON
+#define CRC16_CCITT_EN        ON
+#define CRC16_CCITT_FALSE_EN  ON
+#define CRC16_X25_EN          ON
+#define CRC16_DNP_EN          ON
+
+#define CRC8_EN               ON
+#define CRC8_ITU_EN           ON
+#define CRC8_ROHC_EN          ON
+#define CRC8_MAXIM_EN         ON
+
+
+typedef enum
+{
+    CRC_Custom = 0,
+    
+    CRC32,
+    CRC32_MPEG2,
+
+    CRC16_IBM,
+    CRC16_MAXIM,
+    CRC16_USB,
+    CRC16_MODBUS,
+    CRC16_CCITT,
+    CRC16_CCITT_FALSE,
+    CRC16_X25,
+    CRC16_XMODEM,
+    CRC16_DNP,
+    
+    CRC8,
+    CRC8_ITU,
+    CRC8_ROHC,
+    CRC8_MAXIM,
+    
+    CRC7_MMC,
+    CRC6_ITU,
+    CRC5_EPC,
+    CRC5_ITU,
+    CRC5_USB,
+    CRC4_ITU,
+    
+    CRC_End,
+}CRC_Model_Enum, CRC_Enum;
+
+
+u32 CRC_Get(CRC_Enum model, const u8 *pdata, u32 num);
+
+
 #if defined(CRC32_TYPE)
     #if (CRC32_TYPE == CRC32)
         static const u32 CRC32_Tab[256] = 

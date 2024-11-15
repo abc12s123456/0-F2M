@@ -171,6 +171,66 @@ __INLINE_STATIC_ u8   Pin_Read(FW_GPIO_Type *dev, u16 pin)
     return (u8)gpio_input_bit_get(GPIOx(pin), GPIO_PINx(pin));
 }
 
+__INLINE_STATIC_ u8   Pin_GetConfig(FW_GPIO_Type *dev, u16 pin, FW_GPIO_Config_Type *config)
+{
+    u32 gpio = GPIOx(pin);
+    pin = PINx(pin);
+    
+    u32 tmp;
+    u8 reg;
+    u8 dir = 0, mode = 0, otype = 0, pupd = 0;
+    
+    if(pin >= 8)
+        tmp = GPIO_CTL1(gpio);
+    else
+        tmp = GPIO_CTL0(gpio);
+    
+    tmp = (tmp >> (pin * 4)) & 0b1111;
+    
+    reg = tmp & 0b11;
+    if(reg == 0)
+    {
+        dir = FW_GPIO_DIR_IN;
+    }
+    else
+    {
+        dir = FW_GPIO_DIR_OUT;
+        if(reg == 0b01)  config->Speed = FW_GPIO_Speed_Medium;
+        else if(reg == 0b10)  config->Speed = FW_GPIO_Speed_Low;
+        else if(reg == 0b11)  config->Speed = FW_GPIO_Speed_High;
+        else  config->Speed = FW_GPIO_Speed_Low;
+    }
+    
+    reg = (tmp >> 2) & 0b11;
+    tmp = (GPIO_OCTL(pin) >> pin) & 0b1;
+    if(dir == FW_GPIO_DIR_IN)
+    {
+        if(reg == 0b00)  mode = FW_GPIO_MODE_ANALOG;
+        else if(reg == 0b01)  {mode = FW_GPIO_MODE_IO; pupd = FW_GPIO_PUPD_NONE;}
+        else if(reg == 0b10)  
+        {
+            mode = FW_GPIO_MODE_IO;
+            if(tmp)
+                pupd = FW_GPIO_PUPD_UP;
+            else
+                pupd = FW_GPIO_PUPD_DOWN;
+        }
+        else  mode = FW_GPIO_MODE_ANALOG;
+    }
+    else
+    {
+        if(reg == 0b00)  {mode = FW_GPIO_MODE_IO; otype = FW_GPIO_OUT_PULL;}
+        else if(reg == 0b01)  {mode = FW_GPIO_MODE_IO; otype = FW_GPIO_OUT_OD;}
+        else if(reg == 0b10)  {mode = FW_GPIO_MODE_AF; otype = FW_GPIO_OUT_PULL;}
+        else if(reg == 0b11)  {mode = FW_GPIO_MODE_AF; otype = FW_GPIO_OUT_OD;}
+        else  mode = FW_GPIO_MODE_ANALOG;
+    }
+    
+    config->Mode = FW_GPIO_GetMode(dir, mode, otype, pupd);
+    
+    return True;
+}
+
 __INLINE_STATIC_ void Port_GetDefault(FW_GPIO_Type *dev)
 {
     dev->Default_Mode = FW_GPIO_Mode_AOUT;
@@ -208,6 +268,7 @@ __CONST_STATIC_ FW_GPIO_Driver_Type HGPIO_Driver =
     .Pin_GetOutput   = Pin_GetOutput,
     .Pin_Read        = Pin_Read,
     .Pin_Toggle      = NULL,
+    .Pin_GetConfig   = Pin_GetConfig,
     
     .Port_GetDefault = Port_GetDefault,
     .Port_DeInit     = Port_DeInit,

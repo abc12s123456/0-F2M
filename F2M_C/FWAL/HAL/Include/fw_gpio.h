@@ -955,35 +955,50 @@ extern "{"
 #define GPIO_RET_INVALUE     (0xFFFFFFFF)
 
 
+#define FW_GPIO_DIR_IN       (0b00000000)
+#define FW_GPIO_DIR_OUT      (0b10000000)
+
+#define FW_GPIO_MODE_ANALOG  (0b00000000)
+#define FW_GPIO_MODE_IO      (0b00100000)
+#define FW_GPIO_MODE_AF      (0b01000000)
+
+#define FW_GPIO_OUT_PULL     (0b00000000)
+#define FW_GPIO_OUT_OD       (0b00010000)
+
+#define FW_GPIO_PUPD_NONE    (0b00000000)
+#define FW_GPIO_PUPD_UP      (0b00000100)
+#define FW_GPIO_PUPD_DOWN    (0b00001000)
+
+
 typedef enum
 {
-    FW_GPIO_Mode_AIN = 0,                   //模拟输入
-    FW_GPIO_Mode_AOUT,                      //模拟输出
+    FW_GPIO_Mode_AIN = FW_GPIO_DIR_IN | FW_GPIO_MODE_ANALOG,                                              //模拟输入
+    FW_GPIO_Mode_AOUT = FW_GPIO_DIR_OUT | FW_GPIO_MODE_ANALOG,                                            //模拟输出
 
-    FW_GPIO_Mode_AF_IPN,                    //复用浮空输入
-    FW_GPIO_Mode_AF_IPU,                    //复用上拉输入
-    FW_GPIO_Mode_AF_IPD,                    //复用下拉输入
+    FW_GPIO_Mode_AF_IPN = FW_GPIO_DIR_IN | FW_GPIO_MODE_AF | FW_GPIO_PUPD_NONE,                           //复用浮空输入
+    FW_GPIO_Mode_AF_IPU = FW_GPIO_DIR_IN | FW_GPIO_MODE_AF | FW_GPIO_PUPD_UP,                             //复用上拉输入
+    FW_GPIO_Mode_AF_IPD = FW_GPIO_DIR_IN | FW_GPIO_MODE_AF | FW_GPIO_PUPD_DOWN,                           //复用下拉输入
 
-    FW_GPIO_Mode_AF_Out_PPN,                //复用浮空推挽输出
-    FW_GPIO_Mode_AF_Out_PPU,                //复用上拉推挽输出
-    FW_GPIO_Mode_AF_Out_PPD,                //复用下拉推挽输出
+    FW_GPIO_Mode_AF_Out_PPN = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_NONE,   //复用浮空推挽输出
+    FW_GPIO_Mode_AF_Out_PPU = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_UP,     //复用上拉推挽输出
+    FW_GPIO_Mode_AF_Out_PPD = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_DOWN,   //复用下拉推挽输出
 
-    FW_GPIO_Mode_AF_Out_ODN,                //复用浮空开漏输出
-    FW_GPIO_Mode_AF_Out_ODU,                //复用浮空上拉输出
-    FW_GPIO_Mode_AF_Out_ODD,                //复用浮空下拉输出
+    FW_GPIO_Mode_AF_Out_ODN = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_OD | FW_GPIO_PUPD_NONE,     //复用浮空开漏输出
+    FW_GPIO_Mode_AF_Out_ODU = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_OD | FW_GPIO_PUPD_UP,       //复用浮空上拉输出
+    FW_GPIO_Mode_AF_Out_ODD = FW_GPIO_DIR_OUT | FW_GPIO_MODE_AF | FW_GPIO_OUT_OD | FW_GPIO_PUPD_DOWN,     //复用浮空下拉输出
 
-    FW_GPIO_Mode_IPN,                       //浮空输入
-    FW_GPIO_Mode_IPU,                       //上拉输入
-    FW_GPIO_Mode_IPD,                       //下拉输入
+    FW_GPIO_Mode_IPN = FW_GPIO_DIR_IN | FW_GPIO_MODE_IO | FW_GPIO_PUPD_NONE,                              //浮空输入
+    FW_GPIO_Mode_IPU = FW_GPIO_DIR_IN | FW_GPIO_MODE_IO | FW_GPIO_PUPD_UP,                                //上拉输入
+    FW_GPIO_Mode_IPD = FW_GPIO_DIR_IN | FW_GPIO_MODE_IO | FW_GPIO_PUPD_DOWN,                              //下拉输入
 
-    FW_GPIO_Mode_Out_PPN,                   //浮空推挽输出
-    FW_GPIO_Mode_Out_PPU,                   //上拉推挽输出
-    FW_GPIO_Mode_Out_PPD,                   //下拉推挽输出
+    FW_GPIO_Mode_Out_PPN = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_NONE,      //浮空推挽输出
+    FW_GPIO_Mode_Out_PPU = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_UP,        //上拉推挽输出
+    FW_GPIO_Mode_Out_PPD = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_PULL | FW_GPIO_PUPD_DOWN,      //下拉推挽输出
 
-    FW_GPIO_Mode_Out_ODN,                   //浮空开漏输出
-    FW_GPIO_Mode_Out_ODU,                   //上拉开漏输出
-    FW_GPIO_Mode_Out_ODD,                   //下拉开漏输出
-}FW_GPIO_Mode_Enum;                         //GPIO工作模式
+    FW_GPIO_Mode_Out_ODN = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_OD | FW_GPIO_PUPD_NONE,        //浮空开漏输出
+    FW_GPIO_Mode_Out_ODU = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_OD | FW_GPIO_PUPD_UP,          //上拉开漏输出
+    FW_GPIO_Mode_Out_ODD = FW_GPIO_DIR_OUT | FW_GPIO_MODE_IO | FW_GPIO_OUT_OD | FW_GPIO_PUPD_DOWN,        //下拉开漏输出
+}FW_GPIO_Mode_Enum;  //GPIO工作模式
 /**/
 
 
@@ -995,6 +1010,13 @@ typedef enum
     FW_GPIO_Speed_Ultra,                    //极速
 }FW_GPIO_Speed_Enum;
 /**/
+
+
+typedef struct
+{
+    FW_GPIO_Mode_Enum Mode;
+    FW_GPIO_Speed_Enum Speed;
+}FW_GPIO_Config_Type;
 
 
 typedef struct FW_GPIO
@@ -1028,6 +1050,8 @@ typedef struct
     
     void (*Pin_Toggle)(FW_GPIO_Type *dev, u16 pin);
     
+    u8   (*Pin_GetConfig)(FW_GPIO_Type *dev, u16 pin, FW_GPIO_Config_Type *config);
+    
     /* Port */
     void (*Port_GetDefault)(FW_GPIO_Type *dev);
     
@@ -1053,7 +1077,7 @@ u8   GPIO_PinGetOutput(FW_GPIO_Type *dev, u16 pin);
 u8   GPIO_PinRead(FW_GPIO_Type *dev, u16 pin);
 
 void GPIO_PinToggle(FW_GPIO_Type *dev, u16 pin);
-
+u8   GPIO_PinGetConfig(FW_GPIO_Type *dev, u16 pin, FW_GPIO_Config_Type *config);
 
 void GPIO_PortDeInit(FW_GPIO_Type *dev, u16 port);
 void GPIO_PortInit(FW_GPIO_Type *dev, u16 port, FW_GPIO_Mode_Enum mode, FW_GPIO_Speed_Enum speed);
@@ -1113,6 +1137,14 @@ do{\
     u8 n = VA_NUM(__VA_ARGS__);\
     if(n == 1)  GPIO_PinToggle(&GPIO, VA0(__VA_ARGS__));\
     else if(n == 2)  GPIO_PinToggle((FW_GPIO_Type *)VA0(__VA_ARGS__), VA1(__VA_ARGS__));\
+    else  VA_ARGS_NUM_ERR();\
+}while(0)
+
+#define FW_GPIO_GetConfig(...)\
+do{\
+    u8 n = VA_NUM(__VA_ARGS__);\
+    if(n == 2)  GPIO_PinGetConfig(&GPIO, VA0(__VA_ARGS__));\
+    else if(n == 3)  GPIO_PinGetConfig(&GPIO, VA0(__VA_ARGS__), VA1(__VA_ARGS__));\
     else  VA_ARGS_NUM_ERR();\
 }while(0)
 
@@ -1188,6 +1220,16 @@ __INLINE_STATIC_ void FW_GPIO_Toggle(u16 pin)
     GPIO_PinToggle(&GPIO, pin);
 }
 
+__INLINE_STATIC_ FW_GPIO_Mode_Enum FW_GPIO_GetMode(u8 dir, u8 mode, u8 otype, u8 pupd)
+{
+    return (FW_GPIO_Mode_Enum)(dir | mode | otype | pupd);
+}
+
+__INLINE_STATIC_ u8   FW_GPIO_GetConfig(u16 pin, FW_GPIO_Config_Type *config)
+{
+    return GPIO_PinGetConfig(&GPIO, pin, config);
+}
+
 
 #define FW_GPIO_SET(pin)     FW_GPIO_Write(pin, LEVEL_H)
 #define FW_GPIO_CLR(pin)     FW_GPIO_Write(pin, LEVEL_L)
@@ -1222,7 +1264,6 @@ __INLINE_STATIC_ u32  FW_GPIO_PortRead(u16 port)
 }
 
 #endif  /* #if defined(GPIO_RELOAD_EN) && (GPIO_RELAOD_EN) */
-
 
 #endif  /* defined(GPIO_MOD_EN) && GPIO_MOD_EN */
 

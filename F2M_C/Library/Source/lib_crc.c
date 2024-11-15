@@ -1,6 +1,176 @@
 #include "lib_crc.h"
 
 
+typedef struct
+{
+    u32 Model : 8;
+    u32 Width : 8;
+    u32 Input_Invert_Flag : 1;
+    u32 Output_Invert_Flag : 1;
+    u32 : 14;
+    u32 Poly_Value;
+    u32 Init_Value;
+    u32 Xor_Value;
+}CRC_Type;
+
+
+__CONST_STATIC_ CRC_Type CRC[] =
+{
+    /**/
+    {CRC_Custom},
+    
+    {CRC32,             32, True,  True,  0x04C11DB7, 0xFFFFFFFF, 0xFFFFFFFF},
+    {CRC32_MPEG2,       32, False, False, 0x04C11DB7, 0xFFFFFFFF, 0x00000000},
+    
+    {CRC16_IBM,         16, True,  True,  0x8005, 0x0000, 0x0000},
+    {CRC16_MAXIM,       16, True,  True,  0x8005, 0x0000, 0xFFFF},
+    {CRC16_USB,         16, True,  True,  0x8005, 0xFFFF, 0xFFFF},
+    {CRC16_MODBUS,      16, True,  True,  0x8005, 0xFFFF, 0x0000},
+    {CRC16_CCITT,       16, True,  True,  0x1021, 0x0000, 0x0000},
+    {CRC16_CCITT_FALSE, 16, False, False, 0x1021, 0xFFFF, 0x0000},
+    {CRC16_X25,         16, True,  True,  0x1021, 0xFFFF, 0xFFFF},
+    {CRC16_XMODEM,      16, False, False, 0x1021, 0x0000, 0x0000},
+    {CRC16_DNP,         16, True,  True,  0x3D65, 0x0000, 0xFFFF},
+    
+    {CRC8,              8,  False, False, 0x07,   0x00,   0x00},
+    {CRC8_ITU,          8,  False, False, 0x07,   0x00,   0x55},
+    {CRC8_ROHC,         8,  True,  True,  0x07,   0xFF,   0x00},
+    {CRC8_MAXIM,        8,  True,  True,  0x31,   0x00,   0x00},
+    
+    {CRC7_MMC,          7,  False, False, 0x09,   0x00,   0x00},
+    {CRC6_ITU,          6,  True,  True,  0x03,   0x00,   0x00},
+    {CRC5_EPC,          5,  False, False, 0x09,   0x09,   0x00},
+    {CRC5_ITU,          5,  True,  True,  0x15,   0x00,   0x00},
+    {CRC5_USB,          5,  True,  True,  0x05,   0x1F,   0x1F},
+    {CRC4_ITU,          4,  True,  True,  0x03,   0x00,   0x00},
+};
+
+
+#define Invert(type, value)\
+{\
+    type tmp = 0;\
+    u8 index = sizeof(type) * 8;\
+    \
+    while(index--)\
+    {\
+        tmp <<= 1;\
+        tmp |= value & 0x01;\
+        value >>= 1;\
+    }\
+    \
+    return tmp;\
+}\
+
+__INLINE_STATIC_ u32 Invert32(u32 value)  Invert(u32, value);
+__INLINE_STATIC_ u16 Invert16(u16 value)  Invert(u16, value);
+__INLINE_STATIC_ u8  Invert8(u8 value)  Invert(u8, value);
+
+__INLINE_STATIC_ u32 _CRC32_Get(CRC_Model_Enum model, const u8 *pdata, u32 num)
+{
+    CRC_Type crc = CRC[model];
+    u32 init = crc.Init_Value;
+    u8 value = 0;
+    u8 i;
+    
+    while(num--)
+    {
+        value = *pdata++;
+        
+        if(crc.Input_Invert_Flag)  value = Invert8(value);
+        
+        init ^= (u32)(value << 24);
+        
+        for(i = 0; i < 8; i++)
+        {
+            if(init & 0x80000000)
+                init = (u32)((init << 1) ^ crc.Poly_Value);
+            else
+                init = (u32)(init << 1);
+        }
+    }
+    
+    if(crc.Output_Invert_Flag)  init = Invert32(init);
+    
+    init ^= crc.Xor_Value;
+    
+    return init;
+}
+
+__INLINE_STATIC_ u16 _CRC16_Get(CRC_Model_Enum model, const u8 *pdata, u32 num)
+{
+    CRC_Type crc = CRC[model];
+    u16 init = (u16)crc.Init_Value;
+    u8 value = 0;
+    u8 i;
+    
+    while(num--)
+    {
+        value = *pdata++;
+        
+        if(crc.Input_Invert_Flag)  value = Invert8(value);
+        
+        init ^= (u16)(value << 8);
+        
+        for(i = 0; i < 8; i++)
+        {
+            if(init & 0x8000)
+                init = (u16)((init << 1) ^ crc.Poly_Value);
+            else
+                init = (u16)(init << 1);
+        }
+    }
+    
+    if(crc.Output_Invert_Flag)  init = Invert16(init);
+    
+    init ^= crc.Xor_Value;
+    
+    return init;
+}
+
+__INLINE_STATIC_ u8  _CRC8_Get(CRC_Model_Enum model, const u8 *pdata, u32 num)
+{
+    CRC_Type crc = CRC[model];
+    u8 init = (u8)crc.Init_Value;
+    u8 value = 0;
+    u8 i;
+    
+    while(num--)
+    {
+        value = *pdata++;
+        
+        if(crc.Input_Invert_Flag)  value = Invert8(value);
+        
+        init ^= value;
+        
+        for(i = 0; i < 8; i++)
+        {
+            if(init & 0x80)
+                init = (u8)((init << 1) ^ crc.Poly_Value);
+            else
+                init = (u8)(init << 1);
+        }
+    }
+    
+    if(crc.Output_Invert_Flag)  init = Invert8(init);
+    
+    init ^= crc.Xor_Value;
+    
+    return init;
+}
+
+
+u32  CRC_Get(CRC_Model_Enum model, const u8 *pdata, u32 num)
+{
+    CRC_Type crc = CRC[model];
+    
+    if(crc.Width == 16)  return _CRC16_Get(model, pdata, num);
+    if(crc.Width == 8)  return _CRC8_Get(model, pdata, num);
+    if(crc.Width == 32)  return _CRC32_Get(model, pdata, num);
+    
+    return 0;
+}
+
+
 #if defined(CRC32_TYPE)
 
 #endif

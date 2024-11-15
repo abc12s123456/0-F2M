@@ -87,6 +87,7 @@
 ".\objects\lib_int.o"
 ".\objects\lib_string.o"
 ".\objects\lib_ctrl.o"
+".\objects\lib_crc.o"
 ".\objects\smodem_master.o"
 ".\objects\smodem_slave.o"
 ".\objects\system_gd32f30x.o"

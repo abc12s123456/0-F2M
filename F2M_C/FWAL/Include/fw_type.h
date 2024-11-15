@@ -377,26 +377,26 @@ typedef enum
 /*
  * @CRC定义
  */
-#define CRC_METHOD_LT             0                        /* 查表法 */
-#define CRC_METHOD_CAL            1                        /* 计算法 */
+//#define CRC_METHOD_LT             0                        /* 查表法 */
+//#define CRC_METHOD_CAL            1                        /* 计算法 */
 
-#define CRC32                     0
-#define CRC32_MPEG2               1
+//#define CRC32                     0
+//#define CRC32_MPEG2               1
 
-#define CRC16_IBM                 0
-#define CRC16_MAXIM               1
-#define CRC16_USB                 2
-#define CRC16_MODBUS              3
-#define CRC16_CCITT               4
-#define CRC16_CCITT_FALSE         5
-#define CRC16_X25                 6
-#define CRC16_XMODEM              7
-#define CRC16_DNP                 8
+//#define CRC16_IBM                 0
+//#define CRC16_MAXIM               1
+//#define CRC16_USB                 2
+//#define CRC16_MODBUS              3
+//#define CRC16_CCITT               4
+//#define CRC16_CCITT_FALSE         5
+//#define CRC16_X25                 6
+//#define CRC16_XMODEM              7
+//#define CRC16_DNP                 8
 
-#define CRC8                      0
-#define CRC8_ITU                  1
-#define CRC8_ROHC                 2
-#define CRC8_MAXIM                3
+//#define CRC8                      0
+//#define CRC8_ITU                  1
+//#define CRC8_ROHC                 2
+//#define CRC8_MAXIM                3
 
 
 #ifdef __cplusplus

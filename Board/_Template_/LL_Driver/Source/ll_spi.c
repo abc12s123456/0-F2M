@@ -424,6 +424,8 @@ __INLINE_STATIC_ u32  SPI_Write(FW_SPI_Type *dev, const u8 *pdata, u32 num)
     spi_dma_enable(spi, SPI_DMA_TRANSMIT);
     while(dma_flag_get(dma, dma_tx_ch, DMA_FLAG_FTF) != SET);
     spi_dma_disable(spi, SPI_DMA_TRANSMIT);
+    
+    return num;
 }
 
 __INLINE_STATIC_ u32  SPI_Read(FW_SPI_Type *dev, u8 *pdata, u32 num)
@@ -453,6 +455,8 @@ __INLINE_STATIC_ u32  SPI_Read(FW_SPI_Type *dev, u8 *pdata, u32 num)
     while(dma_flag_get(dma, dma_rx_ch, DMA_FLAG_FTF) != SET);
     spi_dma_disable(spi, SPI_DMA_TRANSMIT);
     spi_dma_disable(spi, SPI_DMA_RECEIVE);
+    
+    return num;
 }
 
 

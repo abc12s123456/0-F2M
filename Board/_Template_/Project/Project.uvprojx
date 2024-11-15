@@ -996,6 +996,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\F2M_C\Library\Source\lib_ctrl.c</FilePath>
             </File>
+            <File>
+              <FileName>lib_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\F2M_C\Library\Source\lib_crc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
