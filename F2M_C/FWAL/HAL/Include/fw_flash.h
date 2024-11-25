@@ -156,8 +156,10 @@ ffse Flash_Erase_Inter(FW_Flash_Type *dev, u32 start_addr, u32 end_addr);
 ffse Flash_Write_Direct(FW_Flash_Type *dev, u32 addr, const void *pdata, u32 num);
 ffse Flash_Write_Unsafe(FW_Flash_Type *dev, u32 addr, const void *pdata, u32 num);
 ffse Flash_Write(FW_Flash_Type *dev, u32 addr, const void *pdata, u32 num);
+ffse Flash_Write_Last(FW_Flash_Type *dev, const void *pdata, u32 num);
 
 u32  Flash_Read(FW_Flash_Type *dev, u32 addr, void *pdata, u32 num);
+u32  Flash_Read_Last(FW_Flash_Type *dev, void *pdata, u32 num);
 
 
 extern FW_Flash_Type IFlash;
@@ -247,10 +249,20 @@ VA_ARGS_NUM_ERR())
 (VA_NUM(__VA_ARGS__) == 4) ? Flash_Write((FW_Flash_Type *)VA0(__VA_ARGS__), (u32)VA1(__VA_ARGS__), (void *)VA2(__VA_ARGS__), (u32)VA3(__VA_ARGS__)) :\
 (ffse)VA_ARGS_NUM_ERR())
 
+#define FW_Flash_WriteLast(...)(\
+(VA_NUM(__VA_ARGS__) == 2) ? Flash_Write_Last(&IFlash, (void *)VA0(__VA_ARGS__), (u32)VA1(__VA_ARGS__)) :\
+(VA_NUM(__VA_ARGS__) == 3) ? Flash_Write_Last((FW_Flash_Type *)VA0(__VA_ARGS__), (void *)VA1(__VA_ARGS__), (u32)VA2(__VA_ARGS__)) :\
+(ffse)VA_ARGS_NUM_ERR())
+
 #define FW_Flash_Read(...)(\
 (VA_NUM(__VA_ARGS__) == 3) ? Flash_Read(&IFlash, (u32)VA0(__VA_ARGS__), (void *)VA1(__VA_ARGS__), (u32)VA2(__VA_ARGS__)) :\
 (VA_NUM(__VA_ARGS__) == 4) ? Flash_Read((FW_Flash_Type *)VA0(__VA_ARGS__), (u32)VA1(__VA_ARGS__), (void *)VA2(__VA_ARGS__), (u32)VA3(__VA_ARGS__)) :\
-(ffse)VA_ARGS_NUM_ERR())
+(u32)VA_ARGS_NUM_ERR())
+
+#define FW_Flash_ReadLast(...)(\
+(VA_NUM(__VA_ARGS__) == 2) ? Flash_Read_Last(&IFlash, (void *)VA0(__VA_ARGS__), (u32)VA1(__VA_ARGS__)) :\
+(VA_NUM(__VA_ARGS__) == 3) ? Flash_Read_Last((FW_Flash_Type *)VA0(__VA_ARGS__), (void *)VA1(__VA_ARGS__), (u32)VA2(__VA_ARGS__)) :\
+(u32)VA_ARGS_NUM_ERR())
 
 #else
 
@@ -336,9 +348,19 @@ __INLINE_STATIC_ ffse FW_Flash_Write(u32 addr, const void *pdata, u32 num)
     return Flash_Write(&IFlash, addr, pdata, num);
 }
 
+__INLINE_STATIC_ ffse FW_Flash_WriteLast(const void *pdata, u32 num)
+{
+    return Flash_Write_Last(&IFlash, pdata, num);
+}
+
 __INLINE_STATIC_ u32  FW_Flash_Read(u32 addr, void *pdata, u32 num)
 {
     return Flash_Read(&IFlash, addr, pdata, num);
+}
+
+__INLINE_STATIC_ u32  FW_Flash_ReadLast(void *pdata, u32 num)
+{
+    return Flash_Read_Last(&IFlash, pdata, num);
 }
 
 #endif  /* #if defined(FLASH_RELOAD_EN) && (FLASH_RELOAD_EN) */
@@ -347,9 +369,6 @@ __INLINE_STATIC_ u32  FW_Flash_Read(u32 addr, void *pdata, u32 num)
 /**
  * @串行NOR Flash闪存
  */
-#define SNOR_DRV_GP_NUM      0         //通用驱动编号
-
- 
 typedef struct SNOR SNOR_Type;
 
     

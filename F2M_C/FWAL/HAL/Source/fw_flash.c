@@ -472,6 +472,19 @@ ffse Flash_Write(FW_Flash_Type *dev, u32 addr, const void *pdata, u32 num)
 }
 /**/
 
+ffse Flash_Write_Last(FW_Flash_Type *dev, const void *pdata, u32 num)
+{
+    FW_Flash_Driver_Type *drv = FW_Device_GetDriver(dev);
+    u32 addr;
+    u32 index;
+    
+    index = drv->Get_SectorNum(dev) - 1;
+    addr = drv->Get_SectorBase(dev, index);
+    
+    return Flash_Write(dev, addr, pdata, num);
+}
+/**/
+
 u32  Flash_Read(FW_Flash_Type *dev, u32 addr, void *pdata, u32 num)
 {
     FW_Flash_Driver_Type *drv;
@@ -497,6 +510,19 @@ u32  Flash_Read(FW_Flash_Type *dev, u32 addr, void *pdata, u32 num)
     FW_ASSERT(drv->Read);
     
     return drv->Read(dev, addr, pdata, num);
+}
+/**/
+
+u32  Flash_Read_Last(FW_Flash_Type *dev, void *pdata, u32 num)
+{
+    FW_Flash_Driver_Type *drv = FW_Device_GetDriver(dev);
+    u32 addr;
+    u32 index;
+    
+    index = drv->Get_SectorNum(dev) - 1;
+    addr = drv->Get_SectorBase(dev, index);
+    
+    return Flash_Read(dev, addr, pdata, num);
 }
 /**/
 

@@ -27,11 +27,29 @@ Project File Date:  11/11/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files (x86)\MDK\ARM\ARMCC\Bin'
 Build target 'Template'
-compiling lib_crc.c...
+compiling diskio.c...
+compiling lfs_port.c...
+..\Ports\littlefs\lfs_port.c(6): warning:  #177-D: variable "lfs"  was declared but never referenced
+  static lfs_t lfs;
+..\Ports\littlefs\lfs_port.c(7): warning:  #177-D: variable "file"  was declared but never referenced
+  static lfs_file_t file;
+..\Ports\littlefs\lfs_port.c(15): warning:  #177-D: function "lfs_port_init"  was declared but never referenced
+  static void lfs_port_init(void *pdata)
+..\Ports\littlefs\lfs_port.c(69): warning:  #177-D: variable "read_buf"  was declared but never referenced
+  static u8 read_buf[256];
+..\Ports\littlefs\lfs_port.c(70): warning:  #177-D: variable "prog_buf"  was declared but never referenced
+  static u8 prog_buf[256];
+..\Ports\littlefs\lfs_port.c(71): warning:  #177-D: variable "lookahead_buf"  was declared but never referenced
+  static u32 lookahead_buf[32] = {0};
+..\Ports\littlefs\lfs_port.c: 6 warnings, 0 errors
+compiling gd25q64.c...
+compiling fw_flash.c...
+compiling flash_access.c...
+compiling ll_flash.c...
 linking...
 Program Size: Code=70996 RO-data=3248 RW-data=588 ZI-data=17748  
 FromELF: creating hex file...
-".\Objects\Project.axf" - 0 Error(s), 0 Warning(s).
+".\Objects\Project.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -45,7 +63,7 @@ Package Vendor: GigaDevice
   D:\Program Files (x86)\MDK\Arm\Packs\GigaDevice\GD32F30x_DFP\1.1.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>
